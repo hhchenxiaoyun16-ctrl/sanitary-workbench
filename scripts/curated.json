@@ -9373,5 +9373,1362 @@
         "弱酸不贵"
       ]
     }
+  },
+  {
+    "id": "mat-093",
+    "section": "material",
+    "category": "卫生巾",
+    "brand": "面层技术",
+    "title": "蚕丝蛋白面层",
+    "tags": [
+      "面层",
+      "亲肤",
+      "蛋白"
+    ],
+    "source": "industry",
+    "body": "将蚕丝蛋白萃取液接枝到无纺布纤维表面，形成类角质层亲肤膜。触感接近真丝，降低摩擦红痒，适合敏感肌与量少日用。",
+    "material": {
+      "role": "直接接触皮肤的面层",
+      "composition": "粘胶纤维+蚕丝蛋白接枝层",
+      "structure": "水刺非织造+蛋白涂层",
+      "process": "低温接枝+热风固化",
+      "experience": "丝滑、低摩擦、像没穿",
+      "consumer": "私处娇嫩、怕摩擦红痒的人",
+      "ref": "可借鉴做\"丝感\"系列面层升级"
+    }
+  },
+  {
+    "id": "mat-094",
+    "section": "material",
+    "category": "卫生巾",
+    "brand": "面层技术",
+    "title": "氨基酸保湿面层",
+    "tags": [
+      "面层",
+      "保湿",
+      "敏感肌"
+    ],
+    "source": "industry",
+    "body": "面层浸轧含氨基酸（如丝氨酸、甘氨酸）的保湿液，维持表层弱酸与水分，缓解干痒。与\"裸感\"定位契合。",
+    "material": {
+      "role": "保湿亲肤面层",
+      "composition": "纯棉水刺布+氨基酸精华",
+      "structure": "微孔导流+锁水层",
+      "process": "浸轧烘干",
+      "experience": "不干不涩、整日润",
+      "consumer": "久坐、易干痒的办公室人群",
+      "ref": "可做\"水润裸感\"卖点支撑"
+    }
+  },
+  {
+    "id": "mat-095",
+    "section": "material",
+    "category": "卫生巾",
+    "brand": "功能成分",
+    "title": "艾草/暖姜温感微粒",
+    "tags": [
+      "暖宫",
+      "草本",
+      "温感"
+    ],
+    "source": "industry",
+    "body": "在面层或芯片嵌入艾草精油/生姜提取物微胶囊，接触体温缓释，带来温感体验，对应\"暖宫\"诉求（非医疗宣称）。",
+    "material": {
+      "role": "温感舒缓成分",
+      "composition": "艾草精油微胶囊+生姜提取物",
+      "structure": "芯片夹层缓释",
+      "process": "微胶囊包埋",
+      "experience": "小腹温热、经期被照顾",
+      "consumer": "宫寒、怕凉的女性",
+      "ref": "洁伶本草系已验证，可深化"
+    }
+  },
+  {
+    "id": "mat-096",
+    "section": "material",
+    "category": "卫生巾",
+    "brand": "功能成分",
+    "title": "薄荷醇凉感微粒",
+    "tags": [
+      "凉感",
+      "清爽",
+      "夏天"
+    ],
+    "source": "industry",
+    "body": "面层加入薄荷醇或凉感剂（如薄荷提取物），夏季使用有即时清凉感，缓解闷热黏腻。",
+    "material": {
+      "role": "清凉舒缓成分",
+      "composition": "薄荷醇微胶囊",
+      "structure": "面层点涂",
+      "process": "微胶囊喷涂",
+      "experience": "一秒清凉、闷热拜拜",
+      "consumer": "夏天怕闷、易出汗人群",
+      "ref": "夏季限定凉感款核心成分"
+    }
+  },
+  {
+    "id": "mat-097",
+    "section": "material",
+    "category": "卫生巾",
+    "brand": "功能成分",
+    "title": "银离子抑菌芯片",
+    "tags": [
+      "抑菌",
+      "芯片",
+      "安心"
+    ],
+    "source": "industry",
+    "body": "在吸收层上方嵌入载银离子芯片，银离子破坏细菌膜，降低异味与细菌滋生，对应\"抑菌\"卖点。",
+    "material": {
+      "role": "抑菌功能层",
+      "composition": "银离子载体制品",
+      "structure": "芯片夹层",
+      "process": "静电纺丝负载",
+      "experience": "闷一天也不异味",
+      "consumer": "量大、易异味人群",
+      "ref": "可与\"医护级\"双背书"
+    }
+  },
+  {
+    "id": "mat-098",
+    "section": "material",
+    "category": "卫生巾",
+    "brand": "功能成分",
+    "title": "负离子/远红外芯片",
+    "tags": [
+      "芯片",
+      "清新",
+      "舒适"
+    ],
+    "source": "industry",
+    "body": "部分品牌用负离子芯片宣称改善闷湿环境、减少异味。属感官舒适型功能，需配合真实体感设计。",
+    "material": {
+      "role": "环境调节芯片",
+      "composition": "电气石/负离子释放材料",
+      "structure": "芯片夹层",
+      "process": "复合压合",
+      "experience": "清爽不闷、空气感",
+      "consumer": "追求清新体感人群",
+      "ref": "注意合规，避免医疗宣称"
+    }
+  },
+  {
+    "id": "mat-099",
+    "section": "material",
+    "category": "卫生巾",
+    "brand": "芯体结构",
+    "title": "高分子梯度锁水芯体",
+    "tags": [
+      "芯体",
+      "锁水",
+      "防反渗"
+    ],
+    "source": "industry",
+    "body": "SAP 由上面层稀疏、下底层密集的梯度分布，液体下渗后锁定不回冒，表面更干爽，反渗率显著降低。",
+    "material": {
+      "role": "吸收锁水核心",
+      "composition": "木浆+梯度SAP",
+      "structure": "上疏下密梯度",
+      "process": "多层复合",
+      "experience": "表面干、不回潮",
+      "consumer": "易反渗、怕湿黏人群",
+      "ref": "高端日用/夜用核心结构"
+    }
+  },
+  {
+    "id": "mat-100",
+    "section": "material",
+    "category": "卫生巾",
+    "brand": "芯体结构",
+    "title": "瞬吸漏斗型导流层",
+    "tags": [
+      "导流",
+      "瞬吸",
+      "芯体"
+    ],
+    "source": "industry",
+    "body": "导流层压出漏斗/沟槽纹理，液体沿沟槽快速扩散至芯体，避免局部饱和导致的侧漏，提升瞬吸速度。",
+    "material": {
+      "role": "液体扩散层",
+      "composition": "蓬松非织造+压花沟槽",
+      "structure": "漏斗型导流纹",
+      "process": "3D 压花",
+      "experience": "一瞬间吸干、不堆液",
+      "consumer": "量大、动作大人群",
+      "ref": "夜用/运动款必备"
+    }
+  },
+  {
+    "id": "mat-101",
+    "section": "material",
+    "category": "卫生巾",
+    "brand": "芯体结构",
+    "title": "超薄复合芯体（无木浆）",
+    "tags": [
+      "超薄",
+      "轻",
+      "芯体"
+    ],
+    "source": "industry",
+    "body": "用高倍率 SAP 复合蓬松非织造替代传统木浆，厚度可压到 1mm 内，依然保持吸收量，主打\"无感轻薄\"。",
+    "material": {
+      "role": "轻薄吸收芯",
+      "composition": "SAP+蓬松非织造",
+      "structure": "超薄复合",
+      "process": "热风成型",
+      "experience": "像没垫、却很能吸",
+      "consumer": "追求无感、夏天人群",
+      "ref": "日用超薄款结构方向"
+    }
+  },
+  {
+    "id": "mat-102",
+    "section": "material",
+    "category": "卫生巾",
+    "brand": "底膜",
+    "title": "微孔透气底膜",
+    "tags": [
+      "底膜",
+      "透气",
+      "不闷"
+    ],
+    "source": "industry",
+    "body": "PE 底膜激光打微孔，水汽可透出、液体不渗入，透气性比普通膜高数倍，闷热感大幅下降。",
+    "material": {
+      "role": "透气防渗底膜",
+      "composition": "打孔PE膜",
+      "structure": "微孔阵列",
+      "process": "激光打孔",
+      "experience": "会呼吸、不捂汗",
+      "consumer": "易闷痘、久坐人群",
+      "ref": "所有款型都可升级"
+    }
+  },
+  {
+    "id": "mat-103",
+    "section": "material",
+    "category": "卫生巾",
+    "brand": "底膜",
+    "title": "可降解植物底膜",
+    "tags": [
+      "环保",
+      "可降解",
+      "底膜"
+    ],
+    "source": "industry",
+    "body": "用 PLA（聚乳酸，玉米淀粉来源）替代部分 PE 做底膜，工业堆肥条件下可降解，主打环保叙事。",
+    "material": {
+      "role": "环保底膜",
+      "composition": "PLA 共混膜",
+      "structure": "单层薄膜",
+      "process": "吹膜+印刷",
+      "experience": "用完也能温柔地球",
+      "consumer": "环保理念消费者",
+      "ref": "ESG/环保线可用"
+    }
+  },
+  {
+    "id": "mat-104",
+    "section": "material",
+    "category": "卫生巾",
+    "brand": "面层",
+    "title": "有机棉认证面层",
+    "tags": [
+      "有机",
+      "纯棉",
+      "敏感"
+    ],
+    "source": "industry",
+    "body": "采用 GOTS 认证有机棉，无农药残留、无荧光剂，触感柔软，对应\"有机\"\"纯净\"定位，适合极敏感肌。",
+    "material": {
+      "role": "纯净亲肤面层",
+      "composition": "GOTS 有机棉",
+      "structure": "水刺非织造",
+      "process": "有机种植+物理加工",
+      "experience": "像云朵贴着、零刺激",
+      "consumer": "成分党、母婴级需求",
+      "ref": "全棉时代/奈丝公主已验证"
+    }
+  },
+  {
+    "id": "mat-105",
+    "section": "material",
+    "category": "卫生巾",
+    "brand": "面层",
+    "title": "海岛棉长绒面层",
+    "tags": [
+      "长绒棉",
+      "柔软",
+      "高端"
+    ],
+    "source": "industry",
+    "body": "海岛棉纤维更长更细，织出面层更柔滑有光泽，定位高端天然棉线，对标高洁丝海岛棉系列。",
+    "material": {
+      "role": "高端天然面层",
+      "composition": "海岛棉",
+      "structure": "精梳水刺",
+      "process": "长绒精梳",
+      "experience": "贵妇级柔软触感",
+      "consumer": "愿为质感付费人群",
+      "ref": "高端棉柔款差异化"
+    }
+  },
+  {
+    "id": "mat-106",
+    "section": "material",
+    "category": "卫生巾",
+    "brand": "结构",
+    "title": " wings 护翼防卷边压纹",
+    "tags": [
+      "护翼",
+      "防卷",
+      "结构"
+    ],
+    "source": "industry",
+    "body": "护翼内侧加防滑压纹/胶点，贴合内裤不外翻；主体边缘压立体防卷边，长时间不移位。",
+    "material": {
+      "role": "贴合固定结构",
+      "composition": "压纹+定位胶",
+      "structure": "立体压边",
+      "process": "热压成型",
+      "experience": "跑跳也不移位",
+      "consumer": "好动、易移位人群",
+      "ref": "所有日用款基础结构"
+    }
+  },
+  {
+    "id": "mat-107",
+    "section": "material",
+    "category": "卫生巾",
+    "brand": "结构",
+    "title": "中凸立体吸收体",
+    "tags": [
+      "中凸",
+      "贴合",
+      "结构"
+    ],
+    "source": "industry",
+    "body": "芯体中央略高形成\"小山丘\"，更贴合身体曲线，减少缝隙渗漏，提升贴合度与舒适度。",
+    "material": {
+      "role": "贴合吸收体",
+      "composition": "SAP+定型棉",
+      "structure": "中凸热压",
+      "process": "模具热压",
+      "experience": "贴身不走位、不漏",
+      "consumer": "追求隐形贴合人群",
+      "ref": "贴身款结构卖点"
+    }
+  },
+  {
+    "id": "mat-108",
+    "section": "material",
+    "category": "卫生巾",
+    "brand": "包装",
+    "title": "单片易撕铝膜包装",
+    "tags": [
+      "包装",
+      "卫生",
+      "便携"
+    ],
+    "source": "industry",
+    "body": "每片独立铝膜易撕包装，防潮防菌、单手可撕，对应\"干净卫生\"\"随身带\"场景，提升使用仪式感。",
+    "material": {
+      "role": "单片防护包装",
+      "composition": "铝塑复合膜",
+      "structure": "易撕齿边",
+      "process": "复合+模切",
+      "experience": "随手一撕就干净",
+      "consumer": "通勤、出差人群",
+      "ref": "包装体验升级点"
+    }
+  },
+  {
+    "id": "mat-109",
+    "section": "material",
+    "category": "卫生巾",
+    "brand": "包装",
+    "title": "可水洗收纳小包",
+    "tags": [
+      "包装",
+      "环保",
+      "复用"
+    ],
+    "source": "industry",
+    "body": "随箱附赠可水洗布艺收纳包，替代一次性塑料袋，强化环保与随身整洁，适配\"月经包\"场景。",
+    "material": {
+      "role": "复用收纳配件",
+      "composition": "涤棉布艺",
+      "structure": "拉链小包",
+      "process": "车缝",
+      "experience": "体面带出门",
+      "consumer": "环保+体面需求",
+      "ref": "品牌周边/礼盒可用"
+    }
+  },
+  {
+    "id": "mat-110",
+    "section": "material",
+    "category": "卫生巾",
+    "brand": "功能成分",
+    "title": "茶多酚清新因子",
+    "tags": [
+      "清新",
+      "茶",
+      "除味"
+    ],
+    "source": "industry",
+    "body": "面层或芯片加入茶多酚提取物，中和异味分子、带来淡茶香，主打\"清新不尴尬\"。",
+    "material": {
+      "role": "清新除味成分",
+      "composition": "茶多酚微胶囊",
+      "structure": "芯片夹层",
+      "process": "微胶囊包埋",
+      "experience": "淡淡的茶香、不尴尬",
+      "consumer": "在意异味人群",
+      "ref": "香氛线自然方向"
+    }
+  },
+  {
+    "id": "mat-111",
+    "section": "material",
+    "category": "卫生巾",
+    "brand": "功能成分",
+    "title": "洋甘菊舒缓精华",
+    "tags": [
+      "舒缓",
+      "植萃",
+      "温和"
+    ],
+    "source": "industry",
+    "body": "洋甘菊提取物具舒缓特性，加入面层降低刺激感，对应\"温和呵护\"的植萃叙事。",
+    "material": {
+      "role": "舒缓植萃成分",
+      "composition": "洋甘菊提取物",
+      "structure": "面层涂层",
+      "process": "浸轧",
+      "experience": "像被轻轻安抚",
+      "consumer": "敏感、易不适人群",
+      "ref": "植萃温和线可用"
+    }
+  },
+  {
+    "id": "mat-112",
+    "section": "material",
+    "category": "卫生巾",
+    "brand": "面层",
+    "title": "网面+棉柔双区面层",
+    "tags": [
+      "双区",
+      "速渗",
+      "舒适"
+    ],
+    "source": "industry",
+    "body": "接触区用棉柔、导流区用网面，兼顾速渗与亲肤，满足\"要干爽也要软\"的双重诉求。",
+    "material": {
+      "role": "分区功能面层",
+      "composition": "网面+棉柔复合",
+      "structure": "分区复合",
+      "process": "复合压合",
+      "experience": "干得快也摸着软",
+      "consumer": "纠结肤感人群",
+      "ref": "平衡型款结构"
+    }
+  },
+  {
+    "id": "mat-113",
+    "section": "material",
+    "category": "卫生巾",
+    "brand": "结构",
+    "title": "尾翼加长防漏兜",
+    "tags": [
+      "防漏",
+      "夜用",
+      "结构"
+    ],
+    "source": "industry",
+    "body": "夜用款尾翼加长并向内兜起，形成尾部防漏兜，应对平躺/侧睡的尾部溢出，降低夜漏焦虑。",
+    "material": {
+      "role": "尾部防漏结构",
+      "composition": "加长无纺+定位胶",
+      "structure": "尾兜立体",
+      "process": "热压定型",
+      "experience": "安心睡整晚",
+      "consumer": "量大、夜漏焦虑人群",
+      "ref": "夜用/安睡裤过渡款"
+    }
+  },
+  {
+    "id": "mat-114",
+    "section": "material",
+    "category": "卫生巾",
+    "brand": "芯体",
+    "title": "SAP 高吸收珠粒",
+    "tags": [
+      "SAP",
+      "高吸",
+      "芯体"
+    ],
+    "source": "industry",
+    "body": "高吸水性树脂（SAP）珠粒可吸收自重百倍液体并凝胶化，是卫生巾吸收量的核心来源，选型决定反渗与结团。",
+    "material": {
+      "role": "核心吸收材料",
+      "composition": "聚丙烯酸钠SAP",
+      "structure": "珠粒分散",
+      "process": "聚合造粒",
+      "experience": "一小颗吸一大片",
+      "consumer": "（材料原理）",
+      "ref": "选型关注粒径/吸速/加压吸"
+    }
+  },
+  {
+    "id": "mat-115",
+    "section": "material",
+    "category": "卫生巾",
+    "brand": "环保",
+    "title": "水溶性外包装膜",
+    "tags": [
+      "环保",
+      "水溶",
+      "包装"
+    ],
+    "source": "industry",
+    "body": "外箱包装用 PVA 水溶性膜，遇水溶解、无塑料残留，减塑趋势下的包装升级方向。",
+    "material": {
+      "role": "减塑外包装",
+      "composition": "PVA 水溶性膜",
+      "structure": "薄膜热封",
+      "process": "吹膜",
+      "experience": "扔了也不留塑料",
+      "consumer": "极简环保人群",
+      "ref": "ESG 包装叙事"
+    }
+  },
+  {
+    "id": "mat-116",
+    "section": "material",
+    "category": "卫生巾",
+    "brand": "面层",
+    "title": "竹纤维抗菌面层",
+    "tags": [
+      "竹纤维",
+      "抗菌",
+      "天然"
+    ],
+    "source": "industry",
+    "body": "竹浆纤维天然含竹醌具抑菌性，且可降解，做面层兼顾天然与安心，对应\"竹系\"纯净定位。",
+    "material": {
+      "role": "天然抗菌面层",
+      "composition": "竹浆纤维",
+      "structure": "水刺非织造",
+      "process": "竹浆制纤",
+      "experience": "天然抑菌、可降解",
+      "consumer": "天然成分党",
+      "ref": "天然线差异化"
+    }
+  },
+  {
+    "id": "mat-117",
+    "section": "material",
+    "category": "卫生巾",
+    "brand": "工艺",
+    "title": "超声波无缝压合",
+    "tags": [
+      "工艺",
+      "无缝",
+      "轻薄"
+    ],
+    "source": "industry",
+    "body": "用超声波替代胶水压合各层，无胶更轻薄、无化学残留，边缘更平整，适合超薄款。",
+    "material": {
+      "role": "无胶复合工艺",
+      "composition": "（工艺）",
+      "structure": "超声波压合",
+      "process": "超声焊接",
+      "experience": "更薄更干净",
+      "consumer": "成分/工艺敏感人群",
+      "ref": "超薄款工艺卖点"
+    }
+  },
+  {
+    "id": "news-172",
+    "section": "news",
+    "category": "卫生巾",
+    "brand": "护舒宝",
+    "title": "护舒宝液体卫生巾 极护 0 感系列",
+    "tags": "液体",
+    "source": "pg",
+    "date": "2026-07-15",
+    "url": "https://www.pg.com",
+    "body": "采用 FlexFoam 液体材料一体成型，0 胶水、超薄贴合，主打\"像皮肤一样\"的无感体验，2026 持续升级极护线。",
+    "usp": {
+      "features": [
+        "FlexFoam 液体材料",
+        "一体成型 0 胶水",
+        "超薄贴合"
+      ],
+      "innovation": [
+        "液体材料替代木浆芯",
+        "回弹不结团"
+      ],
+      "sellingPoint": [
+        "无感穿着",
+        "量大不涨厚"
+      ]
+    }
+  },
+  {
+    "id": "news-173",
+    "section": "news",
+    "category": "卫生巾",
+    "brand": "苏菲",
+    "title": "苏菲 裸感 S 极薄 0.1 系列",
+    "tags": "极薄",
+    "source": "unicharm",
+    "date": "2026-06-20",
+    "url": "https://www.unicharm.com",
+    "body": "苏菲裸感 S 把日用厚度压到约 1mm，辅以棉柔面层与瞬吸芯，主打\"裸感无负担\"的日用体验。",
+    "usp": {
+      "features": [
+        "约 1mm 极薄",
+        "棉柔亲肤面层",
+        "瞬吸芯体"
+      ],
+      "innovation": [
+        "超薄复合芯",
+        "柔边不磨"
+      ],
+      "sellingPoint": [
+        "几乎无感",
+        "夏天首选"
+      ]
+    }
+  },
+  {
+    "id": "news-174",
+    "section": "news",
+    "category": "卫生巾",
+    "brand": "高洁丝",
+    "title": "高洁丝 海岛棉 奢柔夜用",
+    "tags": "长绒棉",
+    "source": "kotex",
+    "date": "2026-05-30",
+    "url": "https://www.kotex.com",
+    "body": "高洁丝海岛棉系列延伸夜用款，长绒棉面层更柔，加长尾翼防漏，主打高端天然棉夜用。",
+    "usp": {
+      "features": [
+        "海岛棉长绒面层",
+        "加长尾翼",
+        "夜用 420mm"
+      ],
+      "innovation": [
+        "高端棉夜用化"
+      ],
+      "sellingPoint": [
+        "贵妇触感",
+        "安心整晚"
+      ]
+    }
+  },
+  {
+    "id": "news-175",
+    "section": "news",
+    "category": "卫生巾",
+    "brand": "乐而雅",
+    "title": "乐而雅 空气棉 呼吸日用",
+    "tags": "透气",
+    "source": "kao",
+    "date": "2026-04-18",
+    "url": "https://www.kao.com",
+    "body": "乐而雅空气棉系列强调\"会呼吸\"，微孔底膜+蓬松芯体，主打不闷不捂的透气日用。",
+    "usp": {
+      "features": [
+        "微孔透气底膜",
+        "蓬松空气芯",
+        "棉柔面层"
+      ],
+      "innovation": [
+        "透气结构升级"
+      ],
+      "sellingPoint": [
+        "一整天不闷",
+        "久坐友好"
+      ]
+    }
+  },
+  {
+    "id": "news-176",
+    "section": "news",
+    "category": "卫生巾",
+    "brand": "ABC",
+    "title": "ABC 卫生巾 轻养 植萃系列",
+    "tags": "植萃",
+    "source": "abc",
+    "date": "2026-03-22",
+    "url": "https://www.abc.com",
+    "body": "ABC 延续清凉+植萃路线，推出含草本精华的轻养系列，兼顾凉感与舒缓，主打年轻女性日常。",
+    "usp": {
+      "features": [
+        "草本植萃芯片",
+        "凉感舒缓",
+        "棉柔面层"
+      ],
+      "innovation": [
+        "清凉+植萃双效"
+      ],
+      "sellingPoint": [
+        "清新不尴尬",
+        "日常性价比"
+      ]
+    }
+  },
+  {
+    "id": "news-177",
+    "section": "news",
+    "category": "卫生巾",
+    "brand": "自由点",
+    "title": "自由点 益生菌 2.0 卫生巾",
+    "tags": "益生菌",
+    "source": "free",
+    "date": "2026-07-08",
+    "url": "https://www.free.com",
+    "body": "自由点益生菌系列升级 2.0，强调私密微生态平衡概念，面层添加益生菌代谢产物，主打\"养护型\"卫生巾。",
+    "usp": {
+      "features": [
+        "益生菌代谢物面层",
+        "弱酸亲肤",
+        "棉柔"
+      ],
+      "innovation": [
+        "微生态养护概念"
+      ],
+      "sellingPoint": [
+        "不只是吸收",
+        "日常养护"
+      ]
+    }
+  },
+  {
+    "id": "news-178",
+    "section": "news",
+    "category": "卫生巾",
+    "brand": "她研社",
+    "title": "她研社 深藏 Blue 夜用裤",
+    "tags": "安睡",
+    "source": "tayan",
+    "date": "2026-06-02",
+    "url": "https://www.tayan.com",
+    "body": "她研社深藏 Blue 推出夜用安睡裤形态，深藏蓝视觉+瞬吸芯，主打年轻女性\"安心睡\"场景。",
+    "usp": {
+      "features": [
+        "安睡裤形态",
+        "瞬吸锁水",
+        "深藏蓝视觉"
+      ],
+      "innovation": [
+        "卫生巾品牌做安睡裤"
+      ],
+      "sellingPoint": [
+        "一夜不怕漏",
+        "颜值在线"
+      ]
+    }
+  },
+  {
+    "id": "news-179",
+    "section": "news",
+    "category": "卫生巾",
+    "brand": "全棉时代",
+    "title": "全棉时代 有机棉 纯棉夜用",
+    "tags": "有机",
+    "source": "purcotton",
+    "date": "2026-05-12",
+    "url": "https://www.purcotton.com",
+    "body": "全棉时代有机棉线延伸夜用，GOTS 有机棉面层+加长防漏，主打纯净母婴级夜用。",
+    "usp": {
+      "features": [
+        "GOTS 有机棉",
+        "加长防漏兜",
+        "无荧光"
+      ],
+      "innovation": [
+        "有机棉夜用化"
+      ],
+      "sellingPoint": [
+        "零刺激",
+        "敏感肌安心"
+      ]
+    }
+  },
+  {
+    "id": "news-180",
+    "section": "news",
+    "category": "卫生巾",
+    "brand": "洁伶",
+    "title": "洁伶 本草 暖宫日用来月经",
+    "tags": "暖宫",
+    "source": "jieling",
+    "date": "2026-02-28",
+    "url": "https://www.jieling.com",
+    "body": "洁伶本草系列主打艾草暖宫，日用款嵌入温感微粒，对应宫寒女性的\"暖\"诉求（非医疗）。",
+    "usp": {
+      "features": [
+        "艾草温感微粒",
+        "棉柔面层",
+        "日用"
+      ],
+      "innovation": [
+        "暖宫概念日用化"
+      ],
+      "sellingPoint": [
+        "小腹暖暖",
+        "宫寒友好"
+      ]
+    }
+  },
+  {
+    "id": "news-181",
+    "section": "news",
+    "category": "卫生巾",
+    "brand": "薇尔",
+    "title": "薇尔 V 型 立体剪裁日用",
+    "tags": "剪裁",
+    "source": "libresse",
+    "date": "2026-04-05",
+    "url": "https://www.libresse.com",
+    "body": "薇尔以\"V 型立体剪裁\"为标识，贴合身体曲线，减少缝隙，主打\"更懂女生身形\"的贴合日用。",
+    "usp": {
+      "features": [
+        "V 型立体剪裁",
+        "中凸贴合",
+        "棉柔"
+      ],
+      "innovation": [
+        "人体工学剪裁"
+      ],
+      "sellingPoint": [
+        "贴身不走位",
+        "隐形感"
+      ]
+    }
+  },
+  {
+    "id": "news-182",
+    "section": "news",
+    "category": "卫生巾",
+    "brand": "倍舒特",
+    "title": "倍舒特 医护级 纯棉卫生巾",
+    "tags": "医护",
+    "source": "beishute",
+    "date": "2026-03-10",
+    "url": "https://www.beishute.com",
+    "body": "倍舒特主打\"医护级\"标准（高于普通国标），纯棉面层+抑菌，切入对安心度要求高的群体。",
+    "usp": {
+      "features": [
+        "医护级标准",
+        "纯棉面层",
+        "抑菌芯片"
+      ],
+      "innovation": [
+        "标准升级背书"
+      ],
+      "sellingPoint": [
+        "更安心",
+        "医院同款感"
+      ]
+    }
+  },
+  {
+    "id": "news-183",
+    "section": "news",
+    "category": "卫生巾",
+    "brand": "奈丝公主",
+    "title": "奈丝公主 竹纤维卫生巾",
+    "tags": "竹纤维",
+    "source": "naisi",
+    "date": "2026-01-25",
+    "url": "https://www.naisi.com",
+    "body": "奈丝公主（恒安）用竹纤维面层，天然抗菌可降解，主打纯净天然的平价有机替代。",
+    "usp": {
+      "features": [
+        "竹纤维面层",
+        "天然抑菌",
+        "可降解"
+      ],
+      "innovation": [
+        "竹系天然线"
+      ],
+      "sellingPoint": [
+        "天然又平价",
+        "环保日常"
+      ]
+    }
+  },
+  {
+    "id": "news-184",
+    "section": "news",
+    "category": "卫生巾",
+    "brand": "淘淘氧棉",
+    "title": "淘淘氧棉 纯氧棉 痘痘肌款",
+    "tags": "纯棉",
+    "source": "taotao",
+    "date": "2026-06-15",
+    "url": "https://www.taotao.com",
+    "body": "淘淘氧棉主打\"纯氧棉\"无添加，推出针对闷痘人群的透气款，强调不闷不捂。",
+    "usp": {
+      "features": [
+        "纯氧棉无添加",
+        "微孔透气",
+        "痘痘肌"
+      ],
+      "innovation": [
+        "针对闷痘场景"
+      ],
+      "sellingPoint": [
+        "不闷痘",
+        "敏感区域友好"
+      ]
+    }
+  },
+  {
+    "id": "news-185",
+    "section": "news",
+    "category": "卫生巾",
+    "brand": "洁婷",
+    "title": "洁婷 樱肌感 粉樱日用",
+    "tags": "颜值",
+    "source": "jieting",
+    "date": "2026-05-20",
+    "url": "https://www.jieting.com",
+    "body": "洁婷樱肌感以粉色樱花视觉+柔棉面层，主打\"少女感\"与柔软触感，切入年轻颜值消费。",
+    "usp": {
+      "features": [
+        "樱花视觉",
+        "柔棉面层",
+        "日用"
+      ],
+      "innovation": [
+        "颜值化包装"
+      ],
+      "sellingPoint": [
+        "好看又好用",
+        "少女心"
+      ]
+    }
+  },
+  {
+    "id": "news-186",
+    "section": "news",
+    "category": "卫生巾",
+    "brand": "护舒宝",
+    "title": "护舒宝 考拉 安睡裤 轻盈版",
+    "tags": "安睡",
+    "source": "pg",
+    "date": "2026-07-01",
+    "url": "https://www.pg.com",
+    "body": "护舒宝考拉安睡裤推轻盈版，更薄更贴，主打\"像内裤一样轻\"的安睡体验。",
+    "usp": {
+      "features": [
+        "轻盈薄款",
+        "360 贴合",
+        "瞬吸"
+      ],
+      "innovation": [
+        "安睡裤轻薄化"
+      ],
+      "sellingPoint": [
+        "轻到忘记穿",
+        "一夜干爽"
+      ]
+    }
+  },
+  {
+    "id": "news-187",
+    "section": "news",
+    "category": "卫生巾",
+    "brand": "苏菲",
+    "title": "苏菲 医护级 纯棉卫生巾",
+    "tags": "医护",
+    "source": "unicharm",
+    "date": "2026-04-28",
+    "url": "https://www.unicharm.com",
+    "body": "苏菲推出医护级纯棉线，借\"医护级\"背书强化安心，纯棉面层+抑菌，对标倍舒特。",
+    "usp": {
+      "features": [
+        "医护级",
+        "纯棉面层",
+        "抑菌"
+      ],
+      "innovation": [
+        "大牌做医护级"
+      ],
+      "sellingPoint": [
+        "大牌更安心",
+        "纯棉亲肤"
+      ]
+    }
+  },
+  {
+    "id": "news-188",
+    "section": "news",
+    "category": "卫生巾",
+    "brand": "高洁丝",
+    "title": "高洁丝 纯棉 夜安裤",
+    "tags": "安睡",
+    "source": "kotex",
+    "date": "2026-03-15",
+    "url": "https://www.kotex.com",
+    "body": "高洁丝纯棉系列出夜安裤，纯棉亲肤+防漏兜，主打天然棉的安睡体验。",
+    "usp": {
+      "features": [
+        "纯棉面层",
+        "夜安裤",
+        "防漏兜"
+      ],
+      "innovation": [
+        "纯棉安睡化"
+      ],
+      "sellingPoint": [
+        "天然贴合",
+        "一夜安心"
+      ]
+    }
+  },
+  {
+    "id": "news-189",
+    "section": "news",
+    "category": "卫生巾",
+    "brand": "乐而雅",
+    "title": "乐而雅 晚安裤 抑菌款",
+    "tags": "安睡",
+    "source": "kao",
+    "date": "2026-02-10",
+    "url": "https://www.kao.com",
+    "body": "乐而雅晚安裤加入抑菌芯片，主打\"闷一夜也不异味\"，针对量大夜漏人群。",
+    "usp": {
+      "features": [
+        "安睡裤",
+        "抑菌芯片",
+        "防漏"
+      ],
+      "innovation": [
+        "安睡裤+抑菌"
+      ],
+      "sellingPoint": [
+        "整晚清新",
+        "量大友好"
+      ]
+    }
+  },
+  {
+    "id": "news-190",
+    "section": "news",
+    "category": "卫生巾",
+    "brand": "ABC",
+    "title": "ABC 卫生巾 纯棉 凉感双效",
+    "tags": "凉感",
+    "source": "abc",
+    "date": "2026-06-25",
+    "url": "https://www.abc.com",
+    "body": "ABC 纯棉款叠加凉感芯片，棉柔亲肤同时夏季清凉，主打\"纯棉也凉快\"。",
+    "usp": {
+      "features": [
+        "纯棉面层",
+        "凉感芯片",
+        "日用"
+      ],
+      "innovation": [
+        "纯棉+凉感组合"
+      ],
+      "sellingPoint": [
+        "软又凉",
+        "夏天舒适"
+      ]
+    }
+  },
+  {
+    "id": "news-191",
+    "section": "news",
+    "category": "卫生巾",
+    "brand": "自由点",
+    "title": "自由点 透气 0 感日用",
+    "tags": "透气",
+    "source": "free",
+    "date": "2026-05-05",
+    "url": "https://www.free.com",
+    "body": "自由点推透气 0 感日用，微孔底膜+超薄芯，主打\"会呼吸的薄\"。",
+    "usp": {
+      "features": [
+        "微孔底膜",
+        "超薄芯",
+        "透气"
+      ],
+      "innovation": [
+        "透气超薄结合"
+      ],
+      "sellingPoint": [
+        "薄且透气",
+        "无感日常"
+      ]
+    }
+  },
+  {
+    "id": "news-192",
+    "section": "news",
+    "category": "卫生巾",
+    "brand": "她研社",
+    "title": "她研社 深藏 Blue 极薄日用",
+    "tags": "极薄",
+    "source": "tayan",
+    "date": "2026-07-12",
+    "url": "https://www.tayan.com",
+    "body": "她研社深藏 Blue 推极薄日用，约 1mm 厚+瞬吸，主打年轻群体的\"隐形日用\"。",
+    "usp": {
+      "features": [
+        "约 1mm 极薄",
+        "瞬吸芯",
+        "深蓝视觉"
+      ],
+      "innovation": [
+        "极薄+颜值"
+      ],
+      "sellingPoint": [
+        "隐形无感",
+        "颜值控"
+      ]
+    }
+  },
+  {
+    "id": "news-193",
+    "section": "news",
+    "category": "卫生巾",
+    "brand": "全棉时代",
+    "title": "全棉时代 纱布卫生巾 日用",
+    "tags": "纱布",
+    "source": "purcotton",
+    "date": "2026-04-22",
+    "url": "https://www.purcotton.com",
+    "body": "全棉时代用纱布工艺做面层，透气蓬松，主打\"会呼吸的棉纱\"自然体验。",
+    "usp": {
+      "features": [
+        "纱布面层",
+        "透气蓬松",
+        "纯棉"
+      ],
+      "innovation": [
+        "纱布工艺面层"
+      ],
+      "sellingPoint": [
+        "自然呼吸",
+        "极简纯净"
+      ]
+    }
+  },
+  {
+    "id": "news-194",
+    "section": "news",
+    "category": "卫生巾",
+    "brand": "洁伶",
+    "title": "洁伶 本草 茶多酚清新款",
+    "tags": "清新",
+    "source": "jieling",
+    "date": "2026-03-18",
+    "url": "https://www.jieling.com",
+    "body": "洁伶本草加入茶多酚清新因子，中和异味带淡茶香，主打\"清新不尴尬\"日常。",
+    "usp": {
+      "features": [
+        "茶多酚因子",
+        "淡茶香",
+        "本草"
+      ],
+      "innovation": [
+        "清新+本草组合"
+      ],
+      "sellingPoint": [
+        "淡淡茶香",
+        "日常清新"
+      ]
+    }
+  },
+  {
+    "id": "news-195",
+    "section": "news",
+    "category": "卫生巾",
+    "brand": "薇尔",
+    "title": "薇尔 有机棉 敏感肌款",
+    "tags": "有机",
+    "source": "libresse",
+    "date": "2026-06-08",
+    "url": "https://www.libresse.com",
+    "body": "薇尔推有机棉敏感肌款，GOTS 认证+无添加，主打\"成分党\"的纯净安心。",
+    "usp": {
+      "features": [
+        "GOTS 有机棉",
+        "无添加",
+        "敏感肌"
+      ],
+      "innovation": [
+        "有机棉+敏感定位"
+      ],
+      "sellingPoint": [
+        "零刺激",
+        "成分配方透明"
+      ]
+    }
+  },
+  {
+    "id": "news-196",
+    "section": "news",
+    "category": "卫生巾",
+    "brand": "倍舒特",
+    "title": "倍舒特 械字号 安心裤",
+    "tags": "安睡",
+    "source": "beishute",
+    "date": "2026-05-28",
+    "url": "https://www.beishute.com",
+    "body": "倍舒特以\"械字号\"更高标准做安睡裤，主打医疗级安心，切入高安心需求。",
+    "usp": {
+      "features": [
+        "械字号标准",
+        "安睡裤",
+        "防漏"
+      ],
+      "innovation": [
+        "械字号安睡裤"
+      ],
+      "sellingPoint": [
+        "更严标准",
+        "一夜安心"
+      ]
+    }
+  },
+  {
+    "id": "news-197",
+    "section": "news",
+    "category": "卫生巾",
+    "brand": "奈丝公主",
+    "title": "奈丝公主 可降解 环保款",
+    "tags": "环保",
+    "source": "naisi",
+    "date": "2026-02-20",
+    "url": "https://www.naisi.com",
+    "body": "奈丝公主推可降解底膜环保款，PLA 植物膜+竹纤维，主打\"用完也温柔地球\"。",
+    "usp": {
+      "features": [
+        "PLA 可降解底膜",
+        "竹纤维",
+        "环保"
+      ],
+      "innovation": [
+        "环保材料组合"
+      ],
+      "sellingPoint": [
+        "减塑环保",
+        "理念消费"
+      ]
+    }
+  },
+  {
+    "id": "news-198",
+    "section": "news",
+    "category": "卫生巾",
+    "brand": "淘淘氧棉",
+    "title": "淘淘氧棉 医护级 夜用",
+    "tags": "医护",
+    "source": "taotao",
+    "date": "2026-04-12",
+    "url": "https://www.taotao.com",
+    "body": "淘淘氧棉推医护级夜用，纯氧棉+加长防漏，主打\"无添加也安心\"的夜用。",
+    "usp": {
+      "features": [
+        "医护级",
+        "纯氧棉",
+        "夜用加长"
+      ],
+      "innovation": [
+        "氧棉做医护级"
+      ],
+      "sellingPoint": [
+        "无添加安心",
+        "夜用防漏"
+      ]
+    }
+  },
+  {
+    "id": "news-199",
+    "section": "news",
+    "category": "卫生巾",
+    "brand": "洁婷",
+    "title": "洁婷 1013+ 超薄瞬吸",
+    "tags": "超薄",
+    "source": "jieting",
+    "date": "2026-03-30",
+    "url": "https://www.jieting.com",
+    "body": "洁婷 1013+ 系列强调超薄+瞬吸，导流沟槽快速扩散，主打\"薄却很能吸\"。",
+    "usp": {
+      "features": [
+        "超薄",
+        "导流沟槽",
+        "瞬吸"
+      ],
+      "innovation": [
+        "薄+瞬吸平衡"
+      ],
+      "sellingPoint": [
+        "薄能吸",
+        "日常实用"
+      ]
+    }
+  },
+  {
+    "id": "news-200",
+    "section": "news",
+    "category": "卫生巾",
+    "brand": "护舒宝",
+    "title": "护舒宝 天然棉 亲肤系列",
+    "tags": "天然",
+    "source": "pg",
+    "date": "2026-07-20",
+    "url": "https://www.pg.com",
+    "body": "护舒宝补充天然棉亲肤线，纯棉面层+液体芯，主打大牌的天然棉体验。",
+    "usp": {
+      "features": [
+        "纯棉面层",
+        "液体芯",
+        "亲肤"
+      ],
+      "innovation": [
+        "大牌天然棉"
+      ],
+      "sellingPoint": [
+        "大牌品质",
+        "天然亲肤"
+      ]
+    }
+  },
+  {
+    "id": "news-201",
+    "section": "news",
+    "category": "卫生巾",
+    "brand": "苏菲",
+    "title": "苏菲 裸感 S 安睡裤",
+    "tags": "安睡",
+    "source": "unicharm",
+    "date": "2026-06-10",
+    "url": "https://www.unicharm.com",
+    "body": "苏菲裸感 S 出安睡裤版，裸感薄+360 贴合，主打\"裸睡般安心\"。",
+    "usp": {
+      "features": [
+        "裸感薄",
+        "360 贴合",
+        "安睡裤"
+      ],
+      "innovation": [
+        "裸感线安睡化"
+      ],
+      "sellingPoint": [
+        "轻薄安睡",
+        "一夜无感"
+      ]
+    }
   }
 ]
