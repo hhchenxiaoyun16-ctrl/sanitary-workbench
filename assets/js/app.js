@@ -252,6 +252,7 @@
     var noteVal = notes[id] || "";
 
     var html = '<div class="modal-hero">' + imgTag(it) + '</div>' +
+      (it.image_credit ? '<div class="img-credit">' + esc(it.image_credit) + '</div>' : '') +
       '<div class="modal-pad">' +
         '<div class="modal-meta">' +
           '<span class="chip">' + esc(it.category) + '</span>' +

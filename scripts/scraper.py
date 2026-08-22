@@ -137,7 +137,8 @@ def build_data_js(curated, auto, pools):
     curated_titles = {norm(c["title"]) for c in curated}
     auto_keep = [a for a in auto if a["nt"] not in curated_titles]
 
-    # 为「精选」中未指定封面的条目分配真实封面(来自 images/real 真实摄影，按板块+id确定性分配，保证每篇不同)
+    # 精选条目的封面由 fetch_images.py 按内容语义抓取真实照片并写回 curated.json，
+    # 此处仅兜底：极少数学条目若仍为空，才用板块图池分配(理论上不会发生)。
     for c in curated:
         if not c.get("image"):
             c["image"] = pick_cover(pools, c.get("section", "news"), c.get("id", c.get("title", "")))
