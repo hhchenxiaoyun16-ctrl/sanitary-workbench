@@ -1,0 +1,54 @@
+name: 每日自动更新情报
+
+on:
+  schedule:
+    # 每天北京时间 08:00 (UTC 00:00) 抓取最新新闻并更新网站
+    - cron: "0 0 * * *"
+  workflow_dispatch:  # 允许手动触发
+
+permissions:
+  contents: write   # 允许 workflow 提交到仓库
+
+jobs:
+  update:
+    runs-on: ubuntu-latest
+    steps:
+      - name: 检出仓库
+        uses: actions/checkout@v4
+
+      - name: 配置 Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
+
+      - name: 安装依赖
+        run: |
+          pip install --quiet requests
+
+      - name: 抓取最新新闻并更新 data.js
+        run: |
+          python scripts/scraper.py
+
+      - name: 检查是否有变更
+        id: diff
+        run: |
+          git add -A
+          if git diff --cached --quiet; then
+            echo "changed=false" >> $GITHUB_OUTPUT
+          else
+            echo "changed=true" >> $GITHUB_OUTPUT
+          fi
+
+      - name: 提交并推送
+        if: steps.diff.outputs.changed == 'true'
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "github-actions[bot]@users.noreply.github.com"
+          DATE=$(date -u +"%Y-%m-%d %H:%M")
+          git commit -m "chore(auto): 每日情报更新 ${DATE} [skip ci]"
+          git push
+
+      - name: 输出摘要
+        run: |
+          echo "✅ 更新完成，GitHub Pages 将自动重建"
+          echo "站点: https://hhchenxiaoyun16-ctrl.github.io/sanitary-workbench/"

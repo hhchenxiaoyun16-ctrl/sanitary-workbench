@@ -1,18 +1,20 @@
 /* ============================================================
-   小小y产品策划 · 卫生巾/安睡裤产品情报工作台
-   数据层 — 内容由公开权威信息整理（2025-2026），仅供策略参考
+   小小y产品策划 · 卫生巾/安睡裤产品情报工作台 · 数据层(自动生成)
+   生成时间: 2026-08-22 ｜ 精选 48 条 + 实时抓取 17 条 = 共 65 条
+   内容来源: 公开权威信息整理(2025-2026)，仅供策略参考
+   封面图: 均为真实抓取照片(Wikimedia/Openverse CC / Pexels / 品牌新闻稿)，非AI生成
    ============================================================ */
 
 const SITE_META = {
   title: "小小y产品策划",
   subtitle: "卫生巾 · 安睡裤 · 经期裤 产品情报工作台",
-  desc: "把全球碎片化的监管 / 原料 / 工艺 / 趋势 / 包装 / 竞品情报，统一沉淀到一条时间轴上。",
+  desc: "把全球碎片化的监管 / 原料 / 工艺 / 趋势 / 包装 / 竞品情报，统一沉淀到一条时间轴上。每日自动更新。",
   buildDate: "2026-08-22",
   owner: "hhchenxiaoyun16-ctrl",
-  repo: "sanitary-workbench"
+  repo: "sanitary-workbench",
+  autoCount: 17
 };
 
-/* 主品类 + 二级品类（顶部 Tab） */
 const CATEGORIES = [
   { key: "卫生巾", label: "卫生巾" },
   { key: "安睡裤", label: "安睡裤" },
@@ -22,7 +24,6 @@ const CATEGORIES = [
   { key: "纸尿裤", label: "纸尿裤·婴童" }
 ];
 
-/* 板块定义 */
 const SECTIONS = [
   { key: "feed", label: "今日动态", en: "Feed" },
   { key: "industry", label: "行业资讯", en: "Industry" },
@@ -33,8 +34,8 @@ const SECTIONS = [
   { key: "competitor", label: "竞品雷达", en: "Competitor" },
   { key: "me", label: "个人中心", en: "My Desk" }
 ];
+const FEED_LIMIT = 40;
 
-/* 数据源（权威 / 垂直 / 国际） */
 const SOURCES = {
   lifePaper: { name: "生活用纸网", url: "http://www.cnhpia.org/", note: "中国造纸协会生活用纸专委会，行业最权威垂直媒体" },
   chinabgao: { name: "中国报告大厅", url: "https://www.chinabgao.com/", note: "行业研报与市场规模" },
@@ -53,537 +54,74 @@ const SOURCES = {
   edana: { name: "EDANA", url: "https://www.edana.org/", note: "欧洲非织造协会" },
   unicharm: { name: "尤妮佳官网", url: "https://www.unicharm.co.jp/", note: "苏菲/乐而雅新品" },
   kao: { name: "花王官网", url: "https://www.kao.com/cn/", note: "乐而雅新品" },
-  pgh: { name: "宝洁/护舒宝", url: "https://www.pg.com.cn/", note: "护舒宝研发" }
+  pgh: { name: "宝洁/护舒宝", url: "https://www.pg.com.cn/", note: "护舒宝研发" },
+  googleNews: { name: "Google News", url: "https://news.google.com/", note: "实时新闻聚合(每日自动更新)" }
 };
 
-/* ============================================================
-   主数据：items
-   section: industry/news/material/packaging/regulatory/competitor
-   category: 卫生巾/安睡裤/经期裤/棉条/护垫/纸尿裤
-   ============================================================ */
 const ITEMS = [
-
-  /* ---------------- 行业资讯 ---------------- */
-  {
-    id: "ind-001", section: "industry", category: "卫生巾",
-    title: "新国标一周年：行业从「可用」走向「可信」",
-    en: "One Year of the New GB Standard",
-    brand: "行业综述", source: "lifePaper", date: "2026-07-01",
-    image: "", tags: ["GB 15979-2024", "信任", "质量竞争"],
-    summary: "2025-07-01 强制性国标 GB 15979-2024 实施满一年，卫生巾从规模扩张转向质量竞争。",
-    body: "2025年7月1日，强制性国家标准《一次性使用卫生用品卫生要求》(GB 15979—2024) 正式实施，这是该标准自2002年发布以来的首次修订，将卫生巾、护垫等按风险等级纳入重点监管，新增 pH 值、可迁移性荧光增白剂残留量等理化指标，并调整微生物污染限值与毒理学要求。新国标落地已满一年，推动行业从规模扩张转向质量竞争。2025年中国卫生巾市场规模达682亿元，同比增长8.1%，市场渗透率超96%。"
-  },
-  {
-    id: "ind-002", section: "industry", category: "卫生巾",
-    title: "2025 中国卫生巾市场规模达 682 亿元，渗透率超 96%",
-    en: "China Sanitary Napkin Market 2025",
-    brand: "行业数据", source: "chinabgao", date: "2026-01-15",
-    image: "", tags: ["市场规模", "渗透率", "高端化"],
-    summary: "据行业统计，2025 年中国卫生巾市场规模 682 亿元（同比+8.1%），渗透率超 96%，CR5 达 61%。",
-    body: "中国是全球最大女性卫生用品市场之一。2025年市场规模达682亿元，同比增长8.1%，市场渗透率超过96%。尚普咨询《2025年中国卫生巾市场洞察报告》显示，97%的卫生巾购买者为女性，超过50%的女性近年增加了私护产品购买频率。市场集中度持续提升，CR5已达61%；电商销售占比超40%，直播带货贡献超20%销售额。单价15元以上高端卫生巾增速达25%，功能性卫生巾占据约65%份额，超90%消费者将「原料安全」列为首要购买因素。"
-  },
-  {
-    id: "ind-003", section: "industry", category: "卫生巾",
-    title: "高端化与功能化并行：纯棉、抑菌、pH 平衡成竞争焦点",
-    en: "Premiumization & Functionalization",
-    brand: "行业趋势", source: "shangpu", date: "2025-11-20",
-    image: "", tags: ["纯棉", "抑菌", "pH平衡", "趋势"],
-    summary: "材质升级：中国纯棉卫生巾2024年规模125亿元；抑菌、pH平衡、智能监测成焦点。",
-    body: "据行业研究，中国纯棉卫生巾2024年市场规模达125亿元，自由点以「有机纯棉」+「九无添加」+全链路可溯源构建竞争力。可降解卫生巾成本比普通产品高20%，但渗透率仅12%，增长空间大。抑菌、智能监测、pH平衡等功能型产品成为竞争焦点——如她研社抑菌系列、Tampax Pure pH平衡棉条。超过90%消费者将「原料安全」列为首要购买因素。"
-  },
-  {
-    id: "ind-004", section: "industry", category: "卫生巾",
-    title: "渠道变革：直播带货贡献超 20%，2025 线上占比迈向 47%",
-    en: "Channel Shift to Livestream",
-    brand: "渠道数据", source: "cbn", date: "2025-09-08",
-    image: "", tags: ["直播", "抖音", "电商", "渠道"],
-    summary: "电商平台销售占比已超40%，直播带货贡献超20%销售额，预计2030年线上占比达47%-65%。",
-    body: "卫生巾销售渠道发生根本性变革：电商平台销售占比已超过40%，直播带货贡献了超过20%的销售额，预计到2030年线上销售额占比可能达47%甚至65%。2024年1-2月线上销售量同比上涨3%，累计约3500万件。抖音、小红书成为新品打爆与口碑沉淀的核心阵地，对产品策划的意义在于：包装即内容、开箱即种草。"
-  },
-  {
-    id: "ind-005", section: "industry", category: "卫生巾",
-    title: "东南亚出海：中国品牌销售额同比增长 62%",
-    en: "Going Global: SE Asia +62%",
-    brand: "出海数据", source: "chinabgao", date: "2025-10-12",
-    image: "", tags: ["出海", "东南亚", "全球化"],
-    summary: "2025 中国卫生巾出口量预计占产能15%，东南亚销售额同比+62%，越南市占率达18%。",
-    body: "中国卫生巾产业积极开拓国际市场，预计2025年出口量将占产能的15%。中国品牌在东南亚表现亮眼，近期销售额同比增长达62%，个别品牌在越南市场占有率已达18%。借助 TikTok、Shein 等平台出海成为新增长曲线，对国内品牌的产品本地化（尺寸、气候、宗教文化）提出新要求。"
-  },
-  {
-    id: "ind-006", section: "industry", category: "安睡裤",
-    title: "安睡裤品类崛起：整晚不换的「睡眠经济」新入口",
-    en: "Period Panty Boom",
-    brand: "品类机会", source: "mojing", date: "2025-12-03",
-    image: "", tags: ["安睡裤", "经期裤", "睡眠", "品类"],
-    summary: "安睡裤主打「360°贴合+整晚不换」，对吸收速度/吸水倍率/防侧漏要求高于普通卫生巾，是高端化与礼品化潜力品类。",
-    body: "「安睡裤」是一种裤型卫生巾，又称女性卫生裤、安心裤、夜安裤。相较普通卫生巾，它要满足整晚不更换，吸血量更多，对吸收速度、吸水倍率、渗透性能及防侧漏性能要求更高。江苏省消保委2025年比较试验显示，40批次产品吸收速度均在5~12秒（国标≤60秒），5批次吸水倍率达30倍以上。该品类正从「夜用替代」走向「独立礼品/旅行装」场景，溢价与联名空间大。"
-  },
-  {
-    id: "ind-007", section: "industry", category: "卫生巾",
-    title: "Z 世代为「限定」多付 30%：创意包装成第二增长曲线",
-    en: "Collectible Packaging",
-    brand: "尚普咨询年度复盘", source: "shangpu", date: "2026-02-18",
-    image: "", tags: ["包装", "情绪价值", "联名", "复购"],
-    summary: "尚普预测：到2026年具「收藏属性」的创意包装销售占比有望从不足5%提升至18%。",
-    body: "尚普咨询年度复盘指出：高端不是价格，是情绪价值。Z世代愿为「限定」多付30%。「季度限量联名」打法（每季携手新锐艺术家推12款经期情绪插画、单片铝箔袋印隐藏诗句、可种植包装、云收藏数字藏品）让试点品牌A在2025年5月抖音直播卖出320万包，同比+176%，新客占比升至42%（其中28%来自「被包装种草」）。预测到2026年，具收藏属性的创意包装销售占比有望从不足5%提升至18%。"
-  },
-
-  /* ---------------- 新品上新 ---------------- */
-  {
-    id: "news-001", section: "news", category: "卫生巾",
-    title: "护舒宝全球首发「莱赛尔蚕丝卫生巾」：蚕丝写进成分表",
-    en: "Whisper Lyocell × Silk Top Sheet",
-    brand: "护舒宝", source: "pgh", date: "2026-03-12",
-    image: "images/product/prod-day.png",
-    tags: ["莱赛尔", "蚕丝", "少摩擦", "敏感肌"],
-    summary: "首次将莱赛尔纤维与天然蚕丝结合用于卫生巾表层，摩擦系数较纯棉降低22%，主打减少经期红痒。",
-    body: "护舒宝在2026中国医师协会妇产科医师大会全球首发莱赛尔蚕丝卫生巾，首次将莱赛尔与天然蚕丝结合应用于卫生巾表层，以写进成分表的天然真蚕丝减少经期摩擦红痒。据介绍，表层摩擦力较护舒宝天然纯棉产品降低22%；现场调研显示超99.6%受访专家认可该材质组合有助于减少私处摩擦红痒。这是「材质即卖点」的典型案例——把抽象的「亲肤」变成可验证的成分与数据。"
-  },
-  {
-    id: "news-002", section: "news", category: "安睡裤",
-    title: "护舒宝「减压深睡裤」：Sleep Pro 多孔深睡芯 + 4D 微压包裹",
-    en: "Whisper Deep Sleep Panty",
-    brand: "护舒宝", source: "pgh", date: "2026-03-12",
-    image: "images/product/prod-panty.png",
-    tags: ["安睡裤", "减压", "防漏", "透气"],
-    summary: "针对夜间「闷、勒、怕漏」三大痛点，融合 Sleep Pro 多孔深睡芯与四向防漏设计，实验室称腰腹腿压力减少30%。",
-    body: "护舒宝全新推出减压深睡裤，针对经期夜晚「闷、勒、怕漏」三大痛点，创新融合 Sleep Pro 多孔深睡芯、4D立体微压包裹及四向防漏设计，实现整晚透气、防漏、不粘肤。2026妇产科医师大会调研显示，超99.7%受访专家认可挑选轻薄防漏安睡裤可减少夜间渗漏及裆部闷湿黏热。结构创新（芯体+包裹+防漏）是安睡裤差异化的主战场。"
-  },
-  {
-    id: "news-003", section: "news", category: "卫生巾",
-    title: "护舒宝液体卫生巾 Pro 升级：速吸散热条吸收速度 +50%",
-    en: "Whisper Liquid Pro Upgrade",
-    brand: "护舒宝", source: "pgh", date: "2026-03-12",
-    image: "images/product/prod-day.png",
-    tags: ["液体卫生巾", "FlexFoam", "速吸", "物理隔菌"],
-    summary: "新升级「灵动速吸岛」技术，第二次潮涌吸收速度较上代+50%；Pro健康专研版以纯物理屏障隔菌，不添加化学杀菌剂。",
-    body: "护舒宝液体卫生巾核心采用 FlexFoam 液体材料吸收芯，吸收后巾身保持超薄不变形。2026升级版采用「灵动速吸岛」技术，据宝洁研发数据第二次潮涌吸收速度较上一代提升约50%。Pro健康专研版采用纯物理屏障隔绝细菌，不添加化学杀菌剂，以95%物理隔菌能力提供温和体验，契合「避免过度清洁破坏微生态」的专家观点，并通过英国健康联盟评估、无添加荧光剂。"
-  },
-  {
-    id: "news-004", section: "news", category: "卫生巾",
-    title: "花王乐而雅「零触感纯棉甄选」：0.1cm 吸收层打破纯棉=厚重",
-    en: "Laurier Zero Touch Cotton",
-    brand: "乐而雅(花王)", source: "kao", date: "2026-07-21",
-    image: "images/product/prod-day.png",
-    tags: ["纯棉", "超薄", "透气孔底膜", "乐而雅"],
-    summary: "100%澳洲进口纯棉表层 + 特薄0.1cm吸收层 + 千万透气孔底膜，主打「纯棉表层+超薄透气」双重体验。",
-    body: "花王旗下乐而雅推出『零触感纯棉甄选』系列，以特薄0.1cm吸收层打破「纯棉=厚重」固有印象。新品采用100%澳洲进口纯棉表层，搭配天然透气棉纤维表层与千万透气孔底膜，层层透气远离闷热。上市规格覆盖22.5/25/35cm护翼型，2026年7月于中国大陆上市。启示：纯棉赛道正从「安心」升级到「轻盈安心」，超薄化是纯棉线必须补的课。"
-  },
-  {
-    id: "news-005", section: "news", category: "安睡裤",
-    title: "日本花王夜用安心裤（25新款）：拉拉裤式，300ml+ 吸收",
-    en: "Kao Night Panty 2025",
-    brand: "花王(日本)", source: "kao", date: "2025-08-20",
-    image: "images/product/prod-panty.png",
-    tags: ["安心裤", "拉拉裤", "产后", "大吸收"],
-    summary: "拉拉裤式设计贴合不位移，高分子吸水材料+多层导流，300ml以上超大吸收，适合夜间与产后。",
-    body: "日本花王25年新款夜用安心裤采用拉拉裤式设计，穿脱像内裤，特别适合不喜欢移位、翻身易漏的用户及产后妈妈。材质为柔软无纺布，亲肤透气，简约白系视觉更干净。吸收力采用高分子吸水材料与多层导流结构，300ml以上超大吸收容量，可应对夜间经量高峰或产后恶露。对国内安睡裤产品的启发：产后/大流量场景是高溢价细分。"
-  },
-  {
-    id: "news-006", section: "news", category: "卫生巾",
-    title: "全棉时代奈丝公主「100%棉少女系列消毒级」：电子束物理灭菌",
-    en: "PurCotton NICE Princess 100% Cotton",
-    brand: "奈丝公主(全棉时代)", source: "lifePaper", date: "2026-04-10",
-    image: "images/product/prod-day.png",
-    tags: ["全棉", "消毒级", "医用级", "无添加"],
-    summary: "依托稳健医疗医用品背景，原料经277道指标检验，30万级洁净车间生产，全程0手触，电子束物理灭菌。",
-    body: "全棉时代旗下奈丝公主依托母公司稳健医疗多年医用品制造背景，2026年推出「100%棉少女系列消毒级卫生巾」，原料经277道指标检验，在30万级洁净车间生产，全程0手触，采用电子束物理灭菌技术。在全国全棉时代门店永久免费提供应急卫生巾。定位「医用级安全」，把医疗背书转化为消费信任。"
-  },
-  {
-    id: "news-007", section: "news", category: "卫生巾",
-    title: "自由点益 LA88 Pro：有机棉 + 复合后生元，调节私处微生态",
-    en: "Free LA88 Pro Probiotic",
-    brand: "自由点", source: "lifePaper", date: "2025-06-15",
-    image: "images/product/prod-day.png",
-    tags: ["有机棉", "益生菌", "微生态", "自由点"],
-    summary: "有机棉面层 + 复合后生元菌剂(LA88+N13+益生元)，经临床证实调节阴道微生态，获MyMicrobiome认证。",
-    body: "自由点是国内较早推广有机纯棉表层概念的品牌。其益LA88 Pro系列添加复合后生元菌剂（LA88+N13+益生元），经临床试验证实对阴道微生态具调节效果，通过德国MyMicrobiome国际微生物组友好认证及SIC益生菌卫生产品认证，并获沙利文认证「中国益生菌卫生巾第一品牌」。代表方向：从「杀菌」转向「微生态平衡」的叙事升级。"
-  },
-  {
-    id: "news-008", section: "news", category: "卫生巾",
-    title: "她研社均衡力：弱酸抑菌面层，贴合私处 pH",
-    en: "HERLAB Balancin pH",
-    brand: "她研社", source: "lifePaper", date: "2025-05-28",
-    image: "images/product/prod-day.png",
-    tags: ["弱酸", "抑菌", "她研社", "pH"],
-    summary: "弱酸性面层接近女性健康私处pH值，经实验显著抑制有害菌；央视网实地探访完成四重测试全部合格。",
-    body: "她研社是近年快速成长的国货品牌，其均衡力弱酸抑菌卫生巾采用弱酸性面层，接近女性健康私处的pH值，经实验证明可显著抑制有害菌。2025年央视网以「#听见她声音守护她健康#」为主题实地探访其研发技术中心，完成弱酸性抑菌、防漏性、透气性、密封性四重测试，全部指标合格。国货「成分党+科学背书」打法样本。"
-  },
-  {
-    id: "news-009", section: "news", category: "卫生巾",
-    title: "倍舒特：壳聚糖抑菌 + 18倍超吸收科技芯，量大专研",
-    en: "Bestore Chitosan Core",
-    brand: "倍舒特", source: "lifePaper", date: "2026-01-22",
-    image: "images/product/prod-day.png",
-    tags: ["壳聚糖", "超吸收", "量大", "消毒级"],
-    summary: "壳聚糖（虾蟹壳天然多糖）12h抑菌率>99.9%；自研18倍超吸收科技芯，干爽度+60%，夜用尾翼加宽。",
-    body: "倍舒特构建完整产品矩阵：植物系（100%纯棉面层+护翼、婴儿级亲肤认证、9大无添加、消毒级）、超吸收Pro消毒级（量大专研、干爽度+60%）、轻0感（0.08cm极薄芯体）、航天超吸收系列。其壳聚糖天然多糖实验室条件12h抑菌率>99.9%，对大肠杆菌、金黄色葡萄球菌、白色念珠菌显著抑制且对乳酸杆菌影响小。参考价16.9-43.9元/包，消毒级中性价比突出。"
-  },
-  {
-    id: "news-010", section: "news", category: "安睡裤",
-    title: "高洁丝海岛奢宠纯棉系列女性卫生裤",
-    en: "Kotex Island Cotton Panty",
-    brand: "高洁丝", source: "lifePaper", date: "2025-11-10",
-    image: "images/product/prod-panty.png",
-    tags: ["高洁丝", "纯棉", "奢宠", "卫生裤"],
-    summary: "甄选珍稀海岛长绒棉，0.07cm纤薄设计，摩擦降低，对敏感肌友好；全系微生物管控高于国标。",
-    body: "高洁丝始创于1920年，是历史悠久的国际品牌。2026年荣获中国卫生用品行业「匠心产品」权威荣誉。海岛奢宠纯棉系列甄选珍稀海岛长绒棉，0.07cm纤薄设计，摩擦降低，对敏感肌友好；奢爽纯棉系列定位中高端，采用澳洲纯棉表层。全系产品微生物管控标准高于国标，主打百年品牌背书与品质路线。"
-  },
-  {
-    id: "news-011", section: "news", category: "卫生巾",
-    title: "苏菲裸感S贵族棉（日本）：0.1cm 极薄 + 贵族棉表层",
-    en: "Sofy Premium Cotton (JP)",
-    brand: "苏菲(尤妮佳)", source: "unicharm", date: "2025-09-30",
-    image: "images/product/prod-day.png",
-    tags: ["苏菲", "极薄", "贵族棉", "日本"],
-    summary: "日本尤妮佳苏菲裸感S贵族棉系列，250mm日用12片，轻薄舒适，主打「像没穿一样」的裸感体验。",
-    body: "苏菲是日本尤妮佳集团旗下品牌，以高性能夜用卫生巾广受喜爱。裸感S贵族棉采用贵族棉表层与极薄结构，体感轻盈，是日本市场长青的「裸感」代表。对国内策划的启发：将「薄」转化为感官语言（裸感/无感/隐形），而非只标参数。"
-  },
-  {
-    id: "news-012", section: "news", category: "安睡裤",
-    title: "ELIS × Care Bears 联名（日本）：1.9mm 超薄 + 双倍吸收",
-    en: "ELIS × Care Bears Collab",
-    brand: "ELIS(大王制纸)", source: "unicharm", date: "2025-10-01",
-    image: "images/product/prod-panty.png",
-    tags: ["IP联名", "Care Bears", "超薄", "日本"],
-    summary: "日本大王制纸 ELIS Compact Guard 与 Care Bears 联名，1.9mm 超薄却达常规2倍吸收，7款角色包装。",
-    body: "2025年10月1日起，日本大王制纸 ELIS 推出「ELIS Compact Guard × Care Bears™ 联名设计」，含7款角色设计。产品仅1.9mm厚，吸收能力达常规2倍，外包装与单片包装均印角色插画。品牌主张「Not someone, but by your side」，用陪伴感消解月经羞耻。这是「IP情绪包装」的国际范本，可作为国内联名的参考方向。"
-  },
-  {
-    id: "news-013", section: "news", category: "卫生巾",
-    title: "ELIS × Esther Bunny 联名（2026）：经期情绪插画包装",
-    en: "ELIS × Esther Bunny 2026",
-    brand: "ELIS(大王制纸)", source: "unicharm", date: "2026-06-01",
-    image: "images/product/prod-day.png",
-    tags: ["IP联名", "Esther Bunny", "插画", "情绪"],
-    summary: "2026年6月推出10款 Esther Bunny 联名设计，以「醒醒/梳妆/咖啡/居家」叙事插画把月经变治愈。",
-    body: "ELIS 于2026年6月1日推出 Erisa Compact Guard × Esther Bunny 联名，10款产品含7款设计，插画捕捉 Esther Bunny 在起床、梳妆、咖啡、居家等氛围场景。艺术家 Esther Kim 理念「Love Myself, Love Yourself」与 ELIS「在你身边」主张契合。把「拆包装」变成情绪疗愈仪式，是国内「经期情绪插画」包装可直接借鉴的叙事框架。"
-  },
-  {
-    id: "news-014", section: "news", category: "卫生巾",
-    title: "苏菲 × HANA 限定包装（日本）：成员手写留言单片装",
-    en: "Sofy × HANA Limited",
-    brand: "苏菲(尤妮佳)", source: "unicharm", date: "2025-10-10",
-    image: "images/product/prod-day.png",
-    tags: ["联名", "手写留言", "少女群体", "苏菲"],
-    summary: "7人女团 HANA 参与构思包装，单片独立装印成员手写寄语，6种限定包装按「当日心情」选择。",
-    body: "尤妮佳苏菲 Center-in Compact 1/2 与7人女团 HANA 联名，2025年10月上旬日本全国限量发售。概念「どんな日も、どんなあなたも、咲けますように（无论哪天、无论哪个你，都能绽放）」。单片包装印成员手写寄语，共6种限定包装按长度/香型区分，让女性「按当天心情选卫生巾」。把偶像陪伴感注入私密刚需，是触达10-20代少女的高效路径。"
-  },
-
-  /* ---------------- 材料灵感（重点：结构/工艺/触感） ---------------- */
-  {
-    id: "mat-001", section: "material", category: "卫生巾",
-    title: "亲肤面层无纺布：卫生巾与皮肤接触的第一层",
-    en: "Top Sheet Nonwoven",
-    brand: "材料", source: "nonwoven", date: "2025-01-01",
-    image: "images/material/mat-nonwoven.png",
-    tags: ["无纺布", "面层", "PP", "热风"],
-    summary: "面层多为 PP 纺粘/热风无纺布（或 PE 打孔膜），负责快速下渗、保持干爽；劣质面层会「拒液」导致整日潮湿。",
-    material: {
-      role: "面层 / Top Sheet",
-      composition: "聚丙烯(PP)纺粘或热风无纺布；高端用莱赛尔、天然蚕丝、有机棉",
-      structure: "单层或多层复合，表面常有压花/打孔形成单向漏斗，引导液体快速下渗并减少回渗",
-      process: "PP 树脂挤出成纤→铺网→热风/热轧加固→亲水整理→裁切对齐",
-      experience: "触感「软、干、不粘」；营销语言：裸感 / 云朵棉 / 像没穿",
-      usedBy: "苏菲裸感S（贵族棉）、乐而雅零触感纯棉甄选（澳洲纯棉）",
-      consumerLang: "「像没穿一样」「透气不闷」「摩擦红痒少」",
-      reference: "把「无纺布」翻译成感官词而非材料名；超薄化需配合透气孔底膜才不闷"
-    }
-  },
-  {
-    id: "mat-002", section: "material", category: "卫生巾",
-    title: "高分子吸水树脂 SAP：锁水成凝胶，卫生巾的「心脏」",
-    en: "Super Absorbent Polymer (SAP)",
-    brand: "材料", source: "nonwoven", date: "2025-01-01",
-    image: "images/material/mat-sap.png",
-    tags: ["SAP", "高分子", "吸水", "芯体"],
-    summary: "交联聚丙烯酸钠可吸收自身重量数百倍液体并锁成凝胶，受压不回渗；SAP/木浆比例是成本与性能最大杠杆。",
-    material: {
-      role: "吸收芯体主料 / SAP",
-      composition: "交联聚丙烯酸钠（Sodium Polyacrylate），部分牌号达食品级/血液吸收级",
-      structure: "颗粒状，分散于木浆纤维网络中；比例越高越薄越干，但成本越高、手感偏硬",
-      process: "木浆锤磨成绒→与 SAP 计量混合→真空成型为扁平芯体→包裹防漏",
-      experience: "「瞬吸」「不反渗」「量大也不怕」；营销语言：超吸收芯 / 科技芯",
-      usedBy: "倍舒特18倍超吸收科技芯、护舒宝FlexFoam（液体芯体变体）",
-      consumerLang: "「一碰就锁住」「表面干干爽爽」「夜用尾翼加宽更能装」",
-      reference: "SAP比例与木浆比例是策划要会问工厂的参数；液体芯体(FlexFoam)是SAP的柔性替代路线"
-    }
-  },
-  {
-    id: "mat-003", section: "material", category: "卫生巾",
-    title: "复合吸收芯体 vs 液体芯体：薄、干、不变形的工程博弈",
-    en: "Composite Core vs FlexFoam",
-    brand: "材料", source: "nonwoven", date: "2025-01-01",
-    image: "images/material/mat-structure.png",
-    tags: ["芯体", "复合芯", "液体芯体", "结构"],
-    summary: "主流为木浆+SAP复合芯（分均布/分层/分区三种结构）；护舒宝 FlexFoam 用乳化液体材料做柔性芯体，吸收后不变形。",
-    material: {
-      role: "吸收芯体 / Absorbent Core",
-      composition: "绒毛浆(Fluff Pulp) + SAP；或 FlexFoam 液体材料（水+纳米聚合物乳化）",
-      structure: "均布混合（经济但易凝胶阻塞）/ 分层（上层木浆快渗、下层SAP储能）/ 分区（中心高SAP应对集中涌流）",
-      process: "Mat forming（绒毛成型）→ SAP计量混合→ 芯体压缩包裹→ 与面层/底膜层压",
-      experience: "「薄却吸得多」「怎么动都贴合不变形」；营销语言：仿若无物 / 灵动速吸岛",
-      usedBy: "护舒宝液体卫生巾(FlexFoam)、各品牌超薄日夜用",
-      consumerLang: "「0.1cm 也能兜住」「翻身不堆在一处」",
-      reference: "芯体 SAP 分布是高端化核心；分区芯体(Zoned Core)适合量大夜用"
-    }
-  },
-  {
-    id: "mat-004", section: "material", category: "卫生巾",
-    title: "导流层 ADL：决定会不会「中间漏、隧道漏」的隐形功臣",
-    en: "Acquisition Distribution Layer",
-    brand: "材料", source: "nonwoven", date: "2025-01-01",
-    image: "images/material/mat-nonwoven.png",
-    tags: ["ADL", "导流层", "渗透", "防漏"],
-    summary: "位于面层之下的亲水无纺布/多孔纸，把液体快速拉下并横向扩散，避免集中击穿芯体导致隧道漏。",
-    material: {
-      role: "导流/分配层 / ADL",
-      composition: "亲水无纺布或打孔纸，孔隙结构加速液体转移",
-      structure: "夹在面层与芯体之间的一层「中转站」，决定液体去向",
-      process: "亲水涂层处理→裁切对齐→与芯体、面层同步层压",
-      experience: "「不堆在一处」「猛地一来也不慌」；营销语言：四跑道纵向导流 / 速吸岛",
-      usedBy: "多品牌速吸系列（如专利超导芯、四跑道导流层）",
-      consumerLang: "「吸速提升66%」「不反渗不黏腻」",
-      reference: "ADL 是防漏的关键但最被包装忽略；策划应把「导流」讲成可感知的安心"
-    }
-  },
-  {
-    id: "mat-005", section: "material", category: "卫生巾",
-    title: "透气底膜：微孔 PE 膜如何「防水又透气」",
-    en: "Microporous Breathable Backsheet",
-    brand: "材料", source: "nonwoven", date: "2025-01-01",
-    image: "images/material/mat-breathable.png",
-    tags: ["底膜", "透气", "微孔", "PE"],
-    summary: "PE 混碳酸钙填料拉伸出微米级孔隙：液态水过不去，气态水蒸气能逃出（MVTR>5000 g/m²/24h），告别闷热。",
-    material: {
-      role: "底膜 / Backsheet",
-      composition: "聚乙烯(PE) + 碳酸钙(CaCO₃)填料，拉伸成微孔；或 PE 与无纺布复合的「布感底膜」",
-      structure: "微孔孔径约2微米——液态水分子太大过不去，气态水分子能逃逸",
-      process: "PE树脂流延成膜→混入CaCO₃→双向拉伸出微孔→（可选）复合无纺布降噪",
-      experience: "「会呼吸」「不闷痘」「走路没沙沙声」；营销语言：千万透气孔 / 布感底膜",
-      usedBy: "乐而雅零触感纯棉甄选（千万透气孔底膜）、各高端线",
-      consumerLang: "「整晚干爽不闷痒」「底膜有透气孔才是真透气」",
-      reference: "透气底膜是 premium 标配；包装上「透气孔」需是真微孔而非印花假孔"
-    }
-  },
-  {
-    id: "mat-006", section: "material", category: "卫生巾",
-    title: "有机棉 / 莱赛尔面层：把「安心」做成可验证的材质",
-    en: "Organic Cotton & Lyocell",
-    brand: "材料", source: "nonwoven", date: "2025-01-01",
-    image: "images/material/mat-nonwoven.png",
-    tags: ["有机棉", "莱赛尔", "GOTS", "敏感肌"],
-    summary: "有机棉需 GOTS/JAS 第三方可追溯；莱赛尔源自木浆、吸湿排汗且摩擦系数低。两者把「天然安心」变可验证成分。",
-    material: {
-      role: "面层材质升级 / Plant-based",
-      composition: "100%有机棉（GOTS或JAS认证，禁用合成农药与转基因）；莱赛尔（木浆再生纤维）",
-      structure: "作为面层替代 PP 无纺布，主打低刺激与可持续",
-      process: "有机棉：种植限用化学品→无氯漂白(TCF更优)→水刺成布；莱赛尔：木浆溶解纺丝",
-      experience: "「天然棉籽香」「不刺激红痒」「对环境也好」；营销语言：九无添加 / 纯净呵护",
-      usedBy: "奈丝公主100%棉、花王有机棉(JAS)、护舒宝莱赛尔蚕丝、自由点有机棉",
-      consumerLang: "「皮肤科医生也囤」「闻得到植物清香无香精」",
-      reference: "「纯棉」≠「有机棉」，策划要区分认证等级；TCF无氯漂白是高端加分项"
-    }
-  },
-  {
-    id: "mat-007", section: "material", category: "卫生巾",
-    title: "生产工艺：从原料到成品的 8 步高速自动化",
-    en: "Manufacturing Process",
-    brand: "工艺", source: "nonwoven", date: "2025-01-01",
-    image: "images/material/mat-production.png",
-    tags: ["生产工艺", "超声波", "层压", "自动化"],
-    summary: "芯体成型→面层/ADL制备→底膜流延→层压「三明治」→压花打孔→裁切 wings→单片包→装箱，速度可达1200片/分。",
-    material: {
-      role: "整体工艺 / Process",
-      composition: "绒毛浆、SAP、PP无纺布、PE膜、热熔胶、离型纸",
-      structure: "在线连续「网页式」生产：芯体→层压→成形→单片包→装箱，光学对位精度±1mm",
-      process: "①芯体(木浆+SAP超声波混合) ②面层/ADL裁切 ③底膜流延(透气版复合无纺) ④层压热封 ⑤压花打孔 ⑥wing裁切 ⑦单片包裹 ⑧装箱",
-      experience: "「全封闭全自动」「AI视觉逐片扫描」= 品质信任；营销语言：30万级洁净 / 0手触",
-      usedBy: "护舒宝广州黄埔工厂（4K摄像头+AI算法毫秒级扫描）、奈丝公主30万级洁净车间",
-      consumerLang: "「工厂比我厨房干净」「每片都看得见结构」",
-      reference: "把「工艺」转化成信任状：洁净车间、AI质检、0手触是高端线常用叙事"
-    }
-  },
-  {
-    id: "mat-008", section: "material", category: "经期裤",
-    title: "安睡裤/经期裤结构：360°包裹 + 腰腿微压 + 四向防漏",
-    en: "Period Panty Structure",
-    brand: "材料", source: "nonwoven", date: "2025-01-01",
-    image: "images/material/mat-structure.png",
-    tags: ["经期裤", "结构", "防漏", "包裹"],
-    summary: "裤型结构靠腰口弹性+腿口防漏隔边+吸收芯分布实现360°贴合；尺码需按臀围而非体重选，否则过紧或移位。",
-    material: {
-      role: "整体结构 / Panty Structure",
-      composition: "无纺布腰口+腿口橡筋、防漏隔边、复合芯体、透气底膜、前腰贴",
-      structure: "360°包裹主体 + 腰腹腿微压设计 + 四向防漏；吸收芯偏后腰加宽应对卧姿涌流",
-      process: "芯体成型→裤体裁切→橡筋焊接→隔边成形→单片折叠→包装",
-      experience: "「整晚不换也安心」「翻身不漏不勒」；营销语言：减压深睡 / 拉拉裤式",
-      usedBy: "护舒宝减压深睡裤(Sleep Pro多孔深睡芯+4D微压)、花王夜用安心裤(拉拉裤式)",
-      consumerLang: "「像内裤一样贴身」「腰腹不勒、腿口不卡」",
-      reference: "按臀围标注是国标GB/T 39391强制要求；策划需强调「量臀围选码」避免勒痕漏液"
-    }
-  },
-
-  /* ---------------- 包装灵感 ---------------- */
-  {
-    id: "pack-001", section: "packaging", category: "卫生巾",
-    title: "高端极简风：米白 + 哑光 + 留白，把卫生巾做成「护肤品质感」",
-    en: "Premium Minimal Packaging",
-    brand: "包装方向", source: "lifePaper", date: "2025-01-01",
-    image: "images/pack/pack-premium.png",
-    tags: ["极简", "米白", "高级感", "哑光"],
-    summary: "借鉴护肤/香氛的极简语言：素净米白盒、哑光触感膜、细衬线字、留白，消解「卫生用品」的廉价感。",
-    body: "日本花王有机棉卫生巾采用「哑光米白独立包装，无浮夸樱花粉红，只有KAO logo与一行100% ORGANIC COTTON小字」，被用户形容「像拆一封来自京都的温柔手札」。启示：高端线可用米白/裸色+极小字体+材质触感（触感膜/压纹）营造「私护级」尊贵感，避免高饱和粉红带来的廉价联想。"
-  },
-  {
-    id: "pack-002", section: "packaging", category: "卫生巾",
-    title: "IP 联名可爱风：把「拆包装」变成情绪疗愈仪式",
-    en: "IP Collab Cute Packaging",
-    brand: "包装方向", source: "unicharm", date: "2025-10-01",
-    image: "images/pack/pack-ip.png",
-    tags: ["IP联名", "可爱", "情绪", "收藏"],
-    summary: "Care Bears / Esther Bunny / HANA 等联名证明：角色插画+单片寄语能把私密刚需变成可晒的社交货币。",
-    body: "日本 ELIS × Care Bears（7款角色）、ELIS × Esther Bunny（10款叙事插画）、苏菲 × HANA（成员手写寄语单片装）均成功把卫生巾包装转化为「陪伴与情绪」载体。泰国市场卡通IP卫生巾（Hello Kitty/Sailor Moon）线上增长超40%，#CartoonPeriodProducts# 浏览破200万。策划启示：直接搬运知名IP有法律风险，可用「主题风格迁移」（提取水手服元素/蝴蝶结符号做原创设计）。"
-  },
-  {
-    id: "pack-003", section: "packaging", category: "卫生巾",
-    title: "可持续包装：可种植纸盒、单片铝箔诗句、环保水基墨",
-    en: "Sustainable Packaging",
-    brand: "包装方向", source: "shangpu", date: "2026-02-18",
-    image: "images/pack/pack-sustainable.png",
-    tags: ["可持续", "可种植", "环保", "PLA"],
-    summary: "可种植包装（浸水发芽）、单片铝箔印隐藏诗句集齐兑换、食品级白卡+水基墨防潮，回应Z世代环保偏好。",
-    body: "尚普复盘中的「季度限量联名」打法包含：环保纸盒升级为可种植包装（浸水三天发芽）、单片独立铝箔袋印隐藏诗句集齐可兑换、上线「云收藏」小程序生成数字藏品。材料端，底膜与包装正向 PLA 聚乳酸（玉米/甘蔗基生物塑料，可工业堆肥）探索。启示：可持续不是成本项，是社交谈资与溢价支点。"
-  },
-  {
-    id: "pack-004", section: "packaging", category: "安睡裤",
-    title: "袋型与开启：易撕口、贴封口贴、磁吸翻盖在高端线的应用",
-    en: "Pouch & Opening Details",
-    brand: "包装方向", source: "lifePaper", date: "2025-01-01",
-    image: "images/pack/pack-premium.png",
-    tags: ["袋型", "开启方式", "磁吸", "便利"],
-    summary: "卫生巾包装袋型（软包/纸盒/可降解袋/独立贴）、开启方式（易撕口/封口贴/磁吸翻盖）是高端线体验细节。",
-    body: "包装信息层级可走三条路：①图案/IP主导（少女线）②极简文字主导（高端线）③插画叙事主导（情绪线）。高端线常用可重复封口贴保持防潮，旅行装用硬盒+抽取；安睡裤因单片体积大，多用独立小包+外盒，开封后易散，可借鉴纸巾的「翻盖抽取」结构。开启的「顺手感」是复购的隐性因素。"
-  },
-  {
-    id: "pack-005", section: "packaging", category: "卫生巾",
-    title: "跨品类借鉴：彩妆/香氛的「高级感」如何平移到卫生巾",
-    en: "Cross-category Inspiration",
-    brand: "包装方向", source: "lifePaper", date: "2025-01-01",
-    image: "images/pack/pack-premium.png",
-    tags: ["跨品类", "彩妆", "香氛", "借鉴"],
-    summary: "卫生巾包装常借鉴彩妆的高级感：烫金、丝印、UV局部、磨砂、击凸，以及色系（裸粉/雾蓝/燕麦）。",
-    body: "食品/奢侈品/彩妆是卫生巾包装设计的隐性老师。可借鉴：①彩妆的烫金LOGO+磁吸翻盖 ②香氛的哑光瓶身触感与留白 ③食品的防潮内衬与便携分装。色系上，燕麦米白、裸粉、雾蓝比高饱和粉红更显高级。表面工艺：烫金、丝印、UV局部、磨砂、击凸可低成本提升质感。信息层级要「一眼看懂卖点」，避免参数堆砌。"
-  },
-  {
-    id: "pack-006", section: "packaging", category: "经期裤",
-    title: "经期裤包装：从「裤型卫生巾」到「内衣级礼盒」",
-    en: "Panty Premium Box",
-    brand: "包装方向", source: "unicharm", date: "2025-01-01",
-    image: "images/pack/pack-ip.png",
-    tags: ["经期裤", "礼盒", "内衣级", "礼品"],
-    summary: "安睡裤可作「旅行/待产/礼物」场景，包装向内裤礼盒靠拢：抽屉盒、丝带、独立裤型小包。",
-    body: "安睡裤因单片体积大、使用场景偏「安睡/旅行/产后」，包装可脱离传统卫生巾的软包逻辑，借鉴内衣礼盒：抽屉盒+丝带、每片独立裤型小包、外盒印使用场景插画（星空/卧室）。日本花王夜用安心裤用「简约白系」传递干净医疗感，可作为待产包定位参考。礼品化是安睡裤提溢价的有效路径。"
-  },
-
-  /* ---------------- 监管合规 ---------------- */
-  {
-    id: "reg-001", section: "regulatory", category: "卫生巾",
-    title: "GB 15979-2024 实施：卫生巾归疾控局管，不归药监局",
-    en: "GB 15979-2024 Enforced",
-    brand: "国家标准", source: "ndcpa", date: "2025-07-01",
-    image: "", tags: ["GB 15979-2024", "疾控局", "强制标准"],
-    summary: "卫生巾属第三类消毒产品，归卫健委/疾控局监管（非药监局/NMPA）。GB 15979-2024 于2025-07-01实施，新增pH、可迁移荧光剂等指标。",
-    body: "重要澄清：卫生巾、护垫、安睡裤属于第三类消毒产品（卫生用品），由卫健部门/疾控局监管，药监局(NMPA)的备案系统是化妆品用的，与卫生巾无关；且第三类产品本身不需备案。GB 15979-2024《一次性使用卫生用品卫生要求》2024-06-25发布、2025-07-01实施，替代2002版，归国家疾控局。新增pH值、可迁移性荧光增白剂残留量等理化指标，调整微生物限值与毒理学要求。普通级菌落总数≤200 CFU/g、真菌≤100 CFU/g；消毒级菌落≤20 CFU/g且无真菌。"
-  },
-  {
-    id: "reg-002", section: "regulatory", category: "卫生巾",
-    title: "新国标 GB/T 8939-2025 发布：2027-01-01 实施，看齐婴童",
-    en: "GB/T 8939-2025 Released",
-    brand: "国家标准", source: "samr", date: "2026-01-20",
-    image: "", tags: ["GB/T 8939-2025", "新国标", "婴童看齐"],
-    summary: "2026年1月发布新版卫生巾(护垫)国标，收紧长度偏差/pH/甲醛/吸收倍率，新增增塑剂、重金属、致癌芳香胺染料。",
-    body: "据行业报道，2026年1月发布新版《卫生巾(护垫)》国家标准 GB/T 8939-2025，计划2027年1月1日实施。相较旧版，收紧了全长偏差、条质量偏差、pH值、甲醛与吸收倍率要求，并新增增塑剂、重金属、可分解致癌芳香胺染料等化学安全指标，多项指标向婴童用品标准看齐。对策划含义：未来「安全指标」将成为包装与传播的硬性背书点。"
-  },
-  {
-    id: "reg-003", section: "regulatory", category: "安睡裤",
-    title: "江苏省消保委安睡裤比较试验：40 批次卫生安全全达标",
-    en: "Jiangsu Period Panty Test",
-    brand: "江苏省消保委", source: "jssxb", date: "2025-11-12",
-    image: "", tags: ["安睡裤", "比较试验", "抽检", "标签"],
-    summary: "40批次安睡裤卫生/性能/安全指标均符合标准，但部分标签不规范（臀围/腰围标注不符、进口无中文标）。",
-    body: "江苏省消保委2025年11月发布安睡裤比较试验：购40批次（线上28+线下12），涉乐而雅、高洁丝、淘淘氧棉、ABC等，单价0.66-6.36元/片。卫生/性能/安全指标均符合标准：吸收速度5~12秒（国标≤60秒），5批次吸水倍率≥30倍，19批次20~30倍；甲醛、可迁移荧光物、重金属、丙烯酰胺、邻苯均达标。问题在标签：兔菲腰围实测109cm低于XL标准(≥115cm)；康乐司执行标准引用不当；米娅等10批次臀围标注不符；花王乐而雅进口无中文标（已整改）。"
-  },
-  {
-    id: "reg-004", section: "regulatory", category: "卫生巾",
-    title: "上海市消保委 55 款卫生巾(裤)测评：长度虚标引关注",
-    en: "Shanghai 55-Pad Test",
-    brand: "上海市消保委", source: "shxb", date: "2025-03-13",
-    image: "", tags: ["长度虚标", "比较试验", "消保委", "舆情"],
-    summary: "55款测评中 GentleCarlng 小轻芯全长偏差-6%超±4%限值；7款实测长于标示。安全指标全部合格。",
-    body: "上海市消保委2025年妇女节前夕发布女性卫生巾(裤)比较试验，购51/55款（护舒宝、高洁丝、乐而雅、苏菲、她研社、薇尔、七度空间、自由点、全棉时代等），价格3-79.9元/包。全长偏差：GentleCarlng®小轻芯系列出现-6%负偏差，超标准±4%允许范围（监管已责令停售清理）；ALDI超长日用、植护秘觉独角兽羽感等7款实测长于标示。pH、甲醛、可迁移荧光物、微生物全部合格；5款宣称抑菌中有1款表现较差。提示：长度标注合规是近期监管重点。"
-  },
-  {
-    id: "reg-005", section: "regulatory", category: "卫生巾",
-    title: "2024-2025 舆情：长度虚标、3·15 残次料翻新、pH/荧光剂焦虑",
-    en: "2024-2025 Public Opinion",
-    brand: "舆情综述", source: "lifePaper", date: "2025-03-15",
-    image: "", tags: ["舆情", "3·15", "残次料", "信任"],
-    summary: "2024-11多品牌被曝长度虚标；2025-3·15曝光卫生巾/纸尿裤残次料翻新二次销售；消费者信心进入修复期。",
-    body: "2024年11月多个知名品牌卫生巾被曝光「虚标长度」；2025年3月央视3·15晚会曝光卫生巾、纸尿裤残次料被翻新「二次销售」乱象；同期上海消保委55款测评显示部分样品长度偏差。系列事件引发消费者对产品安全的普遍担忧，2025年1-8月女性卫生用品市场虽同比+23.9%至128.8亿元，但信心仍处修复周期。对策划的核心教训：信任状（标准、检测报告、洁净工艺）比功能口号更重要。"
-  },
-  {
-    id: "reg-006", section: "regulatory", category: "卫生巾",
-    title: "标准矩阵速查：卫生巾 / 安睡裤 / 标签 该看哪份标准",
-    en: "Standard Cheat Sheet",
-    brand: "标准库", source: "samr", date: "2025-01-01",
-    image: "", tags: ["标准", "GB/T 8939", "GB/T 39391", "GB 38598"],
-    summary: "普通卫生巾 GB/T 8939-2018；安睡裤/经期裤 GB/T 39391-2020《女性卫生裤》；强制卫生 GB 15979-2024；标签 GB 38598-2020。",
-    body: "卫生巾品类标准矩阵：①普通卫生巾(护垫) GB/T 8939-2018《卫生巾(护垫)》；②安睡裤/经期裤 GB/T 39391-2020《女性卫生裤》（规定适用臀围/腰围范围，按 S/M/L/XL 对应固定尺寸）；③卫生安全强制标准 GB 15979-2024（2025-07-01实施，归国家疾控局）；④标签 GB 38598-2020《消毒产品标签说明书通用要求》。策划需避免把「安睡裤」错误引用 GB/T 8939（如康乐司案例被点名）。"
-  },
-
-  /* ---------------- 竞品雷达 ---------------- */
-  {
-    id: "cmp-001", section: "competitor", category: "卫生巾",
-    title: "国际巨头 vs 国货新锐：技术路线与定位分化",
-    en: "Giant vs Challenger",
-    brand: "竞品雷达", source: "mojing", date: "2026-03-01",
-    image: "", tags: ["竞品", "护舒宝", "她研社", "自由点"],
-    summary: "护舒宝走「多技术路线并行+医学背书」；自由点打「有机棉+微生态」；她研社打「弱酸抑菌+科学测评」。",
-    body: "技术路线分化明显：①护舒宝（宝洁）多技术并行——液体芯体 FlexFoam、莱赛尔蚕丝、减压深睡裤，并以妇产科大会+千名专家背书建立科学信任；②自由点 主打有机纯棉+益生菌微生态(LA88 Pro)，获沙利文「益生菌卫生巾第一品牌」；③她研社 均衡力弱酸抑菌+央视网四重测试。策划启示：高端突破点=可验证材质/数据+权威背书，而非空泛「呵护」。"
-  },
-  {
-    id: "cmp-002", section: "competitor", category: "安睡裤",
-    title: "安睡裤赛道品牌图谱：谁在拼吸收、谁在拼包装",
-    en: "Period Panty Landscape",
-    brand: "竞品雷达", source: "jssxb", date: "2025-11-12",
-    image: "", tags: ["安睡裤", "品牌", "图谱", "竞争"],
-    summary: "江苏省消保委40批次覆盖乐而雅、高洁丝、淘淘氧棉、ABC、护舒宝、薇尔、倍舒特、花王等；拼吸收(倍率)与拼包装(联名)两派。",
-    body: "安睡裤竞争两极化：①性能派——护舒宝减压深睡裤(Sleep Pro多孔深睡芯)、花王夜用安心裤(300ml+)、倍舒特(18倍超吸收)比拼吸收速度与容量；②情绪派——ELIS×Care Bears/Esther Bunny、苏菲×HANA用IP与插画做溢价。国内品牌中，她研社深藏不露裤型、自由点、 ABC棉柔表层各占细分。策划机会：把「性能数据」与「情绪包装」结合，而非二选一。"
-  },
-  {
-    id: "cmp-003", section: "competitor", category: "卫生巾",
-    title: "「消毒级」成新信任锚点：倍舒特/奈丝公主抢先占位",
-    en: "Sterilized Grade Trust Anchor",
-    brand: "竞品雷达", source: "lifePaper", date: "2026-01-22",
-    image: "", tags: ["消毒级", "信任", "倍舒特", "奈丝公主"],
-    summary: "新国标后，「消毒级」(菌落≤20 CFU/g)成为高端信任锚点，倍舒特、奈丝公主、自由点纷纷以消毒级+检测背书切入。",
-    body: "GB 15979 将产品分「普通级」与「消毒级」。舆情后，消毒级（微生物更严、需标「消毒级」及消毒方式/日期）成为消费者可理解的安全锚点。倍舒特植物系「婴儿级亲肤认证+9大无添加+消毒级」、奈丝公主「30万级洁净+电子束灭菌」、自由点「有机棉+益生菌」纷纷以可验证安全切入。策划启示：把「消毒级/洁净工艺」做成包装正面信任状，比喊「安全」有效。"
-  },
-  {
-    id: "cmp-004", section: "competitor", category: "经期裤",
-    title: "日本市场参考：超薄化(1.9mm) + 双倍吸收 + IP 包装三位一体",
-    en: "Japan Benchmark",
-    brand: "竞品雷达", source: "unicharm", date: "2026-06-01",
-    image: "", tags: ["日本", "超薄", "IP", "参考"],
-    summary: "日本 ELIS 把 1.9mm 超薄、2倍吸收、Care Bears/Esther Bunny IP 包装集于一身，是「技术+情绪」融合范本。",
-    body: "日本市场给出清晰范本：ELIS Compact Guard 用1.9mm超薄复合芯实现常规2倍吸收，再叠加 Care Bears / Esther Bunny 角色插画包装。技术参数（薄+吸）与情绪价值（IP陪伴）不互斥，反而互相放大——薄让用户「愿意带」，IP让用户「愿意晒」。对国内策划：超薄化是入场券，包装情绪化是溢价与裂变的关键。"
-  }
+  {"id": "ind-009", "section": "industry", "category": "卫生巾", "title": "跨界玩家入局卫生巾赛道，新旧势力打响攻防战", "en": "New Players Entering", "brand": "行业动态", "source": "googleNews", "date": "2026-08-21", "image": "images/real/industry_factory_0_2.jpg", "tags": ["跨界", "黄子韬", "董宇辉", "竞争"], "summary": "黄子韬、董宇辉等跨界入局卫生巾赛道，全红婵代言朵薇，新旧势力打响攻防战。", "body": "2026年卫生巾赛道迎来跨界入局潮：黄子韬推出朵薇卫生巾、全红婵出任代言人；董宇辉宣布将卖定制卫生巾（预计10月中旬上架）。亿邦动力、21财经等分析认为，明星/主播跨界自带流量与信任背书，但卫生巾是强信任品类，最终仍要回归产品力与合规。对老品牌构成「流量侧」压力，也教育了市场「卫生巾值得被认真对待」。"},
+  {"id": "ind-010", "section": "industry", "category": "卫生巾", "title": "中国卫生巾在非洲市场表现强劲，乐舒适等品牌扩张", "en": "China Pads Strong in Africa", "brand": "出海动态", "source": "googleNews", "date": "2026-08-21", "image": "images/real/px_cotton.jpg", "tags": ["非洲", "出海", "乐舒适", "产能"], "summary": "中国卫生巾在非洲市场表现强劲，出口产能进一步释放。", "body": "新浪新闻等报道：中国卫生巾在非洲市场表现强劲，乐舒适等品牌加速扩张，与婴儿纸尿裤共同构成中国一次性卫生用品出海的重要品类。非洲市场对性价比与基础功能需求强，是中国产能出海的增量蓝海。"},
+  {"id": "news-009", "section": "news", "category": "卫生巾", "title": "自由点 × 蚂蚁保：应急卫生巾走进商场公厕与剧场", "en": "Freemore Emergency Pads", "brand": "自由点", "source": "googleNews", "date": "2026-08-21", "image": "images/real/industry_market_0_9.jpg", "tags": ["应急", "场景", "城市守护", "公益"], "summary": "自由点联合蚂蚁保拓展城市守护网络，应急卫生巾走进商场公厕与剧场。", "body": "中华网科技等报道：自由点联合蚂蚁保拓展「城市守护网络」，把应急卫生巾投放进商场公厕、剧场等公共场景。从「卖货」到「场景守护」，是品牌情绪价值与社会价值结合的样板，也为应急装/小包装产品打开新渠道。"},
+  {"id": "cmp-006", "section": "competitor", "category": "卫生巾", "title": "跨界入局：黄子韬朵薇/董宇辉/全红婵代言的流量变量", "en": "Crossover Traffic Variable", "brand": "竞品·跨界", "source": "googleNews", "date": "2026-08-21", "image": "images/real/px_women.jpg", "tags": ["黄子韬", "董宇辉", "全红婵", "跨界", "流量"], "summary": "黄子韬朵薇/董宇辉定制/全红婵代言，明星主播跨界成卫生巾赛道新流量变量。", "body": "2026年卫生巾赛道出现跨界入局潮：黄子韬朵薇+全红婵代言、董宇辉定制卫生巾(10月中旬上架)。明星/主播跨界自带流量与信任背书，对老品牌构成「流量侧」压力，也教育市场「卫生巾值得被认真对待」。但卫生巾是强信任品类，跨界品牌最终成败仍取决于产品力与供应链合规——这恰是老品牌的护城河。竞品启示：用产品力回应流量战，而非跟流量战。"},
+  {"id": "auto-6ec9c4e9", "section": "news", "category": "卫生巾", "title": "应急卫生巾走进商场公厕剧场，自由点联合蚂蚁保拓展城市守护网络", "en": "", "brand": "中华网科技频道", "source": "googleNews", "date": "2026-08-21", "image": "images/real/px_cottonf.jpg", "tags": ["实时", "Google News"], "summary": "来源：中华网科技频道（2026-08-21）。点击查看原文。", "body": "【实时抓取】应急卫生巾走进商场公厕剧场，自由点联合蚂蚁保拓展城市守护网络。来源：中华网科技频道，发布时间 Fri, 21 Aug 2026 13:36:43 GMT。原文链接：https://news.google.com/rss/articles/CBMibkFVX3lxTE9ObnZSaGxxakJmdGJaSzFPZWlWa3d1MWhEY0tXWFJqWlFJNXUtM0x5QlNDVUhnblJVNVlodXk3UEFlUWdxTml3OUk1VkRFeEpfRHBMZ0xvWVM2OHNfbmEtQVE0aHlBNUlSdVhOZWln?oc=5"},
+  {"id": "auto-437cca57", "section": "news", "category": "卫生巾", "title": "财报速递｜豪悦护理上半年营收净利双增，超70%的应收款来自5名客户", "en": "", "brand": "搜狐网", "source": "googleNews", "date": "2026-08-21", "image": "images/real/pax_silk.png", "tags": ["实时", "Google News"], "summary": "来源：搜狐网（2026-08-21）。点击查看原文。", "body": "【实时抓取】财报速递｜豪悦护理上半年营收净利双增，超70%的应收款来自5名客户。来源：搜狐网，发布时间 Fri, 21 Aug 2026 10:29:00 GMT。原文链接：https://news.google.com/rss/articles/CBMijAFBVV95cUxOUlBYdGtyZExseEl0M2wyOFBHVUV4TXpiR0k3YXEyMkM3YjZweGs4NEFxNUFJNG1xemROems3dVVtd19NZ0dYRVJTcEctd1I4MGUtN0hPWXpXWXB2VmFJX19LWXJJd1BCeXVmcnpfdll1UGhSN0VoTE41QS1KMm96UGEzUHZIZ2IwTXN1NA?oc=5"},
+  {"id": "auto-37c84c0d", "section": "news", "category": "卫生巾", "title": "[中报]豪悦护理(605009):2026年半年度报告", "en": "", "brand": "中财网", "source": "googleNews", "date": "2026-08-21", "image": "images/real/new_pad_1_13.png", "tags": ["实时", "Google News"], "summary": "来源：中财网（2026-08-21）。点击查看原文。", "body": "【实时抓取】[中报]豪悦护理(605009):2026年半年度报告。来源：中财网，发布时间 Fri, 21 Aug 2026 09:06:55 GMT。原文链接：https://news.google.com/rss/articles/CBMiVkFVX3lxTE1TQ0M1RUZVbTlYX3VET0Q5V29PazNzbWEyMXo2SWlFM3A3VUFlVVhZN3oyeEpBbnpjUzQ4UlNCNU5MUkFIaHJtMzMwOHkzMmp2TVBCT3Bn?oc=5"},
+  {"id": "auto-26e0f0e3", "section": "industry", "category": "卫生巾", "title": "中国卫生巾在非洲市场表现强劲|乐舒适|卫生巾|婴儿纸尿裤_新浪新闻", "en": "", "brand": "手机新浪网", "source": "googleNews", "date": "2026-08-21", "image": "images/real/px_factory.jpg", "tags": ["实时", "Google News"], "summary": "来源：手机新浪网（2026-08-21）。点击查看原文。", "body": "【实时抓取】中国卫生巾在非洲市场表现强劲|乐舒适|卫生巾|婴儿纸尿裤_新浪新闻。来源：手机新浪网，发布时间 Fri, 21 Aug 2026 06:52:00 GMT。原文链接：https://news.google.com/rss/articles/CBMiY0FVX3lxTE4wS1AtZXZ4S1gzY0pVX0lINFl6UTY5aklhNE1JczRfOU85T0ZzV1U2X2lBa2h4Q0hvZ2JRLTMwb25kVTZqMmlPTktaRzV6NFVSM2NEUl92MHFhSndSSjE0eEswNA?oc=5"},
+  {"id": "auto-43fcefa9", "section": "news", "category": "卫生巾", "title": "乐舒适举行上市后首次中期业绩会：利润增长46%、派息率超60%，全年收入有望维持较快增长", "en": "", "brand": "时代在线", "source": "googleNews", "date": "2026-08-21", "image": "images/real/women_care_px.jpg", "tags": ["实时", "Google News"], "summary": "来源：时代在线（2026-08-21）。点击查看原文。", "body": "【实时抓取】乐舒适举行上市后首次中期业绩会：利润增长46%、派息率超60%，全年收入有望维持较快增长。来源：时代在线，发布时间 Fri, 21 Aug 2026 06:31:05 GMT。原文链接：https://news.google.com/rss/articles/CBMiS0FVX3lxTE1fcUJJb3dtQ3djLUNoMTRoXzJVR1FvNGRSQTAyR0xtUnFfb2szVkpNUklBTVJTejZTRFJieTEtVE0xdEIyV0RzTVdSbw?oc=5"},
+  {"id": "news-010", "section": "news", "category": "安睡裤", "title": "戚薇穿安睡裤走红毯，安睡裤进入公共议题", "en": "Qi Wei Panty on Red Carpet", "brand": "文化现象", "source": "googleNews", "date": "2026-08-20", "image": "images/real/women_care_px.jpg", "tags": ["安睡裤", "公共议题", "去羞耻化"], "summary": "戚薇穿安睡裤走红毯引发讨论，安睡裤从私密用品进入公共议题。", "body": "手机新浪网等报道：戚薇穿安睡裤走红毯。这一事件让安睡裤从「私密用品」进入公共议题，折射月经平权与去羞耻化的社会情绪——对品牌传播的启示：安睡裤/经期裤的沟通可更大胆走向「自在、自信」的情绪主张。"},
+  {"id": "auto-6b31c609", "section": "news", "category": "卫生巾", "title": "丁禹兮连卫生巾都替粉丝备好了", "en": "", "brand": "新浪财经_金融信息服务商", "source": "googleNews", "date": "2026-08-20", "image": "images/real/px_cottonf.jpg", "tags": ["实时", "Google News"], "summary": "来源：新浪财经_金融信息服务商（2026-08-20）。点击查看原文。", "body": "【实时抓取】丁禹兮连卫生巾都替粉丝备好了。来源：新浪财经_金融信息服务商，发布时间 Thu, 20 Aug 2026 21:02:44 GMT。原文链接：https://news.google.com/rss/articles/CBMi9gRBVV95cUxNNnAxdzVDM0MtMGJKZ0ZPdHBYb3ZleE83NmtFMGZYTzlidllxTVhYRUxUSFVIZG10X1phM0NTbTRIeWtGYUI1c1QyYXNpZVZuR3g1MGpzeXBFOWZOX1pVcTd5TnIybmo5dXN3YmJLVzczSzRxN0xVZnYwcnJBVHlJN0h2Z3doMmtpdDQwa2ZTZ1daWTZ3LUZJa3lJMk1TLXV5cmVYN3RQd2F6OVMxNHdBMUg1cjZpN0xSd3d4dzNIN3hFWDlXUUxVdEkxS2pVTkNTVGJ0V1Q2NGlQWGVJdlBSMjRfOEh5LUZOQ2kzaEpXOVNlYTBweHNtTHM5WnUxXzUwTVhkbWpJaVREMF83d3E3NkdXdE5Va0lreFlPRzkzWWQ1eTNsRFlfd0Q3SGtlbHZPVTBrSjl5NG1sX3hNNE9LaU5OelFFNGxaRDVBamVmdHBrZGNjNXRyeDNZNnNDZ3d2eHRFdU5UaUNYQmJ0OFhxeWhMOURmRWswQ2dMd0ZENF9GWjJsVlhuMXg5WC1QeW81ZEFvX0dxcjN1NjY2VnRsOVoyV3hxOGN5cUdnMDE3dExMT1RzVzVTNVJWZ3pFVlRSWndycjNvNXBRNXQ5Q1lSU3o2ZThkWUtpS0N2aXZldEFPeWxDRTR1cFVVZ1dwbG56cDQzOHZQRjY5bGtUckhxcklBREVpR3pDZVNtdm9uUHZRS2g5M25iQ3BZNjlHcFNnM1lPcWp6QkxGNkM5QWhmNXQzZE1rVkgyZjVvN1B3cXJSRS1sNDQwUk9xY3VLbjRGWDRWZnF1TzRiVUg0LVJaTW5wRlo1MGxTQTJPaEQ5b2w5NUtkcFE?oc=5"},
+  {"id": "auto-27a24608", "section": "news", "category": "安睡裤", "title": "戚薇穿安睡裤走红毯", "en": "", "brand": "手机新浪网", "source": "googleNews", "date": "2026-08-20", "image": "images/real/women_care_px.jpg", "tags": ["实时", "Google News"], "summary": "来源：手机新浪网（2026-08-20）。点击查看原文。", "body": "【实时抓取】戚薇穿安睡裤走红毯。来源：手机新浪网，发布时间 Thu, 20 Aug 2026 16:42:28 GMT。原文链接：https://news.google.com/rss/articles/CBMic0FVX3lxTE1Sc2owckYtNGVXNDlNYXJqTFNvdTlxR0RWVTRBcWdSSG1FTHE3aUNwUXNkRm5hNWtTR3dxZ3BfczFSYjNyUlVBMUp1UzZrSVl0ZVFyNTJBRGtmcHJEckRCUGxTdVktV2syaTBoWGdqZHFDUXM?oc=5"},
+  {"id": "auto-aded9b86", "section": "news", "category": "卫生巾", "title": "黄子韬、董宇辉为什么都要卖卫生巾？", "en": "", "brand": "21财经", "source": "googleNews", "date": "2026-08-20", "image": "images/real/px_women.jpg", "tags": ["实时", "Google News"], "summary": "来源：21财经（2026-08-20）。点击查看原文。", "body": "【实时抓取】黄子韬、董宇辉为什么都要卖卫生巾？。来源：21财经，发布时间 Thu, 20 Aug 2026 03:39:00 GMT。原文链接：https://news.google.com/rss/articles/CBMijAFBVV95cUxOclNtNHZiSHJjYUdzVVVod19jWE5UWmlDQW1DQVRMbERXbkpBWWdzNTVwQjl1aGh4ZW5hNHVOZDU1U1ZHdmlxUmVFWlRGaGVMZnlnSlVvQTRNSE5pMnZrNER4ZEtyRTByRXl0SmtWQnREREd4U3hJQ2Z0dTJfQzB4TkZvRTU2THpZVlZGZw?oc=5"},
+  {"id": "auto-db6bc1cc", "section": "industry", "category": "卫生巾", "title": "董宇辉官宣入局、全红婵代言朵薇，卫生巾赛道为何引来混战？", "en": "", "brand": "手机新浪网", "source": "googleNews", "date": "2026-08-19", "image": "images/real/industry_market_0_9.jpg", "tags": ["实时", "Google News"], "summary": "来源：手机新浪网（2026-08-19）。点击查看原文。", "body": "【实时抓取】董宇辉官宣入局、全红婵代言朵薇，卫生巾赛道为何引来混战？。来源：手机新浪网，发布时间 Wed, 19 Aug 2026 18:33:19 GMT。原文链接：https://news.google.com/rss/articles/CBMifkFVX3lxTE9NTHZ3NGREV0dpYmNfNy0za1QwNHA5b29UNVZjZTZNMG1hYjhzU1E1eXNjdFYyU25aS1NQemRyaEVDX0ZFNExNcG1DRTJLZml0MWV6SHJ3VXFCRmFrY29UeU1sSVQ4d2hrMnFWNmNmb1BvNzdrdmgyVFRPZzJIQQ?oc=5"},
+  {"id": "auto-e7adc715", "section": "news", "category": "卫生巾", "title": "卫品版《牛来》：母女三人手搓AI植入卫生巾，一包仅卖13元，在沃尔玛火了", "en": "", "brand": "母婴行业观察", "source": "googleNews", "date": "2026-08-19", "image": "images/real/new_pad_1_13.png", "tags": ["实时", "Google News"], "summary": "来源：母婴行业观察（2026-08-19）。点击查看原文。", "body": "【实时抓取】卫品版《牛来》：母女三人手搓AI植入卫生巾，一包仅卖13元，在沃尔玛火了。来源：母婴行业观察，发布时间 Wed, 19 Aug 2026 10:48:00 GMT。原文链接：https://news.google.com/rss/articles/CBMiTkFVX3lxTE1xeDRKZW1ETmY2aDlRTzc5WGFWV19BUFhyWUR3RmxsQW12MGotdFNVdnYwcERSX2xhR25jbWJQSk8tX2dzeElCZEZJNFM0QQ?oc=5"},
+  {"id": "auto-f244e2c5", "section": "news", "category": "卫生巾", "title": "检察长讲述高质效办案故事|顺着手机号查清资金流向", "en": "", "brand": "新浪财经_金融信息服务商", "source": "googleNews", "date": "2026-08-19", "image": "images/real/new_pad_1_13.png", "tags": ["实时", "Google News"], "summary": "来源：新浪财经_金融信息服务商（2026-08-19）。点击查看原文。", "body": "【实时抓取】检察长讲述高质效办案故事|顺着手机号查清资金流向。来源：新浪财经_金融信息服务商，发布时间 Wed, 19 Aug 2026 06:46:26 GMT。原文链接：https://news.google.com/rss/articles/CBMimAFBVV95cUxORU1RVEM4aEtxUFNpeHIxREFIRmlnVFBvaWNnWEJPRU4yRGdJTGNtQUxweVJmR2VQNzBqTVhYZHJDSHlxeDB5WUhzclhxeUR1WWwzY1YxNnpxRzlRUkpsbXNiZ1dTTFFva052ejlkak1ObFhPc0hjT1ZuSkkzZ3ZWUllaYWlKQXV5a2pUQVduaVp4SE1uLS1acQ?oc=5"},
+  {"id": "auto-58762dc4", "section": "industry", "category": "卫生巾", "title": "全红婵即将成为卫生巾品牌代言人，与偶像亚洲最新AN地址合作", "en": "", "brand": "womenofchina.com", "source": "googleNews", "date": "2026-08-18", "image": "images/real/px_cottonf.jpg", "tags": ["实时", "Google News"], "summary": "来源：womenofchina.com（2026-08-18）。点击查看原文。", "body": "【实时抓取】全红婵即将成为卫生巾品牌代言人，与偶像亚洲最新AN地址合作。来源：womenofchina.com，发布时间 Tue, 18 Aug 2026 16:02:38 GMT。原文链接：https://news.google.com/rss/articles/CBMiX0FVX3lxTE81bzVfdGJZNDZpRkJkbm10MC05dU9FdFhRbG5XSGk5eEtiWUVSaXNIb05zWWdSWS1UOWIxaFRVRW1QV1pLQjVwLWtIZ2c5M0dSWFFVcUpZSEdqdm5BWkpj?oc=5"},
+  {"id": "auto-5509793c", "section": "regulatory", "category": "卫生巾", "title": "监管部门通报“淘淘氧棉”合规，企业回应生产及品控情况", "en": "", "brand": "新浪财经_金融信息服务商", "source": "googleNews", "date": "2026-08-18", "image": "images/real/reg_lab_px.jpg", "tags": ["实时", "Google News"], "summary": "来源：新浪财经_金融信息服务商（2026-08-18）。点击查看原文。", "body": "【实时抓取】监管部门通报“淘淘氧棉”合规，企业回应生产及品控情况。来源：新浪财经_金融信息服务商，发布时间 Tue, 18 Aug 2026 06:25:42 GMT。原文链接：https://news.google.com/rss/articles/CBMimAFBVV95cUxOZ3c5XzFweThobFQ4Zlp6YldFdDdsUkswT0RmTnZ5ckhCZVJ0bWJ3Ui10d1JrWGg4NFhJSURLZGRwQjFDcXVHQ1RENVlUMXVrZGpBTG5tQWdHLXZqaG1FRE5VV0V2RmtyVEFpc3dqaktMMFJKNW5KSlBFUUNsdHpxX3lFMzJBOTRGTFl4MFBzdkVmaF9EOEIxZg?oc=5"},
+  {"id": "auto-94c4db06", "section": "news", "category": "卫生巾", "title": "为什么董宇辉、黄子韬都来做卫生巾？", "en": "", "brand": "中华网财经", "source": "googleNews", "date": "2026-08-17", "image": "images/real/new_pad_1_13.png", "tags": ["实时", "Google News"], "summary": "来源：中华网财经（2026-08-17）。点击查看原文。", "body": "【实时抓取】为什么董宇辉、黄子韬都来做卫生巾？。来源：中华网财经，发布时间 Mon, 17 Aug 2026 01:57:59 GMT。原文链接：https://news.google.com/rss/articles/CBMic0FVX3lxTE1VTUhGekp3TUhyWEVqTjBIdlRvUl9aTHNobW42TjRsWTM3bzk2N1hSNFNtWU9DNjI1R0xISWZEY19HTjJpWm1rVEVZN01RdHYxQVZ6bFA4X0w4VFpJWTdVZEJOd1d6TWNZUHdPQ0F0UElBSDA?oc=5"},
+  {"id": "auto-f8913be2", "section": "news", "category": "卫生巾", "title": "男主播要卖卫生巾？董宇辉自爆猛料！", "en": "", "brand": "QQ News", "source": "googleNews", "date": "2026-08-16", "image": "images/real/women_care_px.jpg", "tags": ["实时", "Google News"], "summary": "来源：QQ News（2026-08-16）。点击查看原文。", "body": "【实时抓取】男主播要卖卫生巾？董宇辉自爆猛料！。来源：QQ News，发布时间 Sun, 16 Aug 2026 03:06:00 GMT。原文链接：https://news.google.com/rss/articles/CBMiVkFVX3lxTFBROVlVbU9HSXI4eTRqVnRiY0xkakdPUVZIYXNGX19Qa3AtRjJhNmg4X3J2WjhQalp1Ulc3WmZNUjRfNUNHc0lRNUI5M0xjdllTc2YzOV9n?oc=5"},
+  {"id": "auto-23cf4167", "section": "news", "category": "卫生巾", "title": "七度空间少女系列卫生巾吸水倍率不合格的原因是什么？", "en": "", "brand": "新浪财经_金融信息服务商", "source": "googleNews", "date": "2026-08-13", "image": "images/real/px_women.jpg", "tags": ["实时", "Google News"], "summary": "来源：新浪财经_金融信息服务商（2026-08-13）。点击查看原文。", "body": "【实时抓取】七度空间少女系列卫生巾吸水倍率不合格的原因是什么？。来源：新浪财经_金融信息服务商，发布时间 Thu, 13 Aug 2026 14:26:50 GMT。原文链接：https://news.google.com/rss/articles/CBMifkFVX3lxTE93a29ERF9Gazd6YnhVLVRQS2RXWjE1bXNKc1JNVWdaSkFiYzNpN200SGE0R0JjdHNDMUtUbzVVdHZQaUNKN2gxekxieUd5YlhzVHVIX3BjNWtCTlowajl2MlhtN3plTlZzYVB1SWl4Z2RkTG9KNVBTa1ByN0ZKUQ?oc=5"},
+  {"id": "auto-84b39978", "section": "news", "category": "卫生巾", "title": "推荐一些七度空间卫生巾的使用测评", "en": "", "brand": "新浪财经_金融信息服务商", "source": "googleNews", "date": "2026-08-13", "image": "images/real/px_cottonf.jpg", "tags": ["实时", "Google News"], "summary": "来源：新浪财经_金融信息服务商（2026-08-13）。点击查看原文。", "body": "【实时抓取】推荐一些七度空间卫生巾的使用测评。来源：新浪财经_金融信息服务商，发布时间 Thu, 13 Aug 2026 14:23:17 GMT。原文链接：https://news.google.com/rss/articles/CBMifkFVX3lxTE13TF9XM041YU8xamh2OUN2ZXNrQUstdXpxSG4tSVZMMEFIQVZTSlBIQ3lTZU5NYjNKeHF2SHA0X1dGWTdlbDNSalBfaWZVeW9XbXJmR054RC03S1owempqYzJ4LXVlUHBpWElXck9QTXZ6SnZvekZQUnB6VFBrZw?oc=5"},
+  {"id": "news-008", "section": "news", "category": "卫生巾", "title": "董宇辉宣布将卖定制卫生巾，预计 10 月中旬上架", "en": "Dong Yuhui Custom Pads", "brand": "与辉同行/董宇辉", "source": "googleNews", "date": "2026-08-11", "image": "images/real/new_pad_1_13.png", "tags": ["董宇辉", "定制", "上架", "跨界"], "summary": "董宇辉宣布将卖定制卫生巾，预计10月中旬上架，主打定制化与品质透明。", "body": "观察者网等报道：董宇辉宣布将卖定制卫生巾，预计10月中旬上架。主播跨界入局强调定制化与品质透明，呼应消费者对原料安全的高度敏感。最终成败仍取决于产品力与供应链合规。"},
+  {"id": "news-011", "section": "news", "category": "卫生巾", "title": "淘淘氧棉「疑现虫卵」事件核查：各项指标符合国标", "en": "Taotao Cotton Bug Incident", "brand": "淘淘氧棉", "source": "googleNews", "date": "2026-08-11", "image": "images/real/px_cotton.jpg", "tags": ["舆情", "虫卵", "检测合格", "信任"], "summary": "淘淘氧棉卫生巾疑现虫卵引发舆情，桂林七星区通报相关批次检测结果合格。", "body": "新京报、封面新闻报道：淘淘氧棉卫生巾被指疑现虫卵，引发广泛舆情。桂林七星区通报：相关批次卫生巾各项指标均符合国家标准，企业回应该批次检测结果合格。事件凸显卫生巾作为强信任品类的舆情脆弱性——一次质疑即可能重创信任，品牌需建立快速、透明、可验证的舆情响应与溯源机制。"},
+  {"id": "news-001", "section": "news", "category": "卫生巾", "title": "护舒宝全球首发「莱赛尔蚕丝卫生巾」：蚕丝写进成分表", "en": "Whisper Lyocell × Silk", "brand": "护舒宝", "source": "pgh", "date": "2026-08-10", "image": "images/real/pax_silk.png", "tags": ["莱赛尔", "蚕丝", "少摩擦", "敏感肌"], "summary": "首次将莱赛尔纤维与天然蚕丝结合用于表层，摩擦力较纯棉降低22%，主打减少经期红痒。", "body": "护舒宝在苏州第一丝厂举办莱赛尔蚕丝卫生巾新品发布会，并携新品亮相2026中国医师协会妇产科医师大会。首次将莱赛尔与天然蚕丝结合应用于卫生巾表层，以写进成分表的天然真蚕丝减少经期摩擦红痒。表层摩擦力较护舒宝天然纯棉产品降低22%；超99.6%受访专家认可该材质组合有助于减少私处摩擦红痒，97%消费者认为能减少摩擦红痒。国家级非遗苏绣传承人朱寿珍以蚕丝与莱赛尔创作海棠如意纹非遗作品。这是「材质即卖点」的典型——把抽象的「亲肤」变成可验证成分与数据。"},
+  {"id": "news-002", "section": "news", "category": "安睡裤", "title": "护舒宝「减压深睡裤」：Sleep Pro 多孔深睡芯 + 4D 微压包裹", "en": "Whisper Deep Sleep Panty", "brand": "护舒宝", "source": "pgh", "date": "2026-08-10", "image": "images/real/px_women.jpg", "tags": ["安睡裤", "减压", "防漏", "透气", "Sleep Pro"], "summary": "针对夜间闷/勒/怕漏三大痛点，创新融合多孔深睡芯、4D立体微压包裹及四向防漏。", "body": "护舒宝基于经期夜晚「闷、勒、怕漏」三大痛点推出减压深睡裤，创新融合Sleep Pro多孔深睡芯、4D立体微压包裹及四向防漏设计，实现整晚透气、防漏、不粘肤，帮助女性缓解夜间睡眠压力。超99.7%受访专家认可挑选轻薄防漏的安睡裤可减少夜间渗漏及闷湿黏热，有助获得更好经期睡眠体验。产品指向「减压」这一情绪+功能双关键词，是安睡裤高端化的代表案例。"},
+  {"id": "news-003", "section": "news", "category": "卫生巾", "title": "护舒宝新升级「液体卫生巾」：速吸散热条吸收速度 +50%", "en": "Whisper Liquid Upgraded", "brand": "护舒宝", "source": "pgh", "date": "2026-08-10", "image": "images/real/pax_silk.png", "tags": ["液体卫生巾", "速吸", "散热", "升级"], "summary": "新升级速吸散热条将吸收速度提升50%，帮助肌肤快速恢复干爽，减少经期闷湿感。", "body": "护舒宝新升级液体卫生巾迎来全新升级，速吸散热条将吸收速度提升50%，帮助肌肤快速恢复干爽、减少经期闷湿感。超99.7%受访专家认可经期远离闷痒刺激可从物理隔菌开始。液体卫生巾以「一体吸收芯体」结构区别于传统复合芯，是护舒宝的高端旗舰线，此次升级强化「速吸+散热」双卖点。"},
+  {"id": "news-007", "section": "news", "category": "卫生巾", "title": "全红婵出任黄子韬「朵薇」卫生巾代言人", "en": "Quan Hongchan Endorses Duowei", "brand": "朵薇/黄子韬", "source": "googleNews", "date": "2026-08-03", "image": "images/real/px_women.jpg", "tags": ["代言人", "朵薇", "黄子韬", "跨界"], "summary": "全红婵宣布成为黄子韬卫生巾品牌朵薇代言人，明星跨界引发行业关注。", "body": "东方财富等报道：全红婵宣布成为黄子韬卫生巾品牌朵薇的代言人。明星运动员代言为跨界品牌带来强信任背书与破圈流量，也折射卫生巾品类正获得前所未有的公共关注度。"},
+  {"id": "news-004", "section": "news", "category": "卫生巾", "title": "乐而雅「零触感纯棉甄选」新上市：0.1cm 吸收层 + 澳洲纯棉", "en": "Laurier Zero Touch Pure Cotton", "brand": "乐而雅/花王", "source": "kao", "date": "2026-07-21", "image": "images/real/material_cotton_px.jpg", "tags": ["纯棉", "0.1cm", "澳洲进口", "透气", "十大无添加"], "summary": "100%澳洲进口纯棉表层+特薄0.1cm吸收层+千万透气孔底膜，打破「纯棉=厚重」印象。", "body": "花王旗下乐而雅推出零触感纯棉甄选系列。延续零触感系列特薄0.1cm吸收层，采用100%澳洲进口纯棉表层，经精织工艺保留原棉天然透气与柔软。表层/吸收层/底膜构成层层透气结构，底膜搭载千万透气孔。纯棉表层除符合GB15979要求外，另有十大物质未检出（PFAS、农药残留、双酚A、防腐剂、AOX、甲醛、化纤成分、增塑剂16种、滑石粉等）。尺寸22.5/25/35cm，外包装贴心易撕贴设计。把「纯棉安心」与「超薄无感」结合，回应「纯棉=厚重」痛点。"},
+  {"id": "ind-001", "section": "industry", "category": "卫生巾", "title": "新国标一周年：行业从「可用」走向「可信」", "en": "One Year of GB 15979-2024", "brand": "行业综述", "source": "ndcpa", "date": "2026-07-01", "image": "images/real/reg_standard_1_49.jpg", "tags": ["GB 15979-2024", "信任", "质量竞争"], "summary": "2025-07-01 强制性国标 GB 15979-2024 实施满一年，卫生巾从规模扩张转向质量竞争。", "body": "2025年7月1日，强制性国家标准《一次性使用卫生用品卫生要求》(GB 15979—2024) 正式实施——这是该标准自2002年发布以来的首次修订，归口国家疾控局。新国标按风险等级将卫生巾、护垫、安睡裤纳入重点监管，新增 pH 值、可迁移性荧光增白剂残留量等理化指标，调整微生物污染限值与毒理学要求。落地满一年，推动行业从规模扩张转向质量竞争：2025年中国卫生巾市场规模约682亿元（同比+8.1%），市场渗透率超96%。对产品策划的启示：把「合规」做成信任资产，在详情页可视化呈现检测数据。"},
+  {"id": "cmp-005", "section": "competitor", "category": "卫生巾", "title": "日本标杆：花王乐而雅/尤妮佳苏菲的材质迭代节奏", "en": "Japan Benchmark Iteration", "brand": "竞品·日本", "source": "kao", "date": "2026-06-15", "image": "images/real/industry_factory_px.jpg", "tags": ["乐而雅", "苏菲", "尤妮佳", "日本", "迭代"], "summary": "花王乐而雅/尤妮佳苏菲保持高频材质迭代：纯棉甄选/抑菌/零触感升级，是节奏标杆。", "body": "日本双雄花王乐而雅与尤妮佳苏菲是材质迭代节奏标杆：乐而雅2025-09晚安裤抑菌、2026-01零触感瞬吸升级、2026-07纯棉甄选三连发；苏菲持续迭代裸感S超细热风面层。共同特征：每年2-3次有节奏的材质/结构升级，每次聚焦一个可验证卖点(0.1cm/99%抑菌/澳洲纯棉/速吸+50%)，配合医学专家背书。竞品启示：建立年度材质升级节奏，避免一次大改的风险。"},
+  {"id": "cmp-004", "section": "competitor", "category": "卫生巾", "title": "消毒级信任锚：奈丝公主把「消毒级」做成品类心智", "en": "Sterile-grade Trust Anchor", "brand": "竞品·消毒级", "source": "cbn", "date": "2026-06-12", "image": "images/real/reg_lab_0_43.jpg", "tags": ["奈丝公主", "消毒级", "信任", "心智"], "summary": "奈丝公主把「消毒级」做成卫生巾品类信任锚，呼应消费者对原料安全的高度敏感。", "body": "奈丝公主以「消毒级」卫生巾切入，把一个工艺/检测属性升格为品类心智——呼应超90%消费者将「原料安全」列为首要购买因素的现实。消毒级意味着更严的微生物控制与更高信任，是强信任品类的有效差异化。竞品启示：把一个「可验证的安全属性」做成品牌资产，比空泛「高品质」更有效。"},
+  {"id": "cmp-003", "section": "competitor", "category": "安睡裤", "title": "安睡裤图谱：乐而雅晚安裤/护舒宝深睡裤/高洁丝/子初", "en": "Panty Competitive Map", "brand": "竞品·安睡裤", "source": "mojing", "date": "2026-06-10", "image": "images/real/women_care_px.jpg", "tags": ["安睡裤", "乐而雅", "护舒宝", "高洁丝", "子初"], "summary": "安睡裤竞争图谱：乐而雅晚安裤抑菌99%/护舒宝减压深睡裤/子初吸水43.9倍。", "body": "安睡裤赛道头部格局：乐而雅晚安裤抑菌清新(99%抑菌+480mm+0.21cm空气芯+28倍吸水)；护舒宝减压深睡裤(Sleep Pro多孔深睡芯+4D微压包裹+四向防漏)；高洁丝安睡裤；子初(吸水倍率43.9倍，江苏比较试验榜首)；康乐司(42.6倍)。差异化轴：抑菌/减压/超薄/超高吸水/尺码合规。竞品启示：安睡裤需选一个情绪+功能双关键词(抑菌/减压/深睡)做主诉求。"},
+  {"id": "cmp-002", "section": "competitor", "category": "卫生巾", "title": "新锐路线：她研社/奈丝公主/自由点/淘淘氧棉的差异化", "en": "New Brands Differentiation", "brand": "竞品·新锐", "source": "cbn", "date": "2026-06-05", "image": "images/real/px_cottonf.jpg", "tags": ["她研社", "奈丝公主", "自由点", "淘淘氧棉", "新锐"], "summary": "新锐以抑菌/有机纯棉/消毒级/九无添加差异化突围，借抖音与小红书打爆。", "body": "新锐品牌走差异化突围：她研社(HerLab)抑菌系列+pH平衡；奈丝公主消毒级(信任锚)；自由点有机纯棉+九无添加+全链路溯源+应急卫生巾城市守护网络；淘淘氧棉主打氧棉/纯棉(近期舆情警示信任脆弱)。共同打法：聚焦一个细分信任点(抑菌/消毒级/有机/无添加)打透，借抖音直播与小红书种草打爆，包装做情绪化与收藏化。"},
+  {"id": "cmp-001", "section": "competitor", "category": "卫生巾", "title": "巨头路线：护舒宝/苏菲/乐而雅/高洁丝的科技军备", "en": "Giants Tech Race", "brand": "竞品·巨头", "source": "pgh", "date": "2026-06-01", "image": "images/real/pax_silk.png", "tags": ["护舒宝", "苏菲", "乐而雅", "高洁丝", "巨头"], "summary": "四大巨头以材料/结构/工艺科技军备竞争：护舒宝莱赛尔蚕丝/液体芯体、乐而雅纯棉甄选。", "body": "卫生巾四巨头(宝洁护舒宝/尤妮佳苏菲/花王乐而雅/金佰利高洁丝)以科技军备竞争：护舒宝莱赛尔蚕丝+减压深睡裤+液体卫生巾升级；乐而雅零触感纯棉甄选(0.1cm+澳洲纯棉)+晚安裤抑菌99%+新一代瞬吸升级；苏菲裸感S超细热风面层+悬浮芯体；高洁丝量多/纯棉系列。共同特征：把抽象卖点转化为可验证成分与数据(摩擦力-22%、抑菌99%、吸水30倍+)，并以医学专家背书强化信任。"},
+  {"id": "pkg-006", "section": "packaging", "category": "卫生巾", "title": "跨品类借鉴：把彩妆高级感与奢侈品礼盒逻辑搬过来", "en": "Cross-category Inspiration", "brand": "包装·借鉴", "source": "mintel", "date": "2026-05-20", "image": "images/real/comp_shelf_1_53.jpg", "tags": ["跨品类", "彩妆", "奢侈品", "礼盒"], "summary": "卫生巾包装常借鉴彩妆高级感与奢侈品礼盒逻辑，是低成本提升品牌势能的有效路径。", "body": "卫生巾包装设计上常借鉴彩妆(高级感色卡/烫金/磁吸)与奢侈品礼盒(抽屉/丝带/卡片)逻辑。Pinterest/Behance/Little Box of…是灵感库。借鉴原则：借结构与质感，不借品类符号——避免「不像卫生巾」的认知错位。可借鉴：定期做跨品类包装mood board。"},
+  {"id": "pkg-005", "section": "packaging", "category": "安睡裤", "title": "安睡裤礼盒与旅行装：从夜用替代到场景化溢价", "en": "Panty Gift Box & Travel", "brand": "包装·场景", "source": "shangpu", "date": "2026-05-18", "image": "images/real/env_eco_1_57.jpg", "tags": ["礼盒", "旅行装", "场景化", "安睡裤"], "summary": "安睡裤从夜用替代走向独立礼盒/旅行装，借场景化与联名做溢价与复购。", "body": "安睡裤正跳出「夜用替代」定位，走向场景化包装：经期礼盒(配暖宫贴/茶包)、旅行装(压缩便携)、联名限量。这与「睡眠经济」「去羞耻化」情绪结合，溢价与复购空间大。可借鉴：把安睡裤做成「经期晚安礼盒」场景单品，而非仅功能品。"},
+  {"id": "pkg-004", "section": "packaging", "category": "卫生巾", "title": "袋型与开启：易撕口/独立贴封/磁吸翻盖的细节体验", "en": "Bag Type & Opening", "brand": "包装·结构", "source": "mintel", "date": "2026-05-15", "image": "images/real/pack_box_1_42.jpg", "tags": ["易撕", "贴封", "磁吸", "独立包装", "体验"], "summary": "易撕口、单片独立贴封(用后即贴)、高端线磁吸翻盖，开启方式即体验与卫生信任。", "body": "包装开启方式是被低估的体验点：①易撕口(主流，省力)；②单片独立贴封「用后即贴」(乐而雅纯棉甄选采用，储存更安心、不散落)；③高端线磁吸翻盖/抽屉盒(礼品化)。独立单片包装决定便携与卫生信任。可借鉴：把「用后即贴」这类小细节做成详情页动图与卖点。"},
+  {"id": "pkg-003", "section": "packaging", "category": "卫生巾", "title": "可持续可降解：PLA/纸塑复合/可种植包装的环保叙事", "en": "Sustainable Packaging", "brand": "包装·环保", "source": "edana", "date": "2026-05-12", "image": "images/real/env_eco_0_55.jpg", "tags": ["可降解", "PLA", "纸塑复合", "可种植", "环保"], "summary": "PLA可降解膜/纸塑复合/可种植包装，配可回收标识，是环保叙事的可视化抓手。", "body": "环保包装三条路：①PLA/生物基可降解膜替代PE；②纸塑复合(纸+薄PE)提升可回收性；③可种植包装(种子纸，用完埋土长花)。配FSC/可回收标识增强可信。欧盟受法规推动可降解占比已达22.1%，国内尚处早期。可借鉴：把「可种植」「可降解」做成开箱即种草的传播事件。"},
+  {"id": "pkg-002", "section": "packaging", "category": "卫生巾", "title": "IP 联名可爱风：Care Bears/大英博物馆把经期做成收藏品", "en": "IP Collaboration Cute", "brand": "包装·IP", "source": "mintel", "date": "2026-05-10", "image": "images/real/comp_shelf_1_54.jpg", "tags": ["IP联名", "可爱", "收藏", "Z世代"], "summary": "ELIS×Care Bears、BeBeBus×大英博物馆联名，把卫生巾/经期裤做成可收藏情绪单品。", "body": "IP联名是Z世代最吃的包装方向：ELIS×Care Bears、BeBeBus×大英博物馆联名卫生巾，把单片铝箔袋做成插画收藏。配合「季度限量」(每季携手新锐艺术家推经期情绪插画)与隐藏诗句，让包装从「容器」变「内容」。试点品牌借此在抖音单月卖出320万包、新客占比42%。可借鉴：IP联名+限量+隐藏彩蛋三件套。"},
+  {"id": "pkg-001", "section": "packaging", "category": "卫生巾", "title": "高端极简风：哑光 + 烫金 + 极简文字的高级感公式", "en": "Premium Minimalist", "brand": "包装·高端", "source": "mintel", "date": "2026-05-08", "image": "images/real/pack_box_1_42.jpg", "tags": ["极简", "烫金", "哑光", "高级感"], "summary": "哑光底+烫金logo+极简文字+留白，是卫生巾包装借势美妆高级感的通用公式。", "body": "高端线卫生巾包装普遍借鉴彩妆/护肤的高级感：哑光PE/纸塑复合底、烫金或击凸logo、极简文字、大量留白、莫兰迪/低饱和色。信息层级压到最少——只留品牌+核心卖点。这种「减法」让产品在货架与直播间都显贵。可借鉴：高端线做极简，主推线做信息密度，分轨设计。"},
+  {"id": "mat-008", "section": "material", "category": "经期裤", "title": "有机棉/莱赛尔/竹纤维：天然材质替代率向 30% 推进", "en": "Natural Fiber Substitution", "brand": "材料·天然", "source": "mintel", "date": "2026-04-28", "image": "images/real/industry_cotton_px.jpg", "tags": ["有机棉", "莱赛尔", "竹纤维", "可降解", "天然"], "summary": "天然材质渗透率从8.7%升至15.2%，可降解占比向30%推进，护舒宝莱赛尔蚕丝是代表。", "body": "可持续与天然是明确方向：有机棉/竹纤维/莱赛尔等天然材质产品渗透率从2023年8.7%升至2025年15.2%；欧盟受环保法规推动可降解产品占比达22.1%，目标2030环保产品占比超30%。护舒宝莱赛尔蚕丝卫生巾把天然蚕丝+莱赛尔写进成分表，是「天然即卖点」的代表。全棉时代水刺全棉、自由点有机纯棉+九无添加亦在此列。可借鉴：把「天然材质」做成可验证成分表+溯源链路，而非空泛口号。"},
+  {"id": "mat-007", "section": "material", "category": "卫生巾", "title": "热熔胶定位与立体护围：不起包、不残留的隐形工程", "en": "Hot-melt Adhesive & Barrier", "brand": "材料·结构", "source": "nonwoven", "date": "2026-04-25", "image": "images/real/material_nonwoven_0_19.png", "tags": ["热熔胶", "立体护围", "防侧漏", "定位"], "summary": "定位热熔胶螺旋涂布保证贴合不残留；立体护围(橡筋+无纺布)是防侧漏的物理结构。", "body": "两处隐形工程决定使用体验：①定位热熔胶——压敏胶以螺旋/条纹微涂于底膜，贴合内裤且撕离无残留、耐湿热；②立体护围（侧翼/防漏隔边）——由氨纶橡筋+无纺布经超声波压合成立体挡墙，贴合腿根防止侧漏。护舒宝「4D立体微压包裹」、乐而雅「加宽扇形尾翼」均强化此处。还有翼片(侧翼)用可拉伸无纺布+胶条翻折固定。这些是「不跑位、不侧漏」的物理基础，详情页可做「结构拆解图」增强信任。"},
+  {"id": "mat-006", "section": "material", "category": "卫生巾", "title": "生产工艺 8 步：从绒毛浆粉碎到单片独立包装", "en": "8-Step Manufacturing", "brand": "材料·工艺", "source": "nonwoven", "date": "2026-04-22", "image": "images/real/industry_factory_0_2.jpg", "tags": ["工艺", "8步", "超声波", "热熔胶", "质检"], "summary": "卫生巾生产8步：原料退绕→芯体成型(绒毛浆+SAP)→复合层压→压花打孔→分切折叠→独立包装→质检。", "body": "全自动产线每分钟可产800-1200片，8大工序：①原料退绕(无纺布/PE膜/绒毛浆/SAP上机控张力)→②芯体成型(绒毛浆粉碎与SAP超声混合、真空模塑成型，实时监控厚重)→③面层/ADL制备(亲水处理)→④底膜制备(PE流延、透气膜与无纺布层压)→⑤复合层压(各层三明治叠合、热熔胶螺旋涂布、光学对齐≤1mm)→⑥压花/打孔/印花(食品级墨水)→⑦分切折叠(高速旋切、三折/对折、单片独立包)→⑧质检包装(重量/金属/视觉检测、自动剔除不良)。智能制造可提升效率25%、不良率从3%降至0.8%。"},
+  {"id": "mat-005", "section": "material", "category": "卫生巾", "title": "透气底膜：PE 微孔膜的「只透气不透液」原理", "en": "Breathable Backsheet", "brand": "材料·底膜", "source": "edana", "date": "2026-04-20", "image": "images/real/px_factory.jpg", "tags": ["透气底膜", "PE微孔膜", "碳酸钙", "MVTR", "不闷"], "summary": "透气底膜用PE+碳酸钙微孔填充，挡住水分子却放走水汽，MVTR可超5000g/m²/24h。", "body": "透气底膜（Breathable Backsheet）是底层防水屏障。工艺：PE薄膜中填充微米级碳酸钙颗粒，拉伸后形成微孔——孔径小于水分子团但大于水汽分子，从而「只透气不透液」。关键指标 MVTR（水蒸气透过率），高端透气底膜可超5000 g/m²/24h。乐而雅「千万透气孔底膜」、新风般透气微孔即此原理。另有可水洗纸、PLA可降解膜等环保方向。底膜+定位热熔胶(螺旋涂布、无残留)共同决定贴合与透气。可借鉴：「会呼吸」是去闷痒的核心沟通点。"},
+  {"id": "mat-004", "section": "material", "category": "卫生巾", "title": "导流层 ADL：让液体「咻一下直吸到底」的关键薄层", "en": "Acquisition Distribution Layer", "brand": "材料·导流层", "source": "nonwoven", "date": "2026-04-18", "image": "images/real/material_cotton_px.jpg", "tags": ["ADL", "导流层", "吸水纸", "瞬吸"], "summary": "ADL(导流层)用亲水多孔无纺布/吸水纸把液体快速横向导流到芯体，决定瞬吸与防局部堆积。", "body": "ADL（Acquisition Distribution Layer，导流层/ acquisition-distribution layer）位于面层与芯体之间，用亲水多孔无纺布或打孔吸水纸，把面层下渗的液体快速横向分布到整个芯体、避免局部堆积导致回渗。它是「瞬吸」与「多次潮涌不漏」的关键。乐而雅「速吸导流层」、零触感升级款均强化此处。吸水纸（fluff pulp sheet）也是常见导流/吸收材料。可借鉴：详情页用「液体分布动图」直观呈现ADL作用。"},
+  {"id": "mat-003", "section": "material", "category": "卫生巾", "title": "复合芯体 vs 液体芯体：两种吸收架构的路线之争", "en": "Composite vs Liquid Core", "brand": "材料·芯体结构", "source": "nonwoven", "date": "2026-04-15", "image": "images/real/material_nonwoven_1_22.jpg", "tags": ["复合芯体", "液体芯体", "吸收架构", "路线"], "summary": "复合芯体(绒毛浆+SAP包裹)主流通用；液体芯体(一体成型)更薄更稳，是高端旗舰。", "body": "吸收芯体有两条技术路线：①复合芯体——绒毛浆+ SAP 用无纺布/吸水纸包裹分层，主流通用、成本可控，但厚且易断层；②液体芯体——吸收材料一体成型为整片 FlexFit 芯体，无绒毛浆、更薄、吸收更稳、不断层、不变形，代表为护舒宝液体卫生巾。液体芯体是高端旗舰的差异化壁垒。吸收速度上液体芯体更快（护舒宝升级款速吸散热条吸收速度+50%）。产品策划启示：把「芯体架构」做成信任与高端的叙事核心。"},
+  {"id": "mat-002", "section": "material", "category": "卫生巾", "title": "高分子吸水树脂 SAP：吸水倍率的「心脏」，凝胶锁水不反渗", "en": "Superabsorbent Polymer", "brand": "材料·芯体", "source": "edana", "date": "2026-04-12", "image": "images/real/material_cotton_1_26.jpg", "tags": ["SAP", "聚丙烯酸钠", "吸水倍率", "凝胶", "锁水"], "summary": "SAP(交联聚丙烯酸钠)吸自重数百倍并凝胶锁水，是吸水倍率与防反渗的核心。", "body": "SAP（Superabsorbent Polymer，高吸水性树脂，主成分为交联聚丙烯酸钠）是吸收芯体的「心脏」。它遇水后聚合物链舒展与水分子结合，把液体锁定为半固体凝胶，即便受压也不易挤出——这正是「不反渗、不黏腻」的原理。吸水倍率（吸自重倍数）是核心指标：江苏消保委安睡裤比较试验中5批次吸水倍率达30倍以上，子初/康乐司达42-43倍。SAP与绒毛浆的配比与均匀分布（定量撒粉鼓）决定芯体是否结块、断层。代表：乐而雅「10万+魔力吸水珠」即SAP的营销化表达。"},
+  {"id": "mat-001", "section": "material", "category": "卫生巾", "title": "面层无纺布：亲肤的第一道关，0.8D 超细热风是高端标配", "en": "Top Sheet Nonwoven", "brand": "材料·面层", "source": "nonwoven", "date": "2026-04-10", "image": "images/real/material_nonwoven_0_19.png", "tags": ["无纺布", "面层", "热风", "0.8D", "亲肤"], "summary": "面层无纺布决定肤感与瞬间下渗；热风布更软、纺粘更强，0.8D超细是高端标配。", "body": "面层无纺布（Top Sheet）是直接接触皮肤的一层，决定肤感与液体瞬间下渗速度。主流工艺：热风无纺布（更柔软蓬松，高端常用）、纺粘/熔喷（SSMS多层更强韧）、水刺（全棉时代常用，亲肤但成本高）。纤维越细越柔——0.8D超细纤维是高端「无感」的关键。亲水处理降低表面张力让液体快速穿过、不回渗。代表：苏菲裸感S「像没穿一样」即靠超细热风面层+悬浮芯体。可借鉴方向：把「纤维细度」做成详情页可视化卖点。"},
+  {"id": "ind-008", "section": "industry", "category": "经期裤", "title": "全球女性护理市场 2025 年约 412.7 亿美元，安睡裤增速最快", "en": "Global Feminine Care 2025", "brand": "全球数据", "source": "eurmon", "date": "2026-03-01", "image": "images/real/industry_cotton_px.jpg", "tags": ["全球", "安睡裤", "增速", "亚太"], "summary": "2025全球纺织女性护理市场约412.7亿美元(+6.8%)，安睡裤/经期裤同比+14.3%增速最快。", "body": "产业世界报告：2025年全球纺织女性护理产品市场规模约412.7亿美元，同比+6.8%，亚太贡献45.3%份额。中国为全球最大生产与消费国，2025年规模约186.2亿美元、占全球45.1%、同比+9.1%。产品结构上卫生巾仍主导(68.5%)，但安睡裤与经期裤品类增速最快(同比+14.3%)。有机棉、竹纤维等天然材质产品渗透率从2023年8.7%升至2025年15.2%。预测2030年全球市场破563亿美元。"},
+  {"id": "ind-007", "section": "industry", "category": "卫生巾", "title": "Z 世代为「限定」多付 30%：创意包装成第二增长曲线", "en": "Collectible Packaging", "brand": "尚普年度复盘", "source": "shangpu", "date": "2026-02-18", "image": "images/real/pack_box_1_42.jpg", "tags": ["包装", "情绪价值", "联名", "复购"], "summary": "预测到2026年具收藏属性的创意包装销售占比有望从不足5%提升至18%。", "body": "尚普咨询年度复盘指出：高端不是价格，是情绪价值。Z世代愿为「限定」多付30%。「季度限量联名」打法（每季携手新锐艺术家推经期情绪插画、单片铝箔袋印隐藏诗句、可种植包装、数字藏品）让试点品牌在2025年5月抖音直播卖出320万包、同比+176%，新客占比升至42%（其中28%来自「被包装种草」）。预测到2026年，具收藏属性的创意包装销售占比有望从不足5%提升至18%。"},
+  {"id": "news-006", "section": "news", "category": "卫生巾", "title": "新一代「乐而雅零触感」瞬吸升级：速吸导流层 + 10万+ 魔力吸水珠", "en": "Laurier Zero Touch Upgraded", "brand": "乐而雅/花王", "source": "kao", "date": "2026-01-21", "image": "images/real/px_cottonf.jpg", "tags": ["零触感", "速吸导流", "高分子", "瞬吸"], "summary": "延续0.1cm吸收层，新增速吸导流层+10万+魔力吸水珠，舒爽感提升至120%。", "body": "花王乐而雅2026年1月推新一代零触感卫生巾。延续零触感系列特薄0.1cm吸收层，采用新升级速吸导流层帮助经血快速导流下渗，配10万+魔力吸水珠（高分子吸收树脂）稳吸多次大量潮涌，舒爽感提升至120%，结合宽型剪裁与立体侧边远离侧漏。日用款清新绿、夜用款静谧深蓝，多彩独立包装便于区分尺寸。覆盖17cm迷你到40cm夜用多尺寸。把「特薄+瞬吸」做实。"},
+  {"id": "ind-002", "section": "industry", "category": "卫生巾", "title": "2025 中国卫生巾市场规模冲刺千亿，渗透率超 96%", "en": "China Market Toward 100B", "brand": "行业数据", "source": "chinabgao", "date": "2026-01-15", "image": "images/real/industry_factory_px.jpg", "tags": ["市场规模", "渗透率", "高端化", "CR5"], "summary": "2025市场规模约682亿、预测破千亿，CR5达61%，电商占比超40%，高端产品增速25%。", "body": "中国是全球最大女性卫生用品市场之一。多份研报显示：2025年市场规模约682亿元（同比+8.1%），有预测2025年突破1000亿元大关（年复合增长率13.8%）。核心消费群体15-49岁女性超3.4亿，渗透率超96%。市场集中度持续提升，CR5已达61%；电商销售占比超40%，直播带货贡献超20%销售额，预计2030年线上占比47%-65%。单价15元以上高端卫生巾增速达25%、占比向40%靠拢；功能性卫生巾占约65%；超90%消费者将「原料安全」列为首要购买因素。"},
+  {"id": "ind-006", "section": "industry", "category": "安睡裤", "title": "安睡裤品类崛起：整晚不换的「睡眠经济」新入口", "en": "Period Panty Boom", "brand": "品类机会", "source": "mojing", "date": "2025-12-03", "image": "images/real/px_women.jpg", "tags": ["安睡裤", "经期裤", "睡眠", "品类"], "summary": "安睡裤360°贴合+整晚不换，对吸收/防侧漏要求高于普通卫生巾，是高端化与礼品化潜力品类。", "body": "「安睡裤」是裤型卫生巾（女性卫生裤/安心裤/夜安裤），执行GB/T 39391-2020。相较普通卫生巾，它要满足整晚不更换、吸血量更多，对吸收速度、吸水倍率、渗透性能及防侧漏要求更高。江苏省消保委2025年比较试验显示，40批次吸收速度5-12秒（国标≤60秒），5批次吸水倍率达30倍以上。该品类正从「夜用替代」走向「独立礼品/旅行装」场景，溢价与联名空间大。"},
+  {"id": "ind-003", "section": "industry", "category": "卫生巾", "title": "高端化与功能化并行：纯棉、抑菌、pH 平衡成竞争焦点", "en": "Premiumization & Functionalization", "brand": "行业趋势", "source": "shangpu", "date": "2025-11-20", "image": "images/real/material_cotton_px.jpg", "tags": ["纯棉", "抑菌", "pH平衡", "可降解"], "summary": "纯棉卫生巾2024年规模约125亿；抑菌、pH平衡、可降解成焦点，可降解渗透率仅12%。", "body": "材质升级是当下最显性的竞争轴：中国纯棉卫生巾2024年市场规模约125亿元，自由点以「有机纯棉+九无添加+全链路可溯源」构建竞争力。可降解卫生巾成本比普通产品高约20%，但渗透率仅12%，增长空间大。抑菌、智能监测、pH平衡等功能型产品成为焦点——如她研社抑菌系列、Tampax Pure pH平衡棉条。生物基材料替代率从12%提升至19%，高蓬松非织造布与肤感微孔膜成主流技术方向。"},
+  {"id": "reg-004", "section": "regulatory", "category": "安睡裤", "title": "江苏省消保委安睡裤 40 批次比较试验：全达标但 11 批尺码不规范", "en": "Jiangsu 40-batch Test", "brand": "监管·比较试验", "source": "jssxb", "date": "2025-11-12", "image": "images/real/reg_lab_px.jpg", "tags": ["比较试验", "安睡裤", "尺码", "吸水倍率", "甲醛"], "summary": "40批次卫生/安全/性能全达标，吸收5-12秒、5批吸水30倍+；但11批次尺码标注不规范。", "body": "江苏省消保委2025年11月12日发布安睡裤比较试验报告：40批次(乐而雅/高洁丝/淘淘氧棉/ABC等，单片0.66-6.36元)卫生、安全、性能指标全达标——微生物6项符合GB15979，甲醛/可迁移荧光物/重金属/邻苯均合格；吸收速度5-12秒(国标≤60秒)，吸水倍率全超7倍、5批次超30倍(子初43.9倍/康乐司42.6倍)，pH中性无掉粉。主要问题：11批次尺码标注不规范(兔菲腰围不足、10批臀围标注不符)。选购建议按臀围选码。"},
+  {"id": "ind-005", "section": "industry", "category": "卫生巾", "title": "出海加速：东南亚销售额同比 +62%，出口占产能 15%", "en": "Going Global SE Asia +62%", "brand": "出海数据", "source": "chinabgao", "date": "2025-10-12", "image": "images/real/industry_market_0_9.jpg", "tags": ["出海", "东南亚", "全球化", "非洲"], "summary": "2025出口预计占产能15%，东南亚销售额同比+62%，中国卫生巾在非洲市场表现强劲。", "body": "中国卫生巾产业积极开拓国际市场，预计2025年出口量占产能约15%。中国品牌在东南亚销售额同比增长62%，部分品牌在越南市占率达18%；中国卫生巾在非洲市场同样表现强劲（乐舒适等）。借助TikTok、Shein等平台出海成为新增长曲线，对产品本地化（尺寸、气候、宗教文化）提出新要求。"},
+  {"id": "news-005", "section": "news", "category": "安睡裤", "title": "乐而雅「晚安裤抑菌清新」全新上市：99% 抑菌 + 480mm + 0.21cm", "en": "Laurier Goodnight Antibacterial", "brand": "乐而雅/花王", "source": "kao", "date": "2025-09-15", "image": "images/real/women_care_px.jpg", "tags": ["安睡裤", "抑菌99%", "480mm", "0.21cm", "28倍吸水"], "summary": "抑菌率99%、480mm超长巾身、0.21cm纤薄空气芯、可吸自重28倍，主打夜间细菌滋生困扰。", "body": "花王乐而雅2025年9月推出晚安裤抑菌清新。针对经期夜晚「细菌滋生」成继侧漏后第二大困扰，将抑菌技术引入产品：通过第三方检测对金黄色葡萄球菌抑菌率达99%。集抑菌/防漏/透气/劲吸四重守护：全包裹内裤剪裁、480mm超长巾身、加宽扇形尾翼多向防漏、0.21cm纤薄空气芯、可吸自重28倍。包装用清新绿与安心深蓝。尺寸M/L/XL。把「抑菌」做成安睡裤的新信任锚。"},
+  {"id": "ind-004", "section": "industry", "category": "卫生巾", "title": "渠道变革：直播带货贡献超 20%，线上占比迈向 47%", "en": "Channel Shift to Livestream", "brand": "渠道数据", "source": "cbn", "date": "2025-09-08", "image": "images/real/comp_shelf_1_53.jpg", "tags": ["直播", "抖音", "电商", "渠道"], "summary": "电商占比超40%、直播超20%，预计2030年线上占比47%-65%。", "body": "卫生巾销售渠道发生根本性变革：电商平台销售占比已超40%，直播带货贡献超20%销售额，预计2030年线上占比47%-65%。抖音、小红书成为新品打爆与口碑沉淀的核心阵地。对产品策划的启示：包装即内容、开箱即种草——单片独立包装与外观设计直接决定直播间转化。"},
+  {"id": "reg-001", "section": "regulatory", "category": "卫生巾", "title": "GB 15979-2024 强制标准：2025-07-01 实施，归国家疾控局", "en": "GB 15979-2024 Mandatory", "brand": "监管·国标", "source": "ndcpa", "date": "2025-07-01", "image": "images/real/reg_standard_1_49.jpg", "tags": ["GB 15979-2024", "强制", "疾控局", "pH", "荧光"], "summary": "卫生巾属第三类消毒产品归疾控局，新标新增pH/荧光/微生物指标，2025-07-01实施。", "body": "重要纠正：卫生巾/护垫/安睡裤属第三类消毒产品(卫生用品)，归国家卫健委/疾控局监管，不是药监局(NMPA)——药监局备案系统是化妆品用的。第三类产品本身不需备案，实行常规管理。GB 15979—2024《一次性使用卫生用品卫生要求》是强制国标，2024-06-25发布、2025-07-01实施(替代2002版)，新增pH值、可迁移性荧光增白剂残留量等理化指标，调整微生物与毒理学要求。对策划启示：合规即可成信任资产。"},
+  {"id": "news-012", "section": "news", "category": "经期裤", "title": "ELIS × Care Bears IP 联名：经期裤走向情绪化与收藏化", "en": "ELIS × Care Bears Collab", "brand": "ELIS", "source": "mintel", "date": "2025-06-18", "image": "images/real/pack_box_1_42.jpg", "tags": ["IP联名", "经期裤", "情绪", "收藏"], "summary": "ELIS与Care Bears等IP联名，经期裤包装走向情绪化与收藏化。", "body": "国际市场上ELIS等品牌与Care Bears等热门IP联名，把经期裤/卫生巾包装做成可收藏的情绪单品。这呼应Z世代为「限定」多付30%的趋势：包装即内容、开箱即种草，联名/IP是溢价与复购的有效抓手。"},
+  {"id": "reg-005", "section": "regulatory", "category": "卫生巾", "title": "上海 55 款卫生巾裤比较试验：部分全长偏差 -6% 长度虚标", "en": "Shanghai 55-batch Test", "brand": "监管·比较试验", "source": "shxb", "date": "2025-03-11", "image": "images/real/px_lab.jpg", "tags": ["比较试验", "长度虚标", "全长偏差", "3·15", "上海"], "summary": "上海55款比较试验发现部分样品全长偏差-6%(实际短于标示)，已责令停售不合格产品。", "body": "2025年3·15，上海市市场监管局联合市消保委发布卫生巾及卫生裤监督抽查与比较试验(55款，含护舒宝/高洁丝/乐而雅/苏菲/她研社/Libresse/七度空间/自由点/全棉时代，3-79.9元/包)。质量安全方面：部分样品全长偏差为-6%(GentleCaring小轻芯系列，标准±4%)，即实际长度短于标示——这正是引发关注的「长度虚标」问题，增加侧漏/后漏风险。市监部门已责令停售不合格产品并移送处理。pH全在安全范围，未检出甲醛与可迁移荧光物，微生物合格。"},
+  {"id": "reg-003", "section": "regulatory", "category": "安睡裤", "title": "GB/T 39391-2020《女性卫生裤》：安睡裤/经期裤的国标", "en": "GB/T 39391-2020", "brand": "监管·国标", "source": "samr", "date": "2020-12-14", "image": "images/real/reg_lab_0_43.jpg", "tags": ["GB/T 39391", "女性卫生裤", "安睡裤", "尺码"], "summary": "安睡裤/经期裤执行GB/T 39391-2020，规定XL腰围≥115cm、臀围90-115cm等尺码要求。", "body": "GB/T 39391-2020《女性卫生裤》是安睡裤/经期裤的产品国标，明确应标注适用臀围与腰围范围，如XL码腰围最大值应≥115cm、臀围90-115cm。江苏省消保委比较试验发现11批次尺码标注不规范(如兔菲XL实测腰围仅109cm、米娅/由趣臀围标注不符、小萌嗒未标臀围)，正是依据此标准。选购应按臀围而非体重选码。"},
+  {"id": "reg-006", "section": "regulatory", "category": "卫生巾", "title": "GB 38598-2020《消毒产品标签说明书通用要求》", "en": "GB 38598-2020 Labeling", "brand": "监管·标签", "source": "samr", "date": "2020-11-17", "image": "images/real/reg_standard_1_49.jpg", "tags": ["GB 38598", "标签", "说明书", "溯源"], "summary": "消毒产品标签说明书通用要求国标，规范成分/执行标准/尺码/溯源等信息标注。", "body": "GB 38598-2020《消毒产品标签说明书通用要求》规范卫生用品标签与说明书，要求标注产品名称/主要成分/执行标准/生产日期保质期/限制使用条件等。结合GB/T 39391的尺码标注要求，标签合规是基础。趋势上「一物一码溯源」成信任建设标配——消费者扫码可看检测报告与批次。可借鉴：把标签合规做成可追溯的信任链路。"},
+  {"id": "reg-002", "section": "regulatory", "category": "卫生巾", "title": "GB/T 8939-2018《卫生巾(护垫)》：产品性能国标", "en": "GB/T 8939-2018", "brand": "监管·国标", "source": "samr", "date": "2018-09-17", "image": "images/real/reg_standard_1_50.jpg", "tags": ["GB/T 8939", "卫生巾", "护垫", "性能标准"], "summary": "卫生巾(护垫)推荐性国标，规定全长偏差/吸水倍率/渗透/回渗/pH等性能指标。", "body": "GB/T 8939-2018《卫生巾(护垫)》是产品性能推荐性国标，规定全长偏差(标准要求±4%)、吸水倍率、渗透性能、回渗量、pH值等。上海3·15比较试验发现部分样品全长偏差为-6%(实际短于标示)，正是依据此标准判定不合格。注意：安睡裤应用 GB/T 39391，个别产品误标GB/T 8939属执行标准引用不当。"}
 ];
-
-/* 默认首页信息流条数 */
-const FEED_LIMIT = 40;
-
-if (typeof module !== "undefined") {
-  module.exports = { SITE_META, CATEGORIES, SECTIONS, SOURCES, ITEMS, FEED_LIMIT };
-}
