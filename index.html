@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=1280" />
+  <title>小小y产品策划 · 卫生巾/安睡裤产品情报工作台</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Serif+SC:wght@500;700;900&family=Noto+Sans+SC:wght@300;400;500;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="assets/css/style.css" />
+</head>
+<body>
+  <!-- 顶部 -->
+  <header class="site-header">
+    <div class="brand">
+      <div class="brand-mark">小</div>
+      <div class="brand-text">
+        <h1 id="siteTitle">小小y产品策划</h1>
+        <p id="siteSubtitle">卫生巾 · 安睡裤 · 经期裤 产品情报工作台</p>
+      </div>
+    </div>
+    <div class="brand-desc" id="siteDesc"></div>
+  </header>
+
+  <!-- 品类 Tab -->
+  <nav class="cat-bar" id="catBar"></nav>
+
+  <!-- 主体 -->
+  <div class="layout">
+    <aside class="sidebar">
+      <div class="side-section" id="sectionNav"></div>
+      <div class="side-stats" id="sideStats"></div>
+      <div class="side-foot">
+        <p>数据来源：公开权威信息整理</p>
+        <p>仅供策略参考 · 非官方发布</p>
+      </div>
+    </aside>
+
+    <main class="content">
+      <div class="toolbar">
+        <div class="toolbar-left">
+          <h2 id="sectionTitle">今日动态</h2>
+          <span class="count" id="resultCount"></span>
+        </div>
+        <div class="toolbar-right">
+          <input id="searchInput" class="search" type="text" placeholder="搜索品牌 / 关键词 / 来源…" />
+          <select id="sortSelect" class="sort">
+            <option value="date">最新优先</option>
+            <option value="dateAsc">最早优先</option>
+            <option value="title">按标题</option>
+          </select>
+        </div>
+      </div>
+      <div class="active-filter" id="activeFilter"></div>
+      <div class="grid" id="cardGrid"></div>
+      <div class="loadmore-wrap" id="loadMoreWrap" style="display:none">
+        <button class="loadmore" id="loadMoreBtn">加载更多</button>
+      </div>
+    </main>
+  </div>
+
+  <!-- 详情弹层 -->
+  <div class="modal-mask" id="modalMask">
+    <div class="modal" id="modal">
+      <button class="modal-close" id="modalClose">×</button>
+      <div class="modal-body" id="modalBody"></div>
+    </div>
+  </div>
+
+  <script src="assets/js/data.js"></script>
+  <script src="assets/js/app.js"></script>
+</body>
+</html>
