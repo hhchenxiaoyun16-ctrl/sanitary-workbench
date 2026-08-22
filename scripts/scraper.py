@@ -167,7 +167,7 @@ def build_data_js(curated, auto, pools):
     meta = (
         'const SITE_META = {\n'
         f'  title: "小小y产品策划",\n'
-        '  subtitle: "卫生巾 · 安睡裤 · 经期裤 产品情报工作台",\n'
+        '  subtitle: "卫生巾 · 安睡裤 · 经期裤 · 纸尿裤 产品情报工作台",\n'
         '  desc: "把全球碎片化的监管 / 原料 / 工艺 / 趋势 / 包装 / 竞品情报，统一沉淀到一条时间轴上。每日自动更新。",\n'
         f'  buildDate: "{today}",\n'
         '  owner: "hhchenxiaoyun16-ctrl",\n'
@@ -208,7 +208,7 @@ def build_data_js(curated, auto, pools):
         src_dict = {}
     src_lines = ",\n".join(
         '  %s: { name: %s, url: %s, note: %s%s }' % (
-            k, json.dumps(v.get("name", k), ensure_ascii=False),
+            json.dumps(k, ensure_ascii=False), json.dumps(v.get("name", k), ensure_ascii=False),
             json.dumps(v.get("url", "#"), ensure_ascii=False),
             json.dumps(v.get("note", ""), ensure_ascii=False),
             (', search: %s' % json.dumps(v["search"], ensure_ascii=False)) if v.get("search") else ""

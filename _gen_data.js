@@ -47,7 +47,7 @@ const FEED_LIMIT = 40;`;
 
 const srcLines = Object.entries(src).map(([k,v])=>{
   const search = v.search ? `, search: ${JSON.stringify(v.search)}` : '';
-  return `  ${k}: { name: ${JSON.stringify(v.name)}, url: ${JSON.stringify(v.url)}, note: ${JSON.stringify(v.note||'')}${search} }`;
+  return `  ${JSON.stringify(k)}: { name: ${JSON.stringify(v.name)}, url: ${JSON.stringify(v.url)}, note: ${JSON.stringify(v.note||'')}${search} }`;
 }).join(',\n');
 const SOURCES = `const SOURCES = {\n${srcLines}\n};`;
 
