@@ -104,7 +104,10 @@ DEFAULT_QUERY = {
 }
 
 def build_query(item):
-    """根据条目内容挑选最贴切的英文检索词。"""
+    """根据条目内容挑选最贴切的英文检索词。
+    优先使用条目自身携带的 imageQuery(更精准)，否则按规则/默认映射。"""
+    if item.get("imageQuery"):
+        return item["imageQuery"]
     text = " ".join([
         item.get("title", ""), item.get("summary", ""),
         " ".join(item.get("tags", [])), item.get("category", "")

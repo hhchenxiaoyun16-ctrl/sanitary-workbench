@@ -34,16 +34,17 @@
 
   /* ---------- 工具 ---------- */
   function srcName(key) { return SOURCES[key] ? SOURCES[key].name : key; }
+  // 优先用条目自身的原文链接，否则降级到来源媒体页
+  function itemUrl(it) { return (it.url && it.url !== "#") ? it.url : (SOURCES[it.source] ? SOURCES[it.source].url : "#"); }
   function srcUrl(key) { return SOURCES[key] ? SOURCES[key].url : "#"; }
   function esc(s) { return String(s == null ? "" : s).replace(/[&<>"]/g, function (c) { return { "&": "&amp;", "<": "&lt;", ">": "&gt;", '"': "&quot;" }[c]; }); }
   function imgTag(item, cls) {
-    if (item.image && item.image.trim() !== "") {
-      return '<img src="' + esc(item.image) + '" alt="' + esc(item.title) + '" onerror="this.parentNode.innerHTML=\'<div class=&quot;ph&quot;><div class=&quot;ph-ico&quot;>图</div><span>配图待生成</span></div>\'">';
-    }
-    return '<div class="ph"><div class="ph-ico">' + (item.section === "material" ? "材" : item.section === "packaging" ? "包" : item.section === "regulatory" ? "规" : item.section === "competitor" ? "竞" : "讯") + '</div><span>' + srcName(item.source) + '</span></div>';
+    // 当前版本不展示图片(用户要求)，以干净的板块色块+首字呈现，避免破图/占位图
+    var ph = (item.section === "material" ? "材" : item.section === "packaging" ? "包" : item.section === "regulatory" ? "规" : item.section === "competitor" ? "竞" : item.section === "supplier" ? "供" : "讯");
+    return '<div class="ph ph-text"><div class="ph-ico">' + ph + '</div><span>' + srcName(item.source) + '</span></div>';
   }
   function secLabel(key) {
-    var m = { industry: "行业资讯", news: "新品上新", material: "材料灵感", packaging: "包装灵感", regulatory: "监管合规", competitor: "竞品雷达", feed: "今日动态" };
+    var m = { industry: "行业资讯", news: "新品上新", material: "材料灵感", packaging: "包装灵感", regulatory: "监管合规", competitor: "竞品雷达", supplier: "供应商", feed: "今日动态" };
     return m[key] || key;
   }
 
@@ -98,12 +99,14 @@
     var total = ITEMS.length;
     var mats = ITEMS.filter(function (i) { return i.section === "material"; }).length;
     var news = ITEMS.filter(function (i) { return i.section === "news"; }).length;
+    var sups = ITEMS.filter(function (i) { return i.section === "supplier"; }).length;
     var favs = getFav().length;
     el.innerHTML =
       '<h4>情报概览</h4>' +
       row("收录条目", total) +
       row("材料/工艺", mats) +
       row("新品追踪", news) +
+      row("供应商", sups) +
       row("我的收藏", favs) +
       row("更新于", SITE_META.buildDate);
     function row(k, v) { return '<div class="row"><span>' + k + '</span><b>' + v + '</b></div>'; }
@@ -252,7 +255,6 @@
     var noteVal = notes[id] || "";
 
     var html = '<div class="modal-hero">' + imgTag(it) + '</div>' +
-      (it.image_credit ? '<div class="img-credit">' + esc(it.image_credit) + '</div>' : '') +
       '<div class="modal-pad">' +
         '<div class="modal-meta">' +
           '<span class="chip">' + esc(it.category) + '</span>' +
@@ -275,7 +277,7 @@
         '<textarea id="noteArea" placeholder="写下你的灵感、可借鉴方向、客户项目关联…">' + esc(noteVal) + '</textarea>' +
         '<div class="modal-actions">' +
           '<button class="btn-fav ' + (fav ? "on" : "") + '" id="favBtn">♥ ' + (fav ? "已收藏" : "收藏") + '</button>' +
-          '<a class="btn-src" href="' + esc(srcUrl(it.source)) + '" target="_blank" rel="noopener">查看来源 ›</a>' +
+          '<a class="btn-src" href="' + esc(itemUrl(it)) + '" target="_blank" rel="noopener">' + (it.url && it.url !== "#" ? "查看原文 ›" : "前往来源 ›") + '</a>' +
         '</div>' +
       '</div>' +
       '</div>';

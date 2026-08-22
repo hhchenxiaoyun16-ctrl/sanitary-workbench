@@ -1,0 +1,211 @@
+{
+  "lifePaper": {
+    "name": "生活用纸网",
+    "url": "http://www.cnhpia.org/",
+    "note": "中国造纸协会生活用纸专委会，行业最权威垂直媒体"
+  },
+  "chinabgao": {
+    "name": "中国报告大厅",
+    "url": "https://www.chinabgao.com/",
+    "note": "行业研报与市场规模"
+  },
+  "shangpu": {
+    "name": "尚普咨询",
+    "url": "https://www.shangpu-china.com/",
+    "note": "《2025中国卫生巾市场洞察报告》"
+  },
+  "cbn": {
+    "name": "CBNData",
+    "url": "https://www.cbndata.com/",
+    "note": "消费大数据"
+  },
+  "chanmama": {
+    "name": "蝉妈妈",
+    "url": "https://www.chanmama.com/",
+    "note": "抖音电商数据"
+  },
+  "mojing": {
+    "name": "魔镜洞察",
+    "url": "https://www.moojing.com/",
+    "note": "电商全网监测"
+  },
+  "ccc": {
+    "name": "消费者报道",
+    "url": "https://www.ccreports.com.cn/",
+    "note": "比较试验媒体"
+  },
+  "jssxb": {
+    "name": "江苏省消保委",
+    "url": "https://www.jsconsumer.com.cn/",
+    "note": "安睡裤比较试验"
+  },
+  "shxb": {
+    "name": "上海市消保委",
+    "url": "https://www.315.sh.cn/",
+    "note": "卫生巾(裤)比较试验"
+  },
+  "ndcpa": {
+    "name": "国家疾控局",
+    "url": "https://www.ndcpa.gov.cn/",
+    "note": "GB 15979-2024 发布"
+  },
+  "samr": {
+    "name": "国家市场监管总局",
+    "url": "https://www.samr.gov.cn/",
+    "note": "标准与抽检"
+  },
+  "eurmon": {
+    "name": "Euromonitor",
+    "url": "https://www.euromonitor.com/",
+    "note": "国际零售监测"
+  },
+  "mintel": {
+    "name": "Mintel",
+    "url": "https://www.mintel.com/",
+    "note": "全球趋势"
+  },
+  "nonwoven": {
+    "name": "Nonwovens Industry",
+    "url": "https://www.nonwovens-industry.com/",
+    "note": "国际非织造材料"
+  },
+  "edana": {
+    "name": "EDANA",
+    "url": "https://www.edana.org/",
+    "note": "欧洲非织造协会"
+  },
+  "unicharm": {
+    "name": "尤妮佳官网",
+    "url": "https://www.unicharm.co.jp/",
+    "note": "苏菲/乐而雅新品"
+  },
+  "kao": {
+    "name": "花王官网",
+    "url": "https://www.kao.com/cn/",
+    "note": "乐而雅新品"
+  },
+  "pgh": {
+    "name": "宝洁/护舒宝",
+    "url": "https://www.pg.com.cn/",
+    "note": "护舒宝研发"
+  },
+  "googleNews": {
+    "name": "Google News",
+    "url": "https://news.google.com/",
+    "note": "实时新闻聚合(每日自动更新)"
+  },
+  "36kr": {
+    "name": "36氪",
+    "url": "https://36kr.com/",
+    "note": "新消费/创投媒体",
+    "search": "https://www.36kr.com/search/articles/"
+  },
+  "adquan": {
+    "name": "广告圈",
+    "url": "https://www.adquan.com/",
+    "note": "营销/品牌案例",
+    "search": "https://www.adquan.com/search?q="
+  },
+  "infomorning": {
+    "name": "InfoMorning",
+    "url": "https://infomorning.com/",
+    "note": "快讯聚合",
+    "search": "https://infomorning.com/?s="
+  },
+  "jiemian": {
+    "name": "界面新闻",
+    "url": "https://www.jiemian.com/",
+    "note": "财经商业媒体",
+    "search": "https://www.jiemian.com/search?q="
+  },
+  "naweekly": {
+    "name": "新周刊",
+    "url": "https://www.neweekly.com.cn/",
+    "note": "社会文化媒体",
+    "search": "https://www.neweekly.com.cn/search/?q="
+  },
+  "pdd": {
+    "name": "拼多多",
+    "url": "https://www.pinduoduo.com/",
+    "note": "下沉渠道上新",
+    "search": "https://www.pinduoduo.com/search?q="
+  },
+  "prnewswire": {
+    "name": "美通社",
+    "url": "https://www.prnewswire.com/",
+    "note": "企业新闻稿",
+    "search": "https://www.prnewswire.com/news/search/?search="
+  },
+  "sina": {
+    "name": "新浪新闻",
+    "url": "https://news.sina.com.cn/",
+    "note": "综合门户",
+    "search": "https://search.sina.com.cn/?q="
+  },
+  "tom": {
+    "name": "Tom.com",
+    "url": "https://www.tom.com/",
+    "note": "综合门户",
+    "search": "https://www.tom.com/search?q="
+  },
+  "tomnews": {
+    "name": "TOM新闻",
+    "url": "https://news.tom.com/",
+    "note": "综合门户",
+    "search": "https://news.tom.com/search/?q="
+  },
+  "xinhua": {
+    "name": "新华网",
+    "url": "https://www.news.cn/",
+    "note": "官方通讯社",
+    "search": "https://so.news.cn/#search/"
+  },
+  "zhonghua": {
+    "name": "中华网",
+    "url": "https://www.china.com/",
+    "note": "综合门户",
+    "search": "https://www.china.com/search?q="
+  },
+  "weixin": {
+    "name": "微信搜一搜",
+    "url": "https://weixin.qq.com/",
+    "note": "公众号原文检索",
+    "search": "https://weixin.sogou.com/weixin?type=2&query="
+  },
+  "motherbaby": {
+    "name": "母婴行业观察",
+    "url": "https://www.muyingguancha.com/",
+    "note": "母婴/纸尿裤垂直媒体",
+    "search": "https://www.muyingguancha.com/?s="
+  },
+  "qctt": {
+    "name": "亲亲宝贝",
+    "url": "https://www.qbaobao.com/",
+    "note": "母婴育儿媒体",
+    "search": "https://www.qbaobao.com/search?q="
+  },
+  "ec360": {
+    "name": "亿欧",
+    "url": "https://www.iyiou.com/",
+    "note": "产业创新媒体",
+    "search": "https://www.iyiou.com/search?q="
+  },
+  "cifnews": {
+    "name": "雨果网",
+    "url": "https://www.cifnews.com/",
+    "note": "跨境出海媒体",
+    "search": "https://www.cifnews.com/search?q="
+  },
+  "c2ccn": {
+    "name": "C2CC传媒",
+    "url": "https://www.c2cc.cn/",
+    "note": "美妆/个护产业媒体",
+    "search": "https://www.c2cc.cn/?s="
+  },
+  "supply": {
+    "name": "供应链研究",
+    "url": "https://www.cnhpia.org/",
+    "note": "生活用纸协会供应链资料",
+    "search": "https://www.cnhpia.org/"
+  }
+}

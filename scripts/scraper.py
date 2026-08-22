@@ -71,10 +71,13 @@ KW_MAP = [
     ("女性护理 卫生用品 新品", "卫生巾"),
     ("卫生巾 国标 OR 抽检 OR 比较试验", "卫生巾"),
     ("卫生巾 包装 OR 联名 OR 新品上市", "卫生巾"),
+    ("纸尿裤 OR 尿不湿 OR 拉拉裤 新品", "纸尿裤"),
 ]
 
 def classify(title):
     t = title
+    if any(k in t for k in ["纸尿裤","尿不湿","拉拉裤","婴儿纸尿裤","婴童"]):
+        return "news", "纸尿裤"
     if any(k in t for k in ["安睡裤","晚安裤","夜安裤","经期裤","安心裤","卫生裤"]):
         return "news", ("安睡裤" if "经期裤" not in t else "经期裤")
     if any(k in t for k in ["无纺布","高分子","SAP","芯体","底膜","工艺","莱赛尔","蚕丝","纯棉材料","吸水树脂"]):
@@ -137,23 +140,23 @@ def build_data_js(curated, auto, pools):
     curated_titles = {norm(c["title"]) for c in curated}
     auto_keep = [a for a in auto if a["nt"] not in curated_titles]
 
-    # 精选条目的封面由 fetch_images.py 按内容语义抓取真实照片并写回 curated.json，
-    # 此处仅兜底：极少数学条目若仍为空，才用板块图池分配(理论上不会发生)。
+    # 当前版本不展示图片(用户要求)，精选条目不写 image 字段，前端渲染干净文字块；
+    # 保留 curated 中的 url(原文链接) 字段。
     for c in curated:
-        if not c.get("image"):
-            c["image"] = pick_cover(pools, c.get("section", "news"), c.get("id", c.get("title", "")))
+        c.pop("image", None)
+        c.pop("image_credit", None)
 
     all_items = list(curated)
     for a in auto_keep:
         sec, cat = classify(a["title"])
-        cover = pick_cover(pools, sec, a["title"])
         date = a["dt"].strftime("%Y-%m-%d")
         all_items.append({
             "id": "auto-" + hashlib.md5(a["nt"].encode()).hexdigest()[:8],
             "section": sec, "category": cat,
             "title": a["title"], "en": "",
             "brand": a["src"], "source": "googleNews", "date": date,
-            "image": cover, "tags": ["实时","Google News"],
+            "url": a["link"], "urlKind": "origin",
+            "tags": ["实时","Google News"],
             "summary": f"来源：{a['src']}（{date}）。点击查看原文。",
             "body": f"【实时抓取】{a['title']}。来源：{a['src']}，发布时间 {a['pub']}。原文链接：{a['link']}"
         })
@@ -191,33 +194,27 @@ def build_data_js(curated, auto, pools):
         '  { key: "packaging", label: "包装灵感", en: "Packaging" },\n'
         '  { key: "regulatory", label: "监管合规", en: "Regulatory" },\n'
         '  { key: "competitor", label: "竞品雷达", en: "Competitor" },\n'
+        '  { key: "supplier", label: "供应商", en: "Supplier" },\n'
         '  { key: "me", label: "个人中心", en: "My Desk" }\n'
         '];\n'
         'const FEED_LIMIT = 40;\n'
     )
-    sources = (
-        'const SOURCES = {\n'
-        '  lifePaper: { name: "生活用纸网", url: "http://www.cnhpia.org/", note: "中国造纸协会生活用纸专委会，行业最权威垂直媒体" },\n'
-        '  chinabgao: { name: "中国报告大厅", url: "https://www.chinabgao.com/", note: "行业研报与市场规模" },\n'
-        '  shangpu: { name: "尚普咨询", url: "https://www.shangpu-china.com/", note: "《2025中国卫生巾市场洞察报告》" },\n'
-        '  cbn: { name: "CBNData", url: "https://www.cbndata.com/", note: "消费大数据" },\n'
-        '  chanmama: { name: "蝉妈妈", url: "https://www.chanmama.com/", note: "抖音电商数据" },\n'
-        '  mojing: { name: "魔镜洞察", url: "https://www.moojing.com/", note: "电商全网监测" },\n'
-        '  ccc: { name: "消费者报道", url: "https://www.ccreports.com.cn/", note: "比较试验媒体" },\n'
-        '  jssxb: { name: "江苏省消保委", url: "https://www.jsconsumer.com.cn/", note: "安睡裤比较试验" },\n'
-        '  shxb: { name: "上海市消保委", url: "https://www.315.sh.cn/", note: "卫生巾(裤)比较试验" },\n'
-        '  ndcpa: { name: "国家疾控局", url: "https://www.ndcpa.gov.cn/", note: "GB 15979-2024 发布" },\n'
-        '  samr: { name: "国家市场监管总局", url: "https://www.samr.gov.cn/", note: "标准与抽检" },\n'
-        '  eurmon: { name: "Euromonitor", url: "https://www.euromonitor.com/", note: "国际零售监测" },\n'
-        '  mintel: { name: "Mintel", url: "https://www.mintel.com/", note: "全球趋势" },\n'
-        '  nonwoven: { name: "Nonwovens Industry", url: "https://www.nonwovens-industry.com/", note: "国际非织造材料" },\n'
-        '  edana: { name: "EDANA", url: "https://www.edana.org/", note: "欧洲非织造协会" },\n'
-        '  unicharm: { name: "尤妮佳官网", url: "https://www.unicharm.co.jp/", note: "苏菲/乐而雅新品" },\n'
-        '  kao: { name: "花王官网", url: "https://www.kao.com/cn/", note: "乐而雅新品" },\n'
-        '  pgh: { name: "宝洁/护舒宝", url: "https://www.pg.com.cn/", note: "护舒宝研发" },\n'
-        '  googleNews: { name: "Google News", url: "https://news.google.com/", note: "实时新闻聚合(每日自动更新)" }\n'
-        '};\n'
+    # SOURCES 字典由 _SOURCES.json 统一维护（含公众号/纸尿裤/供应链来源）
+    sources_path = os.path.join(os.path.dirname(__file__), "..", "_SOURCES.json")
+    try:
+        with open(sources_path, encoding="utf-8") as f:
+            src_dict = json.load(f)
+    except Exception:
+        src_dict = {}
+    src_lines = ",\n".join(
+        '  %s: { name: %s, url: %s, note: %s%s }' % (
+            k, json.dumps(v.get("name", k), ensure_ascii=False),
+            json.dumps(v.get("url", "#"), ensure_ascii=False),
+            json.dumps(v.get("note", ""), ensure_ascii=False),
+            (', search: %s' % json.dumps(v["search"], ensure_ascii=False)) if v.get("search") else ""
+        ) for k, v in src_dict.items()
     )
+    sources = 'const SOURCES = {\n' + src_lines + '\n};\n'
     body = ',\n'.join('  ' + json.dumps(it, ensure_ascii=False) for it in all_items)
     items_str = 'const ITEMS = [\n' + body + '\n];\n'
 
