@@ -37,7 +37,7 @@ def build_pools():
         n = f.lower()
         if n.startswith(("industry_", "px_cotton", "px_factory")) or "market" in n:
             pools["industry"].append(p); pools["competitor"].append(p)
-        if n.startswith(("pax_silk", "new_pad", "px_women", "women_care", "px_cottonf")):
+        if n.startswith(("pax_silk", "new_pad", "px_women", "women_care", "px_cottonf", "material_cotton", "industry_cotton", "pack_box")):
             pools["news"].append(p)
         if n.startswith(("material_", "px_factory")):
             pools["material"].append(p)
