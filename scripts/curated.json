@@ -4774,5 +4774,365 @@
         "环保须可验证且与舒适绑定"
       ]
     }
+  },
+  {
+    "id": "mat-051",
+    "section": "material",
+    "category": "安睡裤",
+    "title": "裤身弹力网眼布：安睡裤侧翼的「呼吸骨架」",
+    "en": "Stretch mesh side panel",
+    "brand": "材料工艺",
+    "source": "nonwoven",
+    "date": "2026-03-10",
+    "imageQuery": "stretch mesh fabric",
+    "url": "https://www.nonwovens-industry.com/search?q=stretch+mesh",
+    "urlKind": "search",
+    "tags": [
+      "安睡裤",
+      "弹力网眼",
+      "侧翼",
+      "透气"
+    ],
+    "summary": "安睡裤侧翼与腿围常用弹力网眼无纺布，既提供包裹力又靠网孔透气排湿，是普通卫生巾做不到的「立体穿着感」来源。",
+    "body": "安睡裤之所以能像内裤一样穿，靠的是裤身侧翼那层弹力网眼布——它通常是氨纶混纺的经编或水刺网眼材料，横向拉伸率可达 150% 以上，纵向保持塑形。网孔结构让侧翼在包裹大腿的同时持续透气，避免闷热。对策划而言，\"弹力网眼\"是区别于普通卫生巾的天然材质话术：它解释了我们为什么敢说\"整夜动也不漏、闷也不慌\"。",
+    "material": {
+      "role": "裤身侧翼/腿围的弹性透气承托层",
+      "composition": "氨纶(Spandex)混纺 + 锦纶/涤纶网眼基布，或弹性水刺无纺布",
+      "structure": "双向弹力网孔组织，孔密度 30–60 目，横向拉伸率 ≥150%",
+      "process": "经编/水刺成网 + 氨纶包覆，热定型锁弹",
+      "experience": "像运动内裤一样贴腿却会呼吸",
+      "consumerLang": "侧翼不闷、不卡大腿根",
+      "reference": "把\"弹力网眼\"做成安睡裤\"会呼吸的骨架\"，对比普通卫生巾的平贴无包裹"
+    }
+  },
+  {
+    "id": "mat-052",
+    "section": "material",
+    "category": "安睡裤",
+    "title": "腰头防滑点胶：防卷边下滑的「隐形小手」",
+    "en": "Silicone grip dots on waistband",
+    "brand": "材料工艺",
+    "source": "nonwoven",
+    "date": "2026-03-12",
+    "imageQuery": "silicone dots elastic",
+    "url": "https://www.nonwovens-industry.com/search?q=silicone+grip+waistband",
+    "urlKind": "search",
+    "tags": [
+      "安睡裤",
+      "防滑点胶",
+      "腰头",
+      "防卷边"
+    ],
+    "summary": "安睡裤腰头内侧的硅胶点胶阵列，用微吸附力固定位置，解决夜间翻身腰头卷边、下滑的痛点，是高端安睡裤的隐性工艺。",
+    "body": "很多安睡裤夜漏其实不是\"吸不住\"而是\"穿跑了\"——腰头翻身卷边、下滑导致后漏。解决方案是在腰头内侧印一排食品级硅胶点胶，靠微吸附力把裤腰\"粘\"在皮肤上，翻身也不跑位。点胶是隐形工艺（消费者看不见），但体验差异巨大，可作为\"整夜不移位\"承诺的材质支撑点。",
+    "material": {
+      "role": "腰头内侧防滑固定层",
+      "composition": "食品级液体硅胶（LSR）点阵",
+      "structure": "直径 0.8–1.2mm 点阵，间距 4–6mm，覆盖率 <15% 不伤肤",
+      "process": "丝网/点胶印刷 + 低温固化",
+      "experience": "翻身一整夜，裤腰不卷不滑",
+      "consumerLang": "怎么动都不跑位",
+      "reference": "把\"防滑点胶\"写成\"隐形小手\"的拟人化卖点，支撑\"整夜不移位\""
+    }
+  },
+  {
+    "id": "mat-053",
+    "section": "material",
+    "category": "安睡裤",
+    "title": "全周橡筋 vs 局部橡筋：腰围舒适度的结构分水岭",
+    "en": "Full-round vs partial elastic waistband",
+    "brand": "材料工艺",
+    "source": "nonwoven",
+    "date": "2026-03-15",
+    "imageQuery": "elastic waistband underwear",
+    "url": "https://www.nonwovens-industry.com/search?q=elastic+waistband",
+    "urlKind": "search",
+    "tags": [
+      "安睡裤",
+      "腰围结构",
+      "橡筋",
+      "舒适"
+    ],
+    "summary": "安睡裤腰围分\"全周橡筋\"（整圈弹力，贴身但易勒）与\"局部橡筋\"（仅上下两道，中间无弹更松）两种结构，直接决定\"勒不勒肚子\"。",
+    "body": "安睡裤腰围有两种主流结构：全周橡筋是整圈都织入橡筋，包裹最稳但平躺时易在腹部留勒痕；局部橡筋只在腰头上下两道加弹、中间腹区留无弹区，平躺更松、不勒肚子，适合睡眠场景。对策划而言，\"局部橡筋/腹区无压\"是很好的睡眠舒适卖点——直接回应\"睡觉勒肚子\"的真实吐槽。",
+    "material": {
+      "role": "腰围弹力与压力分布结构",
+      "composition": "氨纶橡筋丝，局部款腹区改用无弹非织造",
+      "structure": "全周款橡筋覆盖率 100%；局部款腹区 0% 橡筋",
+      "process": "橡筋喂入在线复合 / 腹区挖空复合",
+      "experience": "平躺不勒肚子，侧睡不漏腰",
+      "consumerLang": "肚子那块不勒，睡得香",
+      "reference": "主打\"腹区无压\"舒适卖点，区分全周橡筋的易勒痛点"
+    }
+  },
+  {
+    "id": "mat-054",
+    "section": "material",
+    "category": "安睡裤",
+    "title": "3D 人体工学版型：安睡裤「立体剪裁」的材料逻辑",
+    "en": "3D ergonomic pant pattern",
+    "brand": "材料工艺",
+    "source": "nonwoven",
+    "date": "2026-03-18",
+    "imageQuery": "3d underwear pattern cutting",
+    "url": "https://www.nonwovens-industry.com/search?q=3D+ergonomic+pant",
+    "urlKind": "search",
+    "tags": [
+      "安睡裤",
+      "立体剪裁",
+      "版型",
+      "人体工学"
+    ],
+    "summary": "安睡裤不是\"加大号卫生巾\"，而是按女性臀腿曲线做的 3D 立体剪裁，前后片差量、裆部立体空间、腿围弧线共同决定穿着贴合度。",
+    "body": "安睡裤的核心材料逻辑之一是\"版型\"——它是按女性坐姿/卧姿的臀腿曲线做的 3D 剪裁：后片比前片长（包臀）、裆部留立体空间（不夹裆）、腿围用弧线而非直线（不卡大腿）。版型是隐形竞争力：同样的材料，版型差一档，穿着就像\"偷穿了别人的裤子\"。策划可把\"3D 人体工学剪裁\"作为安睡裤专业度的锚点。",
+    "material": {
+      "role": "决定穿着贴合度的空间结构",
+      "composition": "多片式裁片 + 差异化弹力布拼接",
+      "structure": "前后片差量 2–4cm，裆部立体高 1.5–2.5cm，腿围弧线 R≥大腿半径",
+      "process": "立体裁床排版 + 超声波无缝拼合",
+      "experience": "像为自己身材定制的睡裤",
+      "consumerLang": "不夹裆、不空兜、不卡腿",
+      "reference": "把\"版型\"从制造术语翻译成\"为女性睡姿设计的立体空间\""
+    }
+  },
+  {
+    "id": "mat-055",
+    "section": "material",
+    "category": "安睡裤",
+    "title": "防漏兜收口：前后「高弹收口」专用材料",
+    "en": "Leak-guard pocket cuff",
+    "brand": "材料工艺",
+    "source": "nonwoven",
+    "date": "2026-03-20",
+    "imageQuery": "leak guard cuff underwear",
+    "url": "https://www.nonwovens-industry.com/search?q=leak+guard+cuff",
+    "urlKind": "search",
+    "tags": [
+      "安睡裤",
+      "防漏兜",
+      "收口",
+      "后漏"
+    ],
+    "summary": "安睡裤裆部前后端的\"防漏兜\"靠高弹收口材料形成封闭囊袋，专防后漏与侧漏，是安睡裤区别于普通卫生巾最关键的防漏结构。",
+    "body": "普通卫生巾只有左右立体护围，安睡裤多了前后两端的\"防漏兜\"——用高弹氨纶收口材料在裆部前后形成封闭囊袋，仰卧防后漏、侧卧防前漏。这个\"兜\"是安睡裤敢承诺\"怎么睡都不漏\"的物理基础。策划可把\"360° 防漏兜\"作为安睡裤的旗舰防漏卖点，比普通卫生巾的\"双翼\"高一个维度。",
+    "material": {
+      "role": "裆部前后端封闭防漏结构",
+      "composition": "高弹氨纶收口条 + 拒水无纺布兜壁",
+      "structure": "前后兜深 2–3cm，收口回弹率 ≥90%",
+      "process": "超声波压合收口 + 兜壁热封",
+      "experience": "前后左右都兜住，翻身后漏",
+      "consumerLang": "整晚随便翻，一滴不漏",
+      "reference": "用\"360°防漏兜\"区分普通卫生巾的\"双翼立体护围\""
+    }
+  },
+  {
+    "id": "mat-056",
+    "section": "material",
+    "category": "安睡裤",
+    "title": "双组份面层：内层亲水、外层拒水的「机关」",
+    "en": "Bicomponent hydrophilic/hydrophobic surface",
+    "brand": "材料工艺",
+    "source": "nonwoven",
+    "date": "2026-03-22",
+    "imageQuery": "bicomponent nonwoven fabric",
+    "url": "https://www.nonwovens-industry.com/search?q=bicomponent+nonwoven",
+    "urlKind": "search",
+    "tags": [
+      "安睡裤",
+      "双组份",
+      "亲水拒水",
+      "瞬吸"
+    ],
+    "summary": "安睡裤面层用\"双组份\"纤维：贴肤内层亲水（液体秒渗）、朝外外层拒水（表面速干不反渗），实现\"瞬吸又干爽\"的矛盾统一。",
+    "body": "安睡裤面层常用双组份（皮芯型）纤维：芯层亲水、皮层拒水，或正反面做亲/拒水差异化整理。贴肤面亲水让经血\"秒沉\"不挂壁，朝外一面拒水让表面保持干爽、不回渗。这是\"瞬吸干爽\"卖点的材料真相——不是魔法，是纤维的亲/拒水分工。策划可直接用\"双层分工\"解释干爽。",
+    "material": {
+      "role": "面层瞬吸不反渗的纤维机关",
+      "composition": "皮芯型双组份纤维（如 PE/PET），亲水内层 + 拒水外层",
+      "structure": "面密度 18–25 gsm，亲/拒水差异化整理",
+      "process": "双组分纺粘/热风 + 单面亲水剂整理",
+      "experience": "一碰就沉下去，表面还是干的",
+      "consumerLang": "秒吸、不黏、不反渗",
+      "reference": "把\"瞬吸干爽\"拆成\"内层亲水+外层拒水\"的可信解释"
+    }
+  },
+  {
+    "id": "mat-057",
+    "section": "material",
+    "category": "安睡裤",
+    "title": "低致敏热风面层：敏感肌安睡裤的材质锚点",
+    "en": "Low-sensitization thermal-bonded top sheet",
+    "brand": "材料工艺",
+    "source": "nonwoven",
+    "date": "2026-03-25",
+    "imageQuery": "soft hypoallergenic fabric",
+    "url": "https://www.nonwovens-industry.com/search?q=hypoallergenic+nonwoven",
+    "urlKind": "search",
+    "tags": [
+      "安睡裤",
+      "低致敏",
+      "敏感肌",
+      "热风面层"
+    ],
+    "summary": "敏感肌安睡裤用低致敏热风无纺布，纤维更细、无化学粘合剂残留、通过皮肤刺激测试，是\"不致痒\"承诺的材质支撑。",
+    "body": "夜间长时间贴肤，安睡裤面层致敏风险比 daytime 卫生巾更高。低致敏款用超细热风无纺布（0.6–0.8D 纤维），靠热熔而非化学粘合剂成型，减少致敏残留，并通过第三方皮肤刺激/斑贴测试。对敏感肌人群，\"低致敏面层 + 检测报告\"是比\"纯棉\"更科学的信任锚。",
+    "material": {
+      "role": "敏感肌贴肤的低刺激面层",
+      "composition": "0.6–0.8D 超细热风无纺布，无化学粘合剂",
+      "structure": "面密度 20–28 gsm，通过 ISO 10993 皮肤刺激测试",
+      "process": "热风穿透粘合（无胶）",
+      "experience": "整夜贴着也不刺痒",
+      "consumerLang": "敏感肌也能整晚穿",
+      "reference": "用\"低致敏+检测报告\"替代模糊的\"纯棉亲肤\"话术"
+    }
+  },
+  {
+    "id": "mat-058",
+    "section": "material",
+    "category": "安睡裤",
+    "title": "芯体抗扭材料：超薄安睡裤「弯折不断裂」的秘密",
+    "en": "Anti-flex breakup core",
+    "brand": "材料工艺",
+    "source": "nonwoven",
+    "date": "2026-03-28",
+    "imageQuery": "thin absorbent core material",
+    "url": "https://www.nonwovens-industry.com/search?q=thin+absorbent+core",
+    "urlKind": "search",
+    "tags": [
+      "安睡裤",
+      "抗扭芯体",
+      "超薄",
+      "不起坨"
+    ],
+    "summary": "超薄安睡裤在腿根反复弯折处易\"断芯起坨\"，抗扭芯体用高分子包覆网+弹性粘合让芯体弯折 500 次仍完整，是薄而不塌的关键。",
+    "body": "安睡裤穿在腿根，整夜弯折上千次，普通超薄芯体容易断芯、起坨、漏。抗扭芯体在高分子 SAP 外层包一层弹性无纺网，用柔性热熔点替代硬粘合，弯折 500 次后仍保持完整不粉化。对策划，\"薄而不塌、弯折不断\"是超薄安睡裤避开\"薄了就不耐用\"质疑的材质话术。",
+    "material": {
+      "role": "超薄芯体的抗弯折骨架",
+      "composition": "SAP + 弹性包覆无纺网 + 柔性热熔点",
+      "structure": "芯体厚 0.2–0.35cm，弯折寿命 ≥500 次",
+      "process": "在线复合 + 弹性点胶",
+      "experience": "再薄也经得起一整夜折腾",
+      "consumerLang": "薄但不断、不坨、不漏",
+      "reference": "把\"超薄\"卖点补上\"抗扭不断\"的可靠性背书"
+    }
+  },
+  {
+    "id": "mat-059",
+    "section": "material",
+    "category": "安睡裤",
+    "title": "梯度芯体：裆部「加宽加厚」的吸量分配逻辑",
+    "en": "Gradient absorbent core",
+    "brand": "材料工艺",
+    "source": "nonwoven",
+    "date": "2026-04-01",
+    "imageQuery": "gradient absorbent pad",
+    "url": "https://www.nonwovens-industry.com/search?q=gradient+core",
+    "urlKind": "search",
+    "tags": [
+      "安睡裤",
+      "梯度芯体",
+      "吸量分配",
+      "夜用"
+    ],
+    "summary": "安睡裤芯体不是均匀厚度，而是按夜卧体液分布做\"梯度\"：裆部加宽加厚吸量大、腰臀区减薄保舒适，把材料用在刀刃上。",
+    "body": "夜卧时体液集中在裆部中后段，安睡裤芯体据此做梯度分配：裆部中后段加宽加厚（吸量主战场），前段与腰臀区减薄（保贴身舒适）。这种\"该厚厚、该薄薄\"的材料分配，既保证整夜吸量又避免全厚带来的臃肿。策划可把\"梯度芯体\"作为\"吸量精准投放\"的专业卖点。",
+    "material": {
+      "role": "按体液分布做吸量精准投放",
+      "composition": "SAP 梯度分布 + 分区厚薄复合",
+      "structure": "裆部中段厚 0.4cm/宽 8cm，前后递减至 0.2cm",
+      "process": "多工位 SAP 喷洒 + 分区复合",
+      "experience": "吸量都在该在的地方",
+      "consumerLang": "整夜吸量大，但不臃肿",
+      "reference": "用\"梯度不是均匀\"解释\"为什么能又薄又大吸\""
+    }
+  },
+  {
+    "id": "mat-060",
+    "section": "material",
+    "category": "安睡裤",
+    "title": "植物纤维湿强难题：可降解安睡裤的「遇水不散」",
+    "en": "Wet-strength of plant-fiber degradable pant",
+    "brand": "材料工艺",
+    "source": "nonwoven",
+    "date": "2026-04-05",
+    "imageQuery": "plant fiber biodegradable fabric",
+    "url": "https://www.nonwovens-industry.com/search?q=plant+fiber+wet+strength",
+    "urlKind": "search",
+    "tags": [
+      "安睡裤",
+      "可降解",
+      "植物纤维",
+      "湿强"
+    ],
+    "summary": "纯植物纤维（竹/棉/木浆）安睡裤遇血水易软塌散形，需加\"湿强剂\"或水刺缠结工艺保形，是环保叙事下的真实材料门槛。",
+    "body": "可降解安睡裤用竹/棉/木浆等植物纤维，但天然纤维遇液易软塌、掉毛、散形，影响防漏。解决靠两招：一是水刺缠结提高纤维抱合力（物理湿强），二是加食品级湿强剂（化学湿强，需可控可降解）。这是环保安睡裤\"好看但难做\"的材料真相，策划讲可持续时要诚实带出\"湿强工艺\"才专业。",
+    "material": {
+      "role": "可降解安睡裤的遇液保形",
+      "composition": "竹/棉/木浆植物纤维 + 水刺缠结 ± 食品级湿强剂",
+      "structure": "湿态断裂强力保留率 ≥60%",
+      "process": "高压水刺缠结 / 可控湿强整理",
+      "experience": "降解归降解，用的时候不散",
+      "consumerLang": "环保的，但该防漏还是防漏",
+      "reference": "把\"可降解\"卖点补上\"湿强保形\"的专业可信度"
+    }
+  },
+  {
+    "id": "mat-061",
+    "section": "material",
+    "category": "安睡裤",
+    "title": "无痕压花腰头：视觉「无痕」的材质工艺",
+    "en": "Seamless embossed waistband",
+    "brand": "材料工艺",
+    "source": "nonwoven",
+    "date": "2026-04-08",
+    "imageQuery": "seamless embossed waistband",
+    "url": "https://www.nonwovens-industry.com/search?q=seamless+waistband",
+    "urlKind": "search",
+    "tags": [
+      "安睡裤",
+      "无痕腰头",
+      "压花",
+      "外观"
+    ],
+    "summary": "安睡裤腰头用超声波无痕压花替代缝线橡筋外露，外观平滑无勒痕印记，是\"穿了像没穿\"的视觉与触感双重卖点。",
+    "body": "传统腰头缝线橡筋外露，穿着会留印记、外观显廉价。无痕压花腰头用超声波把橡筋\"埋\"进无纺布内层并压出装饰纹，外观平滑、无外露线迹、贴肤无印。对策划，\"无痕腰头\"既是外观卖点（隐形不尴尬）也是触感卖点（无摩擦），呼应\"裸感睡眠\"。",
+    "material": {
+      "role": "腰头外观与触感的无痕化",
+      "composition": "橡筋内埋 + 超声波压花无纺布",
+      "structure": "压花深 0.3–0.5mm，橡筋零外露",
+      "process": "超声波无缝压合 + 装饰压纹",
+      "experience": "腰头平滑，穿了像没穿",
+      "consumerLang": "不勒印、不显痕、不尴尬",
+      "reference": "把\"无痕\"从外观词升级为\"工艺可追溯\"的卖点"
+    }
+  },
+  {
+    "id": "mat-062",
+    "section": "material",
+    "category": "安睡裤",
+    "title": "静音底膜：翻身不「沙沙响」的无声材料",
+    "en": "Silent breathable backsheet",
+    "brand": "材料工艺",
+    "source": "nonwoven",
+    "date": "2026-04-10",
+    "imageQuery": "soft quiet breathable film",
+    "url": "https://www.nonwovens-industry.com/search?q=silent+breathable+film",
+    "urlKind": "search",
+    "tags": [
+      "安睡裤",
+      "静音底膜",
+      "无声",
+      "舒适"
+    ],
+    "summary": "安睡裤底膜改用柔软静音 PE/无纺复合膜，翻身不发出\"沙沙\"声，解决\"怕吵醒人/怕尴尬\"的隐性睡眠痛点。",
+    "body": "普通底膜偏硬，夜间翻身会\"沙沙\"响，既怕吵到同床人、又让人意识到自己在用安睡裤的尴尬。静音底膜用柔软 PE 与无纺布复合（或绒感底膜），摩擦噪声降低 10–15dB，翻身近乎无声。对策划，\"静音\"是睡眠场景里极细腻的共情卖点——它照顾的是\"不想被提醒自己在用\"。",
+    "material": {
+      "role": "底膜的静音与柔软化",
+      "composition": "柔软 PE 微孔膜 + 绒感无纺布复合",
+      "structure": "摩擦噪声 ≤35dB（普通款 45–50dB）",
+      "process": "膜布柔软复合 + 消音纹处理",
+      "experience": "翻身没声音，安心睡",
+      "consumerLang": "怎么翻都不响，不尴尬",
+      "reference": "把\"静音\"做成睡眠共情卖点，区别于功能参数叙事"
+    }
   }
 ]
