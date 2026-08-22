@@ -38,10 +38,74 @@
   function itemUrl(it) { return (it.url && it.url !== "#") ? it.url : (SOURCES[it.source] ? SOURCES[it.source].url : "#"); }
   function srcUrl(key) { return SOURCES[key] ? SOURCES[key].url : "#"; }
   function esc(s) { return String(s == null ? "" : s).replace(/[&<>"]/g, function (c) { return { "&": "&amp;", "<": "&lt;", ">": "&gt;", '"': "&quot;" }[c]; }); }
-  function imgTag(item, cls) {
-    // 当前版本不展示图片(用户要求)，以干净的板块色块+首字呈现，避免破图/占位图
-    var ph = (item.section === "material" ? "材" : item.section === "packaging" ? "包" : item.section === "regulatory" ? "规" : item.section === "competitor" ? "竞" : item.section === "supplier" ? "供" : "讯");
-    return '<div class="ph ph-text"><div class="ph-ico">' + ph + '</div><span>' + srcName(item.source) + '</span></div>';
+  // 板块首字 / 配色 key（与 CSS .card.<section> 一致）
+  function secMeta(key) {
+    var m = {
+      industry:   { ico: "讯", grad: "grad-blue",   tag: "行业资讯" },
+      news:       { ico: "新", grad: "grad-pink",   tag: "新品上新" },
+      material:   { ico: "材", grad: "grad-teal",   tag: "材料灵感" },
+      packaging:  { ico: "包", grad: "grad-yellow", tag: "包装灵感" },
+      regulatory: { ico: "规", grad: "grad-orange", tag: "监管合规" },
+      competitor: { ico: "竞", grad: "grad-purple", tag: "竞品雷达" },
+      supplier:   { ico: "供", grad: "grad-purple", tag: "供应商"   },
+      feed:       { ico: "讯", grad: "grad-blue",   tag: "今日动态" }
+    };
+    return m[key] || { ico: "讯", grad: "grad-blue", tag: "资讯" };
+  }
+
+  // 信息可视化卡（替代图片）：纯 CSS/SVG 生成，零外部依赖，不崩/不丑/不重复/不假
+  // size: "card" 缩略（网格用） | "hero" 大图（详情用）
+  function vizTag(it, size) {
+    var sm = secMeta(it.section);
+    var brand = it.brand ? esc(it.brand) : "";
+    var tags = (it.tags || []).slice(0, size === "hero" ? 6 : 3);
+
+    if (size === "hero") {
+      // 大图：SVG 视觉摘要卡
+      var usp = it.usp;
+      var clouds = "";
+      if (usp && (usp.features || usp.innovation || usp.sellingPoint)) {
+        function chipGroup(arr, cls, label) {
+          if (!arr || !arr.length) return "";
+          var chips = arr.slice(0, 4).map(function (t) {
+            return '<span class="viz-chip ' + cls + '">' + esc(t) + '</span>';
+          }).join("");
+          return '<div class="viz-cg"><span class="viz-cg-h ' + cls + '">' + label + '</span><div class="viz-chips">' + chips + '</div></div>';
+        }
+        clouds = chipGroup(usp.features, "c-feat", "特色亮点") +
+                 chipGroup(usp.innovation, "c-inno", "创新点") +
+                 chipGroup(usp.sellingPoint, "c-usp", "独特卖点");
+      } else {
+        // 非新品：用 tags 做词条云
+        var tw = tags.map(function (t) { return '<span class="viz-chip c-feat">' + esc(t) + '</span>'; }).join("");
+        clouds = '<div class="viz-cg"><span class="viz-cg-h c-feat">关键词</span><div class="viz-chips">' + (tw || '<span class="viz-chip c-feat">情报条目</span>') + '</div></div>';
+      }
+      return '' +
+        '<div class="viz viz-hero ' + sm.grad + '">' +
+          '<div class="viz-hero-top">' +
+            '<div class="viz-big">' + sm.ico + '</div>' +
+            '<div class="viz-hero-head">' +
+              '<div class="viz-cat">' + esc(it.category || sm.tag) + (brand ? ' · ' + brand : '') + '</div>' +
+              '<div class="viz-src">' + esc(srcName(it.source)) + ' · ' + esc(it.date) + '</div>' +
+            '</div>' +
+          '</div>' +
+          '<div class="viz-clouds">' + clouds + '</div>' +
+        '</div>';
+    }
+
+    // 缩略卡：板块渐变 + 首字 + 品类/品牌 + 标签数据条
+    var tagDots = tags.map(function (t) {
+      return '<span class="viz-dot" title="' + esc(t) + '">' + esc(t) + '</span>';
+    }).join("");
+    return '' +
+      '<div class="viz viz-card ' + sm.grad + '">' +
+        '<div class="viz-card-top">' +
+          '<span class="viz-ico">' + sm.ico + '</span>' +
+          '<span class="viz-cat">' + esc(it.category || sm.tag) + '</span>' +
+        '</div>' +
+        (brand ? '<div class="viz-brand">' + brand + '</div>' : '') +
+        '<div class="viz-dots">' + (tagDots || '<span class="viz-dot">情报</span>') + '</div>' +
+      '</div>';
   }
   function secLabel(key) {
     var m = { industry: "行业资讯", news: "新品上新", material: "材料灵感", packaging: "包装灵感", regulatory: "监管合规", competitor: "竞品雷达", supplier: "供应商", feed: "今日动态" };
@@ -141,7 +205,7 @@
     var fav = isFav(it.id) ? " on" : "";
     var tags = (it.tags || []).slice(0, 3).map(function (t) { return '<span class="tag">' + esc(t) + '</span>'; }).join("");
     return '<article class="card ' + cls + '" data-id="' + it.id + '">' +
-      '<div class="card-img">' + imgTag(it) +
+      '<div class="card-img">' + vizTag(it, "card") +
         '<span class="card-sec">' + secLabel(it.section) + '</span>' +
         '<button class="card-fav' + fav + '" data-fav="' + it.id + '" title="收藏">♥</button>' +
       '</div>' +
@@ -238,7 +302,7 @@
   function meItem(it, note) {
     var noteHtml = note ? esc(note) : '<span class="none">（暂无笔记）</span>';
     return '<div class="me-item" data-id="' + it.id + '">' +
-      '<div class="mi-img">' + imgTag(it) + '</div>' +
+      '<div class="mi-img">' + vizTag(it, "card") + '</div>' +
       '<div class="mi-body"><div class="mi-title">' + esc(it.title) + '</div>' +
       '<div class="mi-note">' + noteHtml + '</div></div></div>';
   }
@@ -254,7 +318,7 @@
     var notes = getNotes();
     var noteVal = notes[id] || "";
 
-    var html = '<div class="modal-hero">' + imgTag(it) + '</div>' +
+    var html = '<div class="modal-hero">' + vizTag(it, "hero") + '</div>' +
       '<div class="modal-pad">' +
         '<div class="modal-meta">' +
           '<span class="chip">' + esc(it.category) + '</span>' +
