@@ -186,6 +186,21 @@ button{font-family:inherit;cursor:pointer;border:none;background:none}
 .mat-row .v{color:var(--ink)}
 .mat-row .v em{color:var(--d-pink);font-style:normal;font-weight:700}
 
+/* 新品亮点拆解块 */
+.news-block{background:var(--paper-2);border:1px solid var(--line);border-radius:8px;padding:20px 24px;margin:8px 0 18px}
+.news-block h4{font-family:var(--serif);font-size:15px;color:var(--d-pink);margin-bottom:14px;letter-spacing:1px;border-bottom:1px solid var(--line);padding-bottom:8px}
+.usp-group{margin:10px 0 16px}
+.usp-group:last-child{margin-bottom:0}
+.usp-h{font-size:12.5px;font-weight:700;color:var(--ink-soft);letter-spacing:.5px;margin-bottom:7px;display:flex;align-items:center;gap:8px}
+.usp-h::before{content:"";width:4px;height:14px;border-radius:3px;background:var(--d-pink)}
+.usp-group.inno .usp-h::before{background:var(--d-purple)}
+.usp-group.usp .usp-h::before{background:var(--d-teal)}
+.news-block ul{margin:0;padding:0;list-style:none}
+.news-block li{position:relative;padding:6px 0 6px 18px;font-size:13.5px;line-height:1.75;color:var(--ink)}
+.news-block li::before{content:"·";position:absolute;left:4px;top:4px;color:var(--d-pink);font-weight:700;font-size:16px;line-height:1}
+.usp-group.inno li::before{color:var(--d-purple)}
+.usp-group.usp li::before{color:var(--d-teal)}
+
 /* 个人中心 */
 .me-empty{text-align:center;color:var(--ink-faint);padding:80px 20px;font-size:14px}
 .me-list{display:flex;flex-direction:column;gap:12px}

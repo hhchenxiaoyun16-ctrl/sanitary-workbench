@@ -268,6 +268,8 @@
 
     if (it.material) html += matBlock(it.material);
 
+    if (it.usp) html += newsBlock(it.usp);
+
     if (it.tags && it.tags.length) {
       html += '<div class="modal-tags">' + it.tags.map(function (t) { return '<span class="tag">' + esc(t) + '</span>'; }).join("") + '</div>';
     }
@@ -307,6 +309,19 @@
     if (m.usedBy) h += row("用了它的爆款", esc(m.usedBy));
     if (m.consumerLang) h += row("消费者话术", esc(m.consumerLang));
     if (m.reference) h += row("可借鉴方向", "<em>" + esc(m.reference) + "</em>");
+    h += '</div>';
+    return h;
+  }
+  function newsBlock(usp) {
+    function list(title, arr, cls) {
+      if (!arr || !arr.length) return '';
+      var items = arr.map(function (t) { return '<li>' + esc(t) + '</li>'; }).join('');
+      return '<div class="usp-group ' + cls + '"><div class="usp-h">' + title + '</div><ul>' + items + '</ul></div>';
+    }
+    var h = '<div class="news-block"><h4>新品亮点拆解</h4>';
+    h += list('特色亮点', usp.features, 'feat');
+    h += list('创新点', usp.innovation, 'inno');
+    h += list('独特卖点 USP', usp.sellingPoint, 'usp');
     h += '</div>';
     return h;
   }
